@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>今天建站啦</title>
-    <url>/2023/02/05/%E4%BB%8A%E5%A4%A9%E5%BB%BA%E7%AB%99%E5%95%A6/</url>
-    <content><![CDATA[<p>今天把博客搭好啦！差不多搞了整整两天。</p>
-<p>之前都在使用普通的Github仓库来存储技术博文，后来发现UI实在不够美观。</p>
-<p>现在这个Hexo + Github Page搭建的博客有时间轴、标签、分类等，还有搜索功能~~:blush:</p>
-<p>中途差点放弃，因为不熟悉遇到很多坑，想用WordPress等收费的可能会简单点（最后其实是因为那些更麻烦哈哈）</p>
-<p>farewell!!</p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2023/02/04/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -33,5 +17,21 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>今天建站啦</title>
+    <url>/2023/02/05/%E4%BB%8A%E5%A4%A9%E5%BB%BA%E7%AB%99%E5%95%A6/</url>
+    <content><![CDATA[<p>今天把博客搭好啦！差不多搞了整整两天。</p>
+<p>之前都在使用普通的Github仓库来存储技术博文，后来发现UI实在不够美观。</p>
+<p>现在这个Hexo + Github Page搭建的博客有时间轴、标签、分类等，还有搜索功能~~:blush:</p>
+<p>中途差点放弃，因为不熟悉遇到很多坑，想用WordPress等收费的可能会简单点（最后其实是因为那些更麻烦哈哈）</p>
+<p>farewell!!</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+      </tags>
   </entry>
 </search>
