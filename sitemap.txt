@@ -1,3 +1,4 @@
+https://jeckonly.github.io/about/index.html
 https://jeckonly.github.io/categories/index.html
 https://jeckonly.github.io/tags/index.html
 https://jeckonly.github.io/2023/02/04/hello-world/
