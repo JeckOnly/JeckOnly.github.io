@@ -1,11 +1,5 @@
-https://jeckonly.github.io/2023/02/05/test2/
-https://jeckonly.github.io/2023/02/05/test1/
 https://jeckonly.github.io/about/index.html
 https://jeckonly.github.io/categories/index.html
 https://jeckonly.github.io/tags/index.html
 https://jeckonly.github.io/2023/02/04/hello-world/
 https://jeckonly.github.io/
-https://jeckonly.github.io/tags/HexoTest/
-https://jeckonly.github.io/tags/HexoTest2/
-https://jeckonly.github.io/categories/HexoTest/
-https://jeckonly.github.io/categories/HexoTest/HexoTest2/
