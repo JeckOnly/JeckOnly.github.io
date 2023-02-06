@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Thread的UncaughtExceptionHandler</title>
+    <url>/2023/02/06/Thread%E7%9A%84UncaughtExceptionHandler/</url>
+    <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">mainFunction</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">val</span> t = thread(start = <span class="literal">false</span>) &#123;</span><br><span class="line">            Thread.sleep(<span class="number">1000</span>)</span><br><span class="line">            <span class="keyword">throw</span> IllegalStateException(<span class="string">&quot;!!!!!&quot;</span>)</span><br><span class="line">        &#125;.apply &#123;</span><br><span class="line">            setUncaughtExceptionHandler &#123; thread, throwable -&gt;</span><br><span class="line">                println(<span class="string">&quot;child&quot;</span> + throwable.message)</span><br><span class="line">            &#125;</span><br><span class="line">            start()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">        println(<span class="string">&quot;Main&quot;</span> + e.message)</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;end&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    mainFunction()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最终输出是：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">end</span><br><span class="line">child!!!!!</span><br></pre></td></tr></table></figure>
+
+
+
+<p>try catch不能捕获在trycatch括号内开的子线程抛出的异常，可以为线程设置一个 <code>UncaughtExceptionHandler</code>。</p>
+<p>我联想到Coroutine中，try catch同样无法捕获括号内新开的<strong>子协程</strong>内抛出的错误，与之不同的是，协程的错误不是定义子协程的exception handler来处理，而是可以为TopLevelScope或Top level coroutine定义异常处理器。</p>
+<p>参考资料：</p>
+<p><a href="https://github.com/JeckOnly/passage/blob/master/Android/Kotin%20%E5%8D%8F%E7%A8%8B.md#1%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86">以前写的协程异常处理</a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1652118">Java多线程捕获</a></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+        <category>并发</category>
+      </categories>
+      <tags>
+        <tag>线程</tag>
+        <tag>协程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>今天去医院看了智齿</title>
+    <url>/2023/02/06/%E4%BB%8A%E5%A4%A9%E5%8E%BB%E5%8C%BB%E9%99%A2%E7%9C%8B%E4%BA%86%E6%99%BA%E9%BD%BF/</url>
+    <content><![CDATA[<p>今天和小云去医院看了智齿，然后给牙齿拍了一张2D的影片。医生说牙齿还是比较好的，没有什么问题。然后对于智齿那边有点疼的问题，医生说注意清淡饮食，少熬夜就可以，它们基本已经长出来了，还是比较平整的，不用拔，lucky:blush:</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>健康</tag>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2023/02/04/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -19,32 +57,18 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Thread的UncaughtExceptionHandler</title>
-    <url>/2023/02/06/Thread%E7%9A%84UncaughtExceptionHandler/</url>
-    <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">mainFunction</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">val</span> t = thread(start = <span class="literal">false</span>) &#123;</span><br><span class="line">            Thread.sleep(<span class="number">1000</span>)</span><br><span class="line">            <span class="keyword">throw</span> IllegalStateException(<span class="string">&quot;!!!!!&quot;</span>)</span><br><span class="line">        &#125;.apply &#123;</span><br><span class="line">            setUncaughtExceptionHandler &#123; thread, throwable -&gt;</span><br><span class="line">                println(<span class="string">&quot;child&quot;</span> + throwable.message)</span><br><span class="line">            &#125;</span><br><span class="line">            start()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">        println(<span class="string">&quot;Main&quot;</span> + e.message)</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;end&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    mainFunction()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>最终输出是：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">end</span><br><span class="line">child!!!!!</span><br></pre></td></tr></table></figure>
-
-
-
-<p>try catch不能捕获在trycatch括号内开的子线程抛出的异常，可以为线程设置一个 <code>UncaughtExceptionHandler</code>。</p>
-<p>我联想到Coroutine中，try catch同样无法捕获括号内新开的<strong>子协程</strong>内抛出的错误，与之不同的是，协程的错误不是定义子协程的exception handler来处理，而是可以为TopLevelScope或Top level coroutine定义异常处理器。</p>
-<p>参考资料：</p>
-<p><a href="https://github.com/JeckOnly/passage/blob/master/Android/Kotin%20%E5%8D%8F%E7%A8%8B.md#1%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86">以前写的协程异常处理</a></p>
-<p><a href="https://cloud.tencent.com/developer/article/1652118">Java多线程捕获</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>今天去医院看了智齿</title>
-    <url>/2023/02/06/%E4%BB%8A%E5%A4%A9%E5%8E%BB%E5%8C%BB%E9%99%A2%E7%9C%8B%E4%BA%86%E6%99%BA%E9%BD%BF/</url>
-    <content><![CDATA[<p>今天和小云去医院看了智齿，然后给牙齿拍了一张2D的影片。医生说牙齿还是比较好的，没有什么问题。然后对于智齿那边有点疼的问题，医生说注意清淡饮食，少熬夜就可以，它们基本已经长出来了，还是比较平整的，不用拔，lucky:blush:</p>
+    <title>今天建站啦</title>
+    <url>/2023/02/05/%E4%BB%8A%E5%A4%A9%E5%BB%BA%E7%AB%99%E5%95%A6/</url>
+    <content><![CDATA[<p>今天把博客搭好啦！差不多搞了整整两天。</p>
+<p>之前都在使用普通的Github仓库来存储技术博文，后来发现UI实在不够美观。</p>
+<p>现在这个Hexo + Github Page搭建的博客有时间轴、标签、分类等，还有搜索功能~~:blush:</p>
+<p>中途差点放弃，因为不熟悉遇到很多坑，想用WordPress等收费的可能会简单点（最后其实是因为那些更麻烦哈哈）</p>
+<p>farewell!!</p>
 ]]></content>
       <categories>
         <category>life</category>
       </categories>
       <tags>
-        <tag>健康</tag>
         <tag>life</tag>
       </tags>
   </entry>
@@ -59,22 +83,6 @@
       <tags>
         <tag>小云</tag>
         <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>今天建站啦</title>
-    <url>/2023/02/05/%E4%BB%8A%E5%A4%A9%E5%BB%BA%E7%AB%99%E5%95%A6/</url>
-    <content><![CDATA[<p>今天把博客搭好啦！差不多搞了整整两天。</p>
-<p>之前都在使用普通的Github仓库来存储技术博文，后来发现UI实在不够美观。</p>
-<p>现在这个Hexo + Github Page搭建的博客有时间轴、标签、分类等，还有搜索功能~~:blush:</p>
-<p>中途差点放弃，因为不熟悉遇到很多坑，想用WordPress等收费的可能会简单点（最后其实是因为那些更麻烦哈哈）</p>
-<p>farewell!!</p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
       </tags>
   </entry>
 </search>
