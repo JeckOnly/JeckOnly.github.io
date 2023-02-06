@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jeckonly.github.io/2023/02/06/%E5%B0%8F%E4%BA%91%E7%AC%AC%E4%B8%80%E5%B1%80Valorant/</loc>
+    
+    <lastmod>2023-02-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jeckonly.github.io/2023/02/06/%E4%BB%8A%E5%A4%A9%E5%8E%BB%E5%8C%BB%E9%99%A2%E7%9C%8B%E4%BA%86%E6%99%BA%E9%BD%BF/</loc>
     
     <lastmod>2023-02-06</lastmod>
@@ -78,10 +87,31 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://jeckonly.github.io/tags/%E5%B0%8F%E4%BA%91/</loc>
+    <lastmod>2023-02-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jeckonly.github.io/tags/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2023-02-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
     <loc>https://jeckonly.github.io/categories/life/</loc>
+    <lastmod>2023-02-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jeckonly.github.io/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2023-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
