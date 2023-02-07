@@ -73,6 +73,45 @@
       </tags>
   </entry>
   <entry>
+    <title>子协程不被父协程影响的例外情况</title>
+    <url>/2023/02/07/%E5%AD%90%E5%8D%8F%E7%A8%8B%E4%B8%8D%E8%A2%AB%E7%88%B6%E5%8D%8F%E7%A8%8B%E5%BD%B1%E5%93%8D%E7%9A%84%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5/</url>
+    <content><![CDATA[<p>协程中的所谓 <strong>结构化并发</strong>，就是指 <strong>父协程和子协程一起有组织有预谋地合作干活</strong>，如果不讨论<code>scupervisorScope&#123;&#125;</code>的话，大致上内涵如下：</p>
+<ol>
+<li>子协程fail——报错，父协程和其他子协程都cancel.</li>
+<li>子协程cancel，父协程和其他子协程<strong>没事</strong>。</li>
+<li>父协程fail，它所有子协程cancel。</li>
+<li>父协程cancel，它所有子协程cancel。</li>
+</ol>
+<blockquote>
+<p>子协程指<code>CoroutineScope</code>.launch&#x2F;async调用的结果。为避免混乱，不讨论 <code>coroutineScope</code>\ <code>supervisorScope</code>。</p>
+</blockquote>
+<p><a href="https://gist.github.com/JeckOnly/646ee60e16591468c405f59d8245880d">上面四个情况的案例</a></p>
+<p>但也有例外，</p>
+<p>当一个协程被其它协程在 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a> 中启动的时候， 它将通过 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/coroutine-context.html">CoroutineScope.coroutineContext</a> 来承袭上下文(除了Job会是一个新实例，其他的例如调度器都继承下来)，并且这个新协程的 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a> 将会成为父协程作业的子Job。当一个父协程被取消的时候，所有它的子协程也会被递归的取消。</p>
+<p>However, this parent-child relation can be explicitly overriden in one of two ways:</p>
+<ol>
+<li>When a different scope is explicitly specified when launching a coroutine (for example, <code>GlobalScope.launch</code>), then it does not inherit a <code>Job</code> from the parent scope.</li>
+<li>When a different <code>Job</code> object is passed as the context for the new coroutine (as shown in the example below), then it overrides the <code>Job</code> of the parent scope.</li>
+</ol>
+<p>In both cases, the launched coroutine is not tied to the scope it was launched from and operates independently.</p>
+<p>第一种情况：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="comment">// 启动一个协程来处理某种传入请求（request）</span></span><br><span class="line">    <span class="keyword">val</span> request = launch &#123;</span><br><span class="line">        <span class="comment">// 一个TopLevelScope</span></span><br><span class="line">        CoroutineScope(context = Dispatchers.Default).launch &#123;</span><br><span class="line">            println(<span class="string">&quot;NewTopLevelScope job1: I run in my own Job and execute independently!&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;NewTopLevelScope job1: I am not affected by cancellation of the request&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 另一个则承袭了父协程的上下文</span></span><br><span class="line">        launch &#123;</span><br><span class="line">            delay(<span class="number">100</span>)</span><br><span class="line">            println(<span class="string">&quot;ChildCoroutine job2: I am a child of the request coroutine&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;ChildCoroutine job2: I will not execute this line if my parent request is cancelled&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">500</span>)</span><br><span class="line">    request.cancel() <span class="comment">// 取消请求（request）的执行</span></span><br><span class="line">    println(<span class="string">&quot;main: Who has survived request cancellation?&quot;</span>)</span><br><span class="line">    delay(<span class="number">1000</span>) <span class="comment">// 主线程延迟一秒钟来看看发生了什么</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果</span><br><span class="line">NewTopLevelScope job1: I run <span class="keyword">in</span> my own Job and execute independently!</span><br><span class="line">ChildCoroutine job2: I am a child of the request coroutine</span><br><span class="line">main: Who has survived request cancellation?</span><br><span class="line">NewTopLevelScope job1: I am not affected <span class="keyword">by</span> cancellation of the request</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>第二种情况：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="comment">// 启动一个协程来处理某种传入请求（request）</span></span><br><span class="line">    <span class="keyword">val</span> request = launch &#123;</span><br><span class="line">        <span class="comment">// 生成了两个子作业</span></span><br><span class="line">        launch(Job()) &#123;</span><br><span class="line">            println(<span class="string">&quot;job1: I run in my own Job and execute independently!&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;job1: I am not affected by cancellation of the request&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 另一个则承袭了父协程的上下文</span></span><br><span class="line">        launch &#123;</span><br><span class="line">            delay(<span class="number">100</span>)</span><br><span class="line">            println(<span class="string">&quot;job2: I am a child of the request coroutine&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;job2: I will not execute this line if my parent request is cancelled&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">500</span>)</span><br><span class="line">    request.cancel() <span class="comment">// 取消请求（request）的执行</span></span><br><span class="line">    println(<span class="string">&quot;main: Who has survived request cancellation?&quot;</span>)</span><br><span class="line">    delay(<span class="number">1000</span>) <span class="comment">// 主线程延迟一秒钟来看看发生了什么</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果</span><br><span class="line">job1: I run <span class="keyword">in</span> my own Job and execute independently!</span><br><span class="line">job2: I am a child of the request coroutine</span><br><span class="line">main: Who has survived request cancellation?</span><br><span class="line">job1: I am not affected <span class="keyword">by</span> cancellation of the request</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>要注意，无论如何，子协程的Job都是一个新实例，和Parent的Job不是同一个实例。我想区别在于 <strong>隐式创建时</strong> 带上了一些父子协程的信息。</p>
+<p>参考资料：<a href="https://book.kotlincn.net/text/coroutine-context-and-dispatchers.html">协程上下文和调度器</a></p>
+]]></content>
+      <categories>
+        <category>Kotlin</category>
+        <category>协程</category>
+      </categories>
+      <tags>
+        <tag>协程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>小云第一局Valorant</title>
     <url>/2023/02/06/%E5%B0%8F%E4%BA%91%E7%AC%AC%E4%B8%80%E5%B1%80Valorant/</url>
     <content><![CDATA[<p>小云今天完完整整地打了一局Valorant，之前都是零零碎碎地打。不得不说对于一个新手来说，还行。不过我们也是今天她玩了才知道她晕三D，她说吃饭时都没啥胃口。我也是第一次实际看到晕三D的情况。</p>
