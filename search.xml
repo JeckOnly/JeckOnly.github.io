@@ -26,19 +26,6 @@
       </tags>
   </entry>
   <entry>
-    <title>今天去医院看了智齿</title>
-    <url>/2023/02/06/%E4%BB%8A%E5%A4%A9%E5%8E%BB%E5%8C%BB%E9%99%A2%E7%9C%8B%E4%BA%86%E6%99%BA%E9%BD%BF/</url>
-    <content><![CDATA[<p>今天和小云去医院看了智齿，然后给牙齿拍了一张2D的影片。医生说牙齿还是比较好的，没有什么问题。然后对于智齿那边有点疼的问题，医生说注意清淡饮食，少熬夜就可以，它们基本已经长出来了，还是比较平整的，不用拔，lucky:blush:</p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-      <tags>
-        <tag>健康</tag>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2023/02/04/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -55,6 +42,19 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>今天去医院看了智齿</title>
+    <url>/2023/02/06/%E4%BB%8A%E5%A4%A9%E5%8E%BB%E5%8C%BB%E9%99%A2%E7%9C%8B%E4%BA%86%E6%99%BA%E9%BD%BF/</url>
+    <content><![CDATA[<p>今天和小云去医院看了智齿，然后给牙齿拍了一张2D的影片。医生说牙齿还是比较好的，没有什么问题。然后对于智齿那边有点疼的问题，医生说注意清淡饮食，少熬夜就可以，它们基本已经长出来了，还是比较平整的，不用拔，lucky:blush:</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>健康</tag>
+        <tag>life</tag>
+      </tags>
   </entry>
   <entry>
     <title>今天建站啦</title>
@@ -83,6 +83,34 @@
       <tags>
         <tag>小云</tag>
         <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最近关于多巴胺的一点思考</title>
+    <url>/2023/02/07/%E6%9C%80%E8%BF%91%E5%85%B3%E4%BA%8E%E5%A4%9A%E5%B7%B4%E8%83%BA%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<p>我想多巴胺可以根据如何触发的分为 内源性多巴胺和外源性多巴胺。内源性多巴胺是在完成了一些困难的任务，或相对的来说和如今的触手可及的娱乐活动相比“不那么愉悦”的活动，或经历了伤痛之后，大脑为了恢复pleasure \ pain的平衡而分泌的多巴胺。外源性的多巴胺则是在“上瘾”的驱动下释放的多巴胺，比如吃巧克力，玩电子游戏（注意，这些活动对一些人来说可能如工作一般乏味，我指的是对认为它们具有巨大诱惑力的人来说）。外源性的多巴胺往往在短时间内可以让人获得比较大的愉悦，但过后往往是痛苦，并且还会有更深层次的危险——在生理层面上改变大脑对快乐和痛苦的感受，使得痛苦越来越敏感，快乐需要更大的刺激才能达到以前小小的刺激就可以达到的水平；在日常状态下，大脑中快乐和痛苦的“跷跷板”不是趋于平衡，而是限于水平之下，即忧郁和焦虑。这也是《Dopamine Nation》的作者认为现代人普遍焦虑、抑郁和失眠的原因。</p>
+<blockquote>
+<p>人类有接近快乐和避免痛苦的习惯。这是一种本能，可以追溯到数百万年前，那时人们需要每天积极寻找食物、衣服和住所，否则就会面临死亡风险。</p>
+<p>但是精神病学家安娜·伦布克他说，在当今世界，这样的基本需求往往是现成的，这改变了等式。</p>
+</blockquote>
+<p>诱惑太多，释放外源性多巴胺对于现代人来说过于容易，这也改变了大脑的快乐痛苦平衡。</p>
+<blockquote>
+<p><strong>关于大脑中快乐和痛苦处理是如何重叠的</strong></p>
+<p>过去75年来，神经科学最令人着迷的发现之一是，大脑中处理快乐的相同区域也处理痛苦，快乐和痛苦就像一种平衡。所以，如果你想象一下，在你的大脑中有一个跷跷板，就像你在孩子们的操场上看到的一样，当摇摇晃荡的东西处于静止基线时，它与地面是平的。当我们做一些令人愉快的事情时——例如，当我吃一块巧克力时——我的快乐&#x2F;痛苦平衡会稍微偏向快乐的一边，我的大脑的奖赏途径中会释放多巴胺。</p>
+<p>但调节这种平衡的一个主要原则是，它希望保持水平，这就是神经科学家所说的 <strong>稳态</strong> 它不想偏离太长时间，无论是快乐还是痛苦。因此，当我吃一块巧克力时，我的大脑会立即适应这种愉悦刺激的存在，<strong>将我的平衡倾斜到与疼痛等量相反的一边</strong>。这就是后遗症或衰退，或者在我的情况下，想要第二块巧克力的那一刻。现在，如果我<strong>等待足够长的时间</strong>，这种感觉就会消失，体内平衡也会恢复。</p>
+<p><strong>当快乐迅速变成痛苦或不适时</strong></p>
+<p>当这种快乐&#x2F;痛苦的平衡在快乐的体验之后倾斜到痛苦的一边时，痛苦是作为许多不同的事物被主观体验的。其中之一是一种不舒服、不安、易怒、不快乐的主观感觉，以及想要重新创造快乐的感觉。但在很多方面，这也是渴望的含义：想要得到快乐，再次，全神贯注于消除我们在事后感受到的痛苦体验。我也会说，这是非常自反的。我甚至没有意识到这种后果或衰落。这可能很微妙，但我只是有点想再吃一块巧克力。</p>
+</blockquote>
+<p>突然想到了所谓的“男人事后一根烟”，sex行为使得多巴胺水平快速升高，而在疯狂的愉悦过后，快感消退，大脑为了恢复稳态，让“跷跷板”倾向于痛苦一侧。反映在主观感受上可能就是一种落寞和空虚吧。我想还有很多其他例子，最“臭名昭著”的莫过于短视频和电子游戏了。女朋友和我说，在刷很长一段时间的B站后（根本停不下来），会觉得精神很疲惫，然后负罪感很强，一开始刚刷的时候停不下来的兴奋不见了，反而是一种轻抑郁的状态。</p>
+<p>我想这对于每一个现代人来说都是一个严肃的问题。有趣的是，我发现现代的很多生理学研究成果证明了很多古代先贤的哲学思想的正确性。比如说佛教的，有什么“俗世间的享乐都是镜中花水中月”，古希腊的斯多葛主义学派：快乐和痛苦都不会长久，安宁（平静）才是我们追求的首要目标，犬儒学派：限制你的生活条件，减少享乐，反而可以带来由衷的快乐。诸如此类。</p>
+<p>有关这一方面的更多知识，可以看 <strong>《Dopamine Nation》</strong>这本书，也有关于这本书的访谈视频，可以在网上搜搜看。</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>健康</tag>
+        <tag>行为建议</tag>
       </tags>
   </entry>
 </search>
