@@ -126,20 +126,6 @@
   </url>
   
   <url>
-    <loc>https://jeckonly.github.io/tags/%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2023-02-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jeckonly.github.io/tags/%E5%8D%8F%E7%A8%8B/</loc>
-    <lastmod>2023-02-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jeckonly.github.io/tags/%E5%81%A5%E5%BA%B7/</loc>
     <lastmod>2023-02-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -148,6 +134,20 @@
   
   <url>
     <loc>https://jeckonly.github.io/tags/life/</loc>
+    <lastmod>2023-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jeckonly.github.io/tags/%E7%BA%BF%E7%A8%8B/</loc>
+    <lastmod>2023-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jeckonly.github.io/tags/%E5%8D%8F%E7%A8%8B/</loc>
     <lastmod>2023-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -184,14 +184,14 @@
   </url>
   
   <url>
-    <loc>https://jeckonly.github.io/categories/Java/</loc>
+    <loc>https://jeckonly.github.io/categories/life/</loc>
     <lastmod>2023-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jeckonly.github.io/categories/life/</loc>
+    <loc>https://jeckonly.github.io/categories/Java/</loc>
     <lastmod>2023-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -205,14 +205,14 @@
   </url>
   
   <url>
-    <loc>https://jeckonly.github.io/categories/Java/%E5%B9%B6%E5%8F%91/</loc>
+    <loc>https://jeckonly.github.io/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2023-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jeckonly.github.io/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <loc>https://jeckonly.github.io/categories/Java/%E5%B9%B6%E5%8F%91/</loc>
     <lastmod>2023-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

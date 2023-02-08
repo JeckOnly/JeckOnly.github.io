@@ -59,6 +59,19 @@
 ]]></content>
   </entry>
   <entry>
+    <title>今天去医院看了智齿</title>
+    <url>/2023/02/06/%E4%BB%8A%E5%A4%A9%E5%8E%BB%E5%8C%BB%E9%99%A2%E7%9C%8B%E4%BA%86%E6%99%BA%E9%BD%BF/</url>
+    <content><![CDATA[<p>今天和小云去医院看了智齿，然后给牙齿拍了一张2D的影片。医生说牙齿还是比较好的，没有什么问题。然后对于智齿那边有点疼的问题，医生说注意清淡饮食，少熬夜就可以，它们基本已经长出来了，还是比较平整的，不用拔，lucky:blush:</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>健康</tag>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Thread的UncaughtExceptionHandler</title>
     <url>/2023/02/06/Thread%E7%9A%84UncaughtExceptionHandler/</url>
     <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">mainFunction</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">val</span> t = thread(start = <span class="literal">false</span>) &#123;</span><br><span class="line">            Thread.sleep(<span class="number">1000</span>)</span><br><span class="line">            <span class="keyword">throw</span> IllegalStateException(<span class="string">&quot;!!!!!&quot;</span>)</span><br><span class="line">        &#125;.apply &#123;</span><br><span class="line">            setUncaughtExceptionHandler &#123; thread, throwable -&gt;</span><br><span class="line">                println(<span class="string">&quot;child&quot;</span> + throwable.message)</span><br><span class="line">            &#125;</span><br><span class="line">            start()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">        println(<span class="string">&quot;Main&quot;</span> + e.message)</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;end&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    mainFunction()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -81,19 +94,6 @@
       <tags>
         <tag>线程</tag>
         <tag>协程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>今天去医院看了智齿</title>
-    <url>/2023/02/06/%E4%BB%8A%E5%A4%A9%E5%8E%BB%E5%8C%BB%E9%99%A2%E7%9C%8B%E4%BA%86%E6%99%BA%E9%BD%BF/</url>
-    <content><![CDATA[<p>今天和小云去医院看了智齿，然后给牙齿拍了一张2D的影片。医生说牙齿还是比较好的，没有什么问题。然后对于智齿那边有点疼的问题，医生说注意清淡饮食，少熬夜就可以，它们基本已经长出来了，还是比较平整的，不用拔，lucky:blush:</p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-      <tags>
-        <tag>健康</tag>
-        <tag>life</tag>
       </tags>
   </entry>
   <entry>
