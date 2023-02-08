@@ -26,6 +26,19 @@
       </tags>
   </entry>
   <entry>
+    <title>今天去医院看了智齿</title>
+    <url>/2023/02/06/%E4%BB%8A%E5%A4%A9%E5%8E%BB%E5%8C%BB%E9%99%A2%E7%9C%8B%E4%BA%86%E6%99%BA%E9%BD%BF/</url>
+    <content><![CDATA[<p>今天和小云去医院看了智齿，然后给牙齿拍了一张2D的影片。医生说牙齿还是比较好的，没有什么问题。然后对于智齿那边有点疼的问题，医生说注意清淡饮食，少熬夜就可以，它们基本已经长出来了，还是比较平整的，不用拔，lucky:blush:</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>健康</tag>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2023/02/04/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -42,19 +55,6 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>今天去医院看了智齿</title>
-    <url>/2023/02/06/%E4%BB%8A%E5%A4%A9%E5%8E%BB%E5%8C%BB%E9%99%A2%E7%9C%8B%E4%BA%86%E6%99%BA%E9%BD%BF/</url>
-    <content><![CDATA[<p>今天和小云去医院看了智齿，然后给牙齿拍了一张2D的影片。医生说牙齿还是比较好的，没有什么问题。然后对于智齿那边有点疼的问题，医生说注意清淡饮食，少熬夜就可以，它们基本已经长出来了，还是比较平整的，不用拔，lucky:blush:</p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-      <tags>
-        <tag>健康</tag>
-        <tag>life</tag>
-      </tags>
   </entry>
   <entry>
     <title>今天建站啦</title>
@@ -150,6 +150,86 @@
       <tags>
         <tag>健康</tag>
         <tag>行为建议</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>转载：IntelliJ调试协程</title>
+    <url>/2023/02/08/%E8%BD%AC%E8%BD%BD%EF%BC%9AIntelliJ%E8%B0%83%E8%AF%95%E5%8D%8F%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="Debug-coroutines-using-IntelliJ-IDEA-–-tutorial"><a href="#Debug-coroutines-using-IntelliJ-IDEA-–-tutorial" class="headerlink" title="Debug coroutines using IntelliJ IDEA – tutorial"></a>Debug coroutines using IntelliJ IDEA – tutorial</h1><p>Last modified: 07 February 2023</p>
+<p>This tutorial demonstrates how to create Kotlin coroutines and debug them using IntelliJ IDEA.</p>
+<p>The tutorial assumes you have prior knowledge of the <a href="https://kotlinlang.org/docs/coroutines-guide.html">coroutines</a> concept.</p>
+<h2 id="Create-coroutines"><a href="#Create-coroutines" class="headerlink" title="Create coroutines"></a>Create coroutines</h2><ol>
+<li><p>Open a Kotlin project in IntelliJ IDEA. If you don’t have a project, <a href="https://kotlinlang.org/docs/jvm-get-started.html#create-a-project">create one</a>.</p>
+</li>
+<li><p>To use the <code>kotlinx.coroutines</code> library in a Gradle project, add the following dependency to <code>build.gradle(.kts)</code>:</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    implementation(<span class="string">&quot;org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>For other build systems, see instructions in the <a href="https://github.com/Kotlin/kotlinx.coroutines#using-in-your-projects"><code>kotlinx.coroutines</code> README</a>.</p>
+<blockquote>
+<p>我的Coroutine版本是最新，但是Kotlin版本不是最新，而是1.6.24，结果调试器有问题，我更改到1.8.10最新版就可以了。</p>
+</blockquote>
+</li>
+<li><p>Open the <code>Main.kt</code> file in <code>src/main/kotlin</code>.</p>
+<p>The <code>src</code> directory contains Kotlin source files and resources. The <code>Main.kt</code> file contains sample code that will print <code>Hello World!</code>.</p>
+</li>
+<li><p>Change code in the <code>main()</code> function:</p>
+<ul>
+<li>Use the <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/run-blocking.html"><code>runBlocking()</code></a> block to wrap a coroutine.</li>
+<li>Use the <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html"><code>async()</code></a> function to create coroutines that compute deferred values <code>a</code> and <code>b</code>.</li>
+<li>Use the <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/await.html"><code>await()</code></a> function to await the computation result.</li>
+<li>Use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/println.html"><code>println()</code></a> function to print computing status and the result of multiplication to the output.</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">val</span> a = async &#123;</span><br><span class="line">        println(<span class="string">&quot;I&#x27;m computing part of the answer&quot;</span>)</span><br><span class="line">        <span class="number">6</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> b = async &#123;</span><br><span class="line">        println(<span class="string">&quot;I&#x27;m computing another part of the answer&quot;</span>)</span><br><span class="line">        <span class="number">7</span></span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;The answer is <span class="subst">$&#123;a.await() * b.await()&#125;</span>&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>Build the code by clicking <strong>Build Project</strong>.</p>
+<p><img src="https://kotlinlang.org/docs/images/flow-build-project.png" alt="Build an application"></p>
+</li>
+</ol>
+<h2 id="Debug-coroutines"><a href="#Debug-coroutines" class="headerlink" title="Debug coroutines"></a>Debug coroutines</h2><ol>
+<li><p>Set breakpoints at the lines with the <code>println()</code> function call:</p>
+<p><img src="https://kotlinlang.org/docs/images/coroutine-breakpoint.png" alt="Build a console application"></p>
+</li>
+<li><p>Run the code in debug mode by clicking <strong>Debug</strong> next to the run configuration at the top of the screen.</p>
+<p><img src="https://kotlinlang.org/docs/images/flow-debug-project.png" alt="Build a console application"></p>
+<p>The <strong>Debug</strong> tool window appears:</p>
+<ul>
+<li>The <strong>Frames</strong> tab contains the call stack.</li>
+<li>The <strong>Variables</strong> tab contains variables in the current context.</li>
+<li>The <strong>Coroutines</strong> tab contains information on running or suspended coroutines. It shows that there are three coroutines. The first one has the <strong>RUNNING</strong> status, and the other two have the <strong>CREATED</strong> status.</li>
+</ul>
+<p><img src="https://kotlinlang.org/docs/images/coroutine-debug-1.png" alt="Debug the coroutine"></p>
+</li>
+<li><p>Resume the debugger session by clicking <strong>Resume Program</strong> in the <strong>Debug</strong> tool window:</p>
+<p><img src="https://kotlinlang.org/docs/images/coroutine-debug-2.png" alt="Debug the coroutine"></p>
+<p>Now the <strong>Coroutines</strong> tab shows the following:</p>
+<ul>
+<li>The first coroutine has the <strong>SUSPENDED</strong> status – it is waiting for the values so it can multiply them.</li>
+<li>The second coroutine is calculating the <code>a</code> value – it has the <strong>RUNNING</strong> status.</li>
+<li>The third coroutine has the <strong>CREATED</strong> status and isn’t calculating the value of <code>b</code>.</li>
+</ul>
+</li>
+<li><p>Resume the debugger session by clicking <strong>Resume Program</strong> in the <strong>Debug</strong> tool window:</p>
+<p><img src="https://kotlinlang.org/docs/images/coroutine-debug-3.png" alt="Build a console application"></p>
+<p>Now the <strong>Coroutines</strong> tab shows the following:</p>
+<ul>
+<li>The first coroutine has the <strong>SUSPENDED</strong> status – it is waiting for the values so it can multiply them.</li>
+<li>The second coroutine has computed its value and disappeared.</li>
+<li>The third coroutine is calculating the value of <code>b</code> – it has the <strong>RUNNING</strong> status.</li>
+</ul>
+</li>
+</ol>
+<p>Using IntelliJ IDEA debugger, you can dig deeper into each coroutine to debug your code.</p>
+]]></content>
+      <categories>
+        <category>Kotlin</category>
+        <category>协程</category>
+      </categories>
+      <tags>
+        <tag>协程</tag>
       </tags>
   </entry>
 </search>

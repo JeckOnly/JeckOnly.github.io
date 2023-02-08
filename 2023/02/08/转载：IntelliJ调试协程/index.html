@@ -1,0 +1,273 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>转载：IntelliJ调试协程 | 路漫漫其修远兮</title><meta name="author" content="JeckOnly"><meta name="copyright" content="JeckOnly"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Debug coroutines using IntelliJ IDEA – tutorialLast modified: 07 February 2023 This tutorial demonstrates how to create Kotlin coroutines and debug them using IntelliJ IDEA. The tutorial assumes you h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="转载：IntelliJ调试协程">
+<meta property="og:url" content="https://jeckonly.github.io/2023/02/08/%E8%BD%AC%E8%BD%BD%EF%BC%9AIntelliJ%E8%B0%83%E8%AF%95%E5%8D%8F%E7%A8%8B/index.html">
+<meta property="og:site_name" content="路漫漫其修远兮">
+<meta property="og:description" content="Debug coroutines using IntelliJ IDEA – tutorialLast modified: 07 February 2023 This tutorial demonstrates how to create Kotlin coroutines and debug them using IntelliJ IDEA. The tutorial assumes you h">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2023/02/08/15ad1fe88347fc65.webp">
+<meta property="article:published_time" content="2023-02-08T02:16:27.000Z">
+<meta property="article:modified_time" content="2023-02-08T02:25:26.500Z">
+<meta property="article:author" content="JeckOnly">
+<meta property="article:tag" content="协程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2023/02/08/15ad1fe88347fc65.webp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jeckonly.github.io/2023/02/08/%E8%BD%AC%E8%BD%BD%EF%BC%9AIntelliJ%E8%B0%83%E8%AF%95%E5%8D%8F%E7%A8%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '转载：IntelliJ调试协程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-02-08 10:25:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (false) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s3.bmp.ovh/imgs/2023/02/05/c03b34cc88fbcefd.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s3.bmp.ovh/imgs/2023/02/08/15ad1fe88347fc65.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="路漫漫其修远兮"><span class="site-name">路漫漫其修远兮</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">转载：IntelliJ调试协程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-02-08T02:16:27.000Z" title="发表于 2023-02-08 10:16:27">2023-02-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-02-08T02:25:26.500Z" title="更新于 2023-02-08 10:25:26">2023-02-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Kotlin/">Kotlin</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Kotlin/%E5%8D%8F%E7%A8%8B/">协程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">516</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="转载：IntelliJ调试协程"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2023/02/08/%E8%BD%AC%E8%BD%BD%EF%BC%9AIntelliJ%E8%B0%83%E8%AF%95%E5%8D%8F%E7%A8%8B/#post-comment"><span class="waline-comment-count" data-path="/2023/02/08/%E8%BD%AC%E8%BD%BD%EF%BC%9AIntelliJ%E8%B0%83%E8%AF%95%E5%8D%8F%E7%A8%8B/"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Debug-coroutines-using-IntelliJ-IDEA-–-tutorial"><a href="#Debug-coroutines-using-IntelliJ-IDEA-–-tutorial" class="headerlink" title="Debug coroutines using IntelliJ IDEA – tutorial"></a>Debug coroutines using IntelliJ IDEA – tutorial</h1><p>Last modified: 07 February 2023</p>
+<p>This tutorial demonstrates how to create Kotlin coroutines and debug them using IntelliJ IDEA.</p>
+<p>The tutorial assumes you have prior knowledge of the <a target="_blank" rel="noopener" href="https://kotlinlang.org/docs/coroutines-guide.html">coroutines</a> concept.</p>
+<h2 id="Create-coroutines"><a href="#Create-coroutines" class="headerlink" title="Create coroutines"></a>Create coroutines</h2><ol>
+<li><p>Open a Kotlin project in IntelliJ IDEA. If you don’t have a project, <a target="_blank" rel="noopener" href="https://kotlinlang.org/docs/jvm-get-started.html#create-a-project">create one</a>.</p>
+</li>
+<li><p>To use the <code>kotlinx.coroutines</code> library in a Gradle project, add the following dependency to <code>build.gradle(.kts)</code>:</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    implementation(<span class="string">&quot;org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>For other build systems, see instructions in the <a target="_blank" rel="noopener" href="https://github.com/Kotlin/kotlinx.coroutines#using-in-your-projects"><code>kotlinx.coroutines</code> README</a>.</p>
+<blockquote>
+<p>我的Coroutine版本是最新，但是Kotlin版本不是最新，而是1.6.24，结果调试器有问题，我更改到1.8.10最新版就可以了。</p>
+</blockquote>
+</li>
+<li><p>Open the <code>Main.kt</code> file in <code>src/main/kotlin</code>.</p>
+<p>The <code>src</code> directory contains Kotlin source files and resources. The <code>Main.kt</code> file contains sample code that will print <code>Hello World!</code>.</p>
+</li>
+<li><p>Change code in the <code>main()</code> function:</p>
+<ul>
+<li>Use the <a target="_blank" rel="noopener" href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/run-blocking.html"><code>runBlocking()</code></a> block to wrap a coroutine.</li>
+<li>Use the <a target="_blank" rel="noopener" href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html"><code>async()</code></a> function to create coroutines that compute deferred values <code>a</code> and <code>b</code>.</li>
+<li>Use the <a target="_blank" rel="noopener" href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/await.html"><code>await()</code></a> function to await the computation result.</li>
+<li>Use the <a target="_blank" rel="noopener" href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/println.html"><code>println()</code></a> function to print computing status and the result of multiplication to the output.</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">val</span> a = async &#123;</span><br><span class="line">        println(<span class="string">&quot;I&#x27;m computing part of the answer&quot;</span>)</span><br><span class="line">        <span class="number">6</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> b = async &#123;</span><br><span class="line">        println(<span class="string">&quot;I&#x27;m computing another part of the answer&quot;</span>)</span><br><span class="line">        <span class="number">7</span></span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;The answer is <span class="subst">$&#123;a.await() * b.await()&#125;</span>&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>Build the code by clicking <strong>Build Project</strong>.</p>
+<p><img src="https://kotlinlang.org/docs/images/flow-build-project.png" alt="Build an application"></p>
+</li>
+</ol>
+<h2 id="Debug-coroutines"><a href="#Debug-coroutines" class="headerlink" title="Debug coroutines"></a>Debug coroutines</h2><ol>
+<li><p>Set breakpoints at the lines with the <code>println()</code> function call:</p>
+<p><img src="https://kotlinlang.org/docs/images/coroutine-breakpoint.png" alt="Build a console application"></p>
+</li>
+<li><p>Run the code in debug mode by clicking <strong>Debug</strong> next to the run configuration at the top of the screen.</p>
+<p><img src="https://kotlinlang.org/docs/images/flow-debug-project.png" alt="Build a console application"></p>
+<p>The <strong>Debug</strong> tool window appears:</p>
+<ul>
+<li>The <strong>Frames</strong> tab contains the call stack.</li>
+<li>The <strong>Variables</strong> tab contains variables in the current context.</li>
+<li>The <strong>Coroutines</strong> tab contains information on running or suspended coroutines. It shows that there are three coroutines. The first one has the <strong>RUNNING</strong> status, and the other two have the <strong>CREATED</strong> status.</li>
+</ul>
+<p><img src="https://kotlinlang.org/docs/images/coroutine-debug-1.png" alt="Debug the coroutine"></p>
+</li>
+<li><p>Resume the debugger session by clicking <strong>Resume Program</strong> in the <strong>Debug</strong> tool window:</p>
+<p><img src="https://kotlinlang.org/docs/images/coroutine-debug-2.png" alt="Debug the coroutine"></p>
+<p>Now the <strong>Coroutines</strong> tab shows the following:</p>
+<ul>
+<li>The first coroutine has the <strong>SUSPENDED</strong> status – it is waiting for the values so it can multiply them.</li>
+<li>The second coroutine is calculating the <code>a</code> value – it has the <strong>RUNNING</strong> status.</li>
+<li>The third coroutine has the <strong>CREATED</strong> status and isn’t calculating the value of <code>b</code>.</li>
+</ul>
+</li>
+<li><p>Resume the debugger session by clicking <strong>Resume Program</strong> in the <strong>Debug</strong> tool window:</p>
+<p><img src="https://kotlinlang.org/docs/images/coroutine-debug-3.png" alt="Build a console application"></p>
+<p>Now the <strong>Coroutines</strong> tab shows the following:</p>
+<ul>
+<li>The first coroutine has the <strong>SUSPENDED</strong> status – it is waiting for the values so it can multiply them.</li>
+<li>The second coroutine has computed its value and disappeared.</li>
+<li>The third coroutine is calculating the value of <code>b</code> – it has the <strong>RUNNING</strong> status.</li>
+</ul>
+</li>
+</ol>
+<p>Using IntelliJ IDEA debugger, you can dig deeper into each coroutine to debug your code.</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8D%8F%E7%A8%8B/">协程</a></div><div class="post_share"><div class="social-share" data-image="https://s3.bmp.ovh/imgs/2023/02/08/15ad1fe88347fc65.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2023/02/07/%E5%AD%90%E5%8D%8F%E7%A8%8B%E4%B8%8D%E8%A2%AB%E7%88%B6%E5%8D%8F%E7%A8%8B%E5%BD%B1%E5%93%8D%E7%9A%84%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5/" title="子协程不被父协程影响的例外情况"><img class="cover" src="https://s3.bmp.ovh/imgs/2023/02/07/e9f26566bb427dba.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">子协程不被父协程影响的例外情况</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/02/06/Thread%E7%9A%84UncaughtExceptionHandler/" title="Thread的UncaughtExceptionHandler"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-06</div><div class="title">Thread的UncaughtExceptionHandler</div></div></a></div><div><a href="/2023/02/07/%E5%AD%90%E5%8D%8F%E7%A8%8B%E4%B8%8D%E8%A2%AB%E7%88%B6%E5%8D%8F%E7%A8%8B%E5%BD%B1%E5%93%8D%E7%9A%84%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5/" title="子协程不被父协程影响的例外情况"><img class="cover" src="https://s3.bmp.ovh/imgs/2023/02/07/e9f26566bb427dba.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-07</div><div class="title">子协程不被父协程影响的例外情况</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s3.bmp.ovh/imgs/2023/02/05/c03b34cc88fbcefd.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">JeckOnly</div><div class="author-info__description">Live and so on</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JeckOnly"><i class="fab fa-github"></i><span>Click here</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/JeckOnly" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://github.com/JeckOnly/passage" target="_blank" title="以前写博客的地方"><i class="far fa-folder-open"></i></a><a class="social-icon" href="https://space.bilibili.com/287002331" target="_blank" title="bilibili"><i class="fab fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">以前的技术博客在上面文件夹按钮进入。评论需要VPN。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Debug-coroutines-using-IntelliJ-IDEA-%E2%80%93-tutorial"><span class="toc-text">Debug coroutines using IntelliJ IDEA – tutorial</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Create-coroutines"><span class="toc-text">Create coroutines</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Debug-coroutines"><span class="toc-text">Debug coroutines</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/02/08/%E8%BD%AC%E8%BD%BD%EF%BC%9AIntelliJ%E8%B0%83%E8%AF%95%E5%8D%8F%E7%A8%8B/" title="转载：IntelliJ调试协程"><img src="https://s3.bmp.ovh/imgs/2023/02/08/15ad1fe88347fc65.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="转载：IntelliJ调试协程"/></a><div class="content"><a class="title" href="/2023/02/08/%E8%BD%AC%E8%BD%BD%EF%BC%9AIntelliJ%E8%B0%83%E8%AF%95%E5%8D%8F%E7%A8%8B/" title="转载：IntelliJ调试协程">转载：IntelliJ调试协程</a><time datetime="2023-02-08T02:16:27.000Z" title="发表于 2023-02-08 10:16:27">2023-02-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/07/%E5%AD%90%E5%8D%8F%E7%A8%8B%E4%B8%8D%E8%A2%AB%E7%88%B6%E5%8D%8F%E7%A8%8B%E5%BD%B1%E5%93%8D%E7%9A%84%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5/" title="子协程不被父协程影响的例外情况"><img src="https://s3.bmp.ovh/imgs/2023/02/07/e9f26566bb427dba.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="子协程不被父协程影响的例外情况"/></a><div class="content"><a class="title" href="/2023/02/07/%E5%AD%90%E5%8D%8F%E7%A8%8B%E4%B8%8D%E8%A2%AB%E7%88%B6%E5%8D%8F%E7%A8%8B%E5%BD%B1%E5%93%8D%E7%9A%84%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5/" title="子协程不被父协程影响的例外情况">子协程不被父协程影响的例外情况</a><time datetime="2023-02-07T13:40:04.000Z" title="发表于 2023-02-07 21:40:04">2023-02-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/07/%E6%9C%80%E8%BF%91%E5%85%B3%E4%BA%8E%E5%A4%9A%E5%B7%B4%E8%83%BA%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/" title="最近关于多巴胺的一点思考"><img src="https://media.npr.org/assets/img/2021/08/25/gettyimages-1224708623_wide-e73c60d7916c6f6b6fc8177e640a9e1c21c5f1e9-s1200-c85.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="最近关于多巴胺的一点思考"/></a><div class="content"><a class="title" href="/2023/02/07/%E6%9C%80%E8%BF%91%E5%85%B3%E4%BA%8E%E5%A4%9A%E5%B7%B4%E8%83%BA%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/" title="最近关于多巴胺的一点思考">最近关于多巴胺的一点思考</a><time datetime="2023-02-07T07:56:53.000Z" title="发表于 2023-02-07 15:56:53">2023-02-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/02/06/Thread%E7%9A%84UncaughtExceptionHandler/" title="Thread的UncaughtExceptionHandler">Thread的UncaughtExceptionHandler</a><time datetime="2023-02-06T12:06:36.000Z" title="发表于 2023-02-06 20:06:36">2023-02-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/06/%E5%B0%8F%E4%BA%91%E7%AC%AC%E4%B8%80%E5%B1%80Valorant/" title="小云第一局Valorant"><img src="https://s3.bmp.ovh/imgs/2023/02/06/af2f723d1af23d64.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小云第一局Valorant"/></a><div class="content"><a class="title" href="/2023/02/06/%E5%B0%8F%E4%BA%91%E7%AC%AC%E4%B8%80%E5%B1%80Valorant/" title="小云第一局Valorant">小云第一局Valorant</a><time datetime="2023-02-06T10:15:57.000Z" title="发表于 2023-02-06 18:15:57">2023-02-06</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By JeckOnly</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">路漫漫其修远兮</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadWaline () {
+  function initWaline () {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://vercel-mu-opal.vercel.app',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: true,
+    }, null))
+  }
+
+  if (typeof Waline === 'object') initWaline()
+  else {
+    getCSS('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css').then(() => {
+      getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js').then(initWaline)
+    })
+  }
+}
+
+if ('Waline' === 'Waline' || !false) {
+  if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="理性,愉悦,安宁" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
