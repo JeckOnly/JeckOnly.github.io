@@ -90,31 +90,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Thread的UncaughtExceptionHandler</title>
-    <url>/2023/02/06/Thread%E7%9A%84UncaughtExceptionHandler/</url>
-    <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">mainFunction</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">val</span> t = thread(start = <span class="literal">false</span>) &#123;</span><br><span class="line">            Thread.sleep(<span class="number">1000</span>)</span><br><span class="line">            <span class="keyword">throw</span> IllegalStateException(<span class="string">&quot;!!!!!&quot;</span>)</span><br><span class="line">        &#125;.apply &#123;</span><br><span class="line">            setUncaughtExceptionHandler &#123; thread, throwable -&gt;</span><br><span class="line">                println(<span class="string">&quot;child&quot;</span> + throwable.message)</span><br><span class="line">            &#125;</span><br><span class="line">            start()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">        println(<span class="string">&quot;Main&quot;</span> + e.message)</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;end&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    mainFunction()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>最终输出是：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">end</span><br><span class="line">child!!!!!</span><br></pre></td></tr></table></figure>
-
-
-
-<p>try catch不能捕获在trycatch括号内开的子线程抛出的异常，可以为线程设置一个 <code>UncaughtExceptionHandler</code>。</p>
-<p>我联想到Coroutine中，try catch同样无法捕获括号内新开的<strong>子协程</strong>内抛出的错误，与之不同的是，协程的错误不是定义子协程的exception handler来处理，而是可以为TopLevelScope或Top level coroutine定义异常处理器。</p>
-<p>参考资料：</p>
-<p><a href="https://github.com/JeckOnly/passage/blob/master/Android/Kotin%20%E5%8D%8F%E7%A8%8B.md#1%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86">以前写的协程异常处理</a></p>
-<p><a href="https://cloud.tencent.com/developer/article/1652118">Java多线程捕获</a></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-        <category>并发</category>
-      </categories>
-      <tags>
-        <tag>线程</tag>
-        <tag>协程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2023/02/04/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -148,6 +123,31 @@
       </tags>
   </entry>
   <entry>
+    <title>Thread的UncaughtExceptionHandler</title>
+    <url>/2023/02/06/Thread%E7%9A%84UncaughtExceptionHandler/</url>
+    <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">mainFunction</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">val</span> t = thread(start = <span class="literal">false</span>) &#123;</span><br><span class="line">            Thread.sleep(<span class="number">1000</span>)</span><br><span class="line">            <span class="keyword">throw</span> IllegalStateException(<span class="string">&quot;!!!!!&quot;</span>)</span><br><span class="line">        &#125;.apply &#123;</span><br><span class="line">            setUncaughtExceptionHandler &#123; thread, throwable -&gt;</span><br><span class="line">                println(<span class="string">&quot;child&quot;</span> + throwable.message)</span><br><span class="line">            &#125;</span><br><span class="line">            start()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">        println(<span class="string">&quot;Main&quot;</span> + e.message)</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;end&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    mainFunction()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最终输出是：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">end</span><br><span class="line">child!!!!!</span><br></pre></td></tr></table></figure>
+
+
+
+<p>try catch不能捕获在trycatch括号内开的子线程抛出的异常，可以为线程设置一个 <code>UncaughtExceptionHandler</code>。</p>
+<p>我联想到Coroutine中，try catch同样无法捕获括号内新开的<strong>子协程</strong>内抛出的错误，与之不同的是，协程的错误不是定义子协程的exception handler来处理，而是可以为TopLevelScope或Top level coroutine定义异常处理器。</p>
+<p>参考资料：</p>
+<p><a href="https://github.com/JeckOnly/passage/blob/master/Android/Kotin%20%E5%8D%8F%E7%A8%8B.md#1%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86">以前写的协程异常处理</a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1652118">Java多线程捕获</a></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+        <category>并发</category>
+      </categories>
+      <tags>
+        <tag>线程</tag>
+        <tag>协程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>今天去医院看了智齿</title>
     <url>/2023/02/06/%E4%BB%8A%E5%A4%A9%E5%8E%BB%E5%8C%BB%E9%99%A2%E7%9C%8B%E4%BA%86%E6%99%BA%E9%BD%BF/</url>
     <content><![CDATA[<p>今天和小云去医院看了智齿，然后给牙齿拍了一张2D的影片。医生说牙齿还是比较好的，没有什么问题。然后对于智齿那边有点疼的问题，医生说注意清淡饮食，少熬夜就可以，它们基本已经长出来了，还是比较平整的，不用拔，lucky:blush:</p>
@@ -174,6 +174,140 @@
       </categories>
       <tags>
         <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>协程异常处理总结</title>
+    <url>/2023/02/11/%E5%8D%8F%E7%A8%8B%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h3 id="1-Job的继承关系"><a href="#1-Job的继承关系" class="headerlink" title="1. Job的继承关系"></a>1. Job的继承关系</h3><p>首先来了解kotlin协程作用域的父子关系，parent-child。先来看一段代码：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> exceptionHandler1 = CoroutineExceptionHandler &#123; coroutineContext, throwable -&gt;</span><br><span class="line">        println(<span class="string">&quot;Handle <span class="variable">$throwable</span> in handler1&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> exceptionHandler2 = CoroutineExceptionHandler &#123; coroutineContext, throwable -&gt;</span><br><span class="line">        println(<span class="string">&quot;Handle <span class="variable">$throwable</span> in handler2&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> exceptionHandler3 = CoroutineExceptionHandler &#123; coroutineContext, throwable -&gt;</span><br><span class="line">        println(<span class="string">&quot;Handle <span class="variable">$throwable</span> in handler3&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> topLevelScope = CoroutineScope(exceptionHandler1)</span><br><span class="line">    topLevelScope.launch(exceptionHandler2) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            launch(exceptionHandler3) &#123;</span><br><span class="line">                <span class="keyword">throw</span> RuntimeException(<span class="string">&quot;RuntimeException in nested coroutine&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (exception: Exception) &#123;</span><br><span class="line">            println(<span class="string">&quot;Handle <span class="variable">$exception</span> in try/catch&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    delay(<span class="number">5000</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果一个协程报错，然后try&#x2F;catch<strong>没有包裹报错的代码，而是包裹报错的那个协程</strong>，那么exception并不会被catch到，也就是协程里面的exception没有re-throw，而是propagated up，沿着job的继承链向上传递。下面是上面代码的父子协程关系图：</p>
+<p><img src="https://i0.wp.com/www.lukaslechner.com/wp-content/uploads/2020/08/Screenshot-2020-08-25-at-10.51.22.png?w=792&ssl=1" alt="代码的协程继承关系"></p>
+<ol>
+<li><p>CoroutineScope是topLevelScope，第一个launch是Top-Level Coroutine，第二个和更多被它包裹住的算是Child Coroutine.</p>
+</li>
+<li><p>要判断继承关系需要看Job的继承，而不是看launch，不然会错过。CoroutineScope和launch中都有一个默认的Job参数作为Context。</p>
+<p>这段话解读的很好：”To make all the features of Structured Concurrency possible, the <code>Job</code> object of a <code>CoroutineScope</code> and the <code>Job</code> objects of Coroutines and Child-Coroutines form a hierarchy of parent-child relationships. An uncaught exception, instead of being re-thrown, is “propagated up the job hierarchy”. This exception propagation leads to the failure of the parent <code>Job</code>, which in turn leads to the cancellation of all the <code>Job</code>s of its children.“</p>
+</li>
+</ol>
+<h3 id="2-ExceptionHandler的位置"><a href="#2-ExceptionHandler的位置" class="headerlink" title="2. ExceptionHandler的位置"></a>2. ExceptionHandler的位置</h3><p>在上面的代码例子中，</p>
+<p>1）如果exceptionHandler1和exceptionHandler2都在，那么exception上升到exceptionHandler2就被处理了，</p>
+<p>2）如果exceptionHandler1和exceptionHandler2只有任意一个，那么就由存在的那个处理。</p>
+<p>3）如果exceptionHandler1和exceptionHandler2都不在，那么就会去到<strong>线程的错误处理</strong>——crash。</p>
+<p>4）在一个child coroutine中安装exceptionHandler没有效果。</p>
+<p>总结：<strong>In order for a <code>CoroutineExceptionHandler</code> to have an effect, it must be installed either in the <code>CoroutineScope</code> or in a top-level coroutine.</strong></p>
+<p>要么</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">val</span> topLevelScope = CoroutineScope(Job() + coroutineExceptionHandler)</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>要么</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">topLevelScope.launch(coroutineExceptionHandler) &#123;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>在上面的那个例子中，由topLevelScope launch的<strong>其他顶层协程</strong>都因为一个顶层协程的报错而被取消，当然这个cancel是合作式的，仅仅是发出取消的指令。</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> topLevelScope = CoroutineScope(exceptionHandler1)</span><br><span class="line">topLevelScope.launch() &#123;</span><br><span class="line">    <span class="comment">// 发生报错</span></span><br><span class="line">&#125;</span><br><span class="line">topLevelScope.launch &#123;<span class="comment">// 被取消</span></span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        delay(<span class="number">1000</span>)<span class="comment">// 合作式取消</span></span><br><span class="line">        println(<span class="string">&quot;循环打印&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-async的异常处理"><a href="#3-async的异常处理" class="headerlink" title="3.  async的异常处理"></a>3.  async的异常处理</h3><p>由async启动的协程的错误处理和launch有点不同。</p>
+<h4 id="1-async启动的协程是Top-Level-协程"><a href="#1-async启动的协程是Top-Level-协程" class="headerlink" title="1.async启动的协程是Top-Level 协程"></a>1.async启动的协程是Top-Level 协程</h4><p>看一段代码：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> exceptionHandler1 = CoroutineExceptionHandler &#123; coroutineContext, throwable -&gt;</span><br><span class="line">       println(<span class="string">&quot;Handle <span class="variable">$throwable</span> in handler1&quot;</span>)</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">val</span> topLevelScope = CoroutineScope(exceptionHandler1)</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 顶层async</span></span><br><span class="line">   <span class="keyword">val</span> deferred = topLevelScope.async  &#123;</span><br><span class="line">       <span class="comment">// 发生报错</span></span><br><span class="line">       <span class="keyword">throw</span> RuntimeException(<span class="string">&quot;RuntimeException in nested coroutine&quot;</span>)</span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>报错既不会在async处 re-throw也不会上升到handler1处理，而是会在<strong>调用await()处</strong>被re-throw。</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> exceptionHandler1 = CoroutineExceptionHandler &#123; coroutineContext, throwable -&gt;</span><br><span class="line">    println(<span class="string">&quot;Handle <span class="variable">$throwable</span> in handler1&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">val</span> exceptionHandler2 = CoroutineExceptionHandler &#123; coroutineContext, throwable -&gt;</span><br><span class="line">    println(<span class="string">&quot;Handle <span class="variable">$throwable</span> in handler2&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">val</span> topLevelScope = CoroutineScope(exceptionHandler1)</span><br><span class="line"><span class="keyword">val</span> topLevelScope2 = CoroutineScope(exceptionHandler2)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 顶层async</span></span><br><span class="line"><span class="keyword">val</span> deferred = topLevelScope.async  &#123;</span><br><span class="line">    <span class="comment">// 发生报错</span></span><br><span class="line">    <span class="keyword">throw</span> RuntimeException(<span class="string">&quot;RuntimeException in nested coroutine&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">topLevelScope2.launch &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        deferred.await()<span class="comment">// re-throw here</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">        println(<span class="string">&quot;Handle <span class="variable">$e</span> in try/catch&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>打印：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Handle java.lang.RuntimeException: RuntimeException in nested coroutine in try/catch</span><br></pre></td></tr></table></figure>
+
+<p>总结：这种情况，异常被封装在Deferred之中，只有在调用await处才会被re-throw。只需要在await()处调用try&#x2F;catch捕获。</p>
+<h4 id="2-async启动的协程是Child协程"><a href="#2-async启动的协程是Child协程" class="headerlink" title="2.async启动的协程是Child协程"></a>2.async启动的协程是Child协程</h4><p>看一段代码：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> exceptionHandler1 = CoroutineExceptionHandler &#123; coroutineContext, throwable -&gt;</span><br><span class="line">        println(<span class="string">&quot;Handle <span class="variable">$throwable</span> in handler1&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> exceptionHandler2 = CoroutineExceptionHandler &#123; coroutineContext, throwable -&gt;</span><br><span class="line">        println(<span class="string">&quot;Handle <span class="variable">$throwable</span> in handler2&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> topLevelScope = CoroutineScope(exceptionHandler1)</span><br><span class="line">    <span class="keyword">val</span> topLevelScope2 = CoroutineScope(exceptionHandler2)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> deferred2: Deferred&lt;<span class="built_in">Nothing</span>&gt;? = <span class="literal">null</span></span><br><span class="line"><span class="comment">// 顶层async</span></span><br><span class="line">    topLevelScope.launch  &#123;</span><br><span class="line">        deferred2 = async &#123;</span><br><span class="line">            <span class="comment">// 发生报错</span></span><br><span class="line">            <span class="keyword">throw</span> RuntimeException(<span class="string">&quot;RuntimeException in nested coroutine&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    topLevelScope2.launch &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">while</span> (deferred2 == <span class="literal">null</span>)</span><br><span class="line">                print(<span class="string">&quot;&quot;</span>)</span><br><span class="line">            delay(<span class="number">5000</span>)</span><br><span class="line">            println(<span class="string">&quot;after 5 seconds&quot;</span>)</span><br><span class="line">            deferred2!!.await()</span><br><span class="line">        &#125; <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">            println(<span class="string">&quot;Handle <span class="variable">$e</span> in try/catch&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    delay(<span class="number">800000</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>打印：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Handle java.lang.RuntimeException: RuntimeException in nested coroutine in handler1</span><br><span class="line">after 5 seconds</span><br><span class="line">Handle java.lang.RuntimeException: RuntimeException in nested coroutine in try/catch</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，async里面的报错，<strong>立即</strong>沿着Job继承链<strong>上升</strong>——propagated up，即使没调用await()，<strong>并且也会</strong>在await()处re-throw。</p>
+<p>如果topLevelScope的exceptionHandler1被去掉，那么会crash，因为没有handler捕获这个上升的报错。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Exception in thread &quot;DefaultDispatcher-worker-3&quot; java.lang.RuntimeException: RuntimeException in nested coroutine</span><br><span class="line">	at com.example.composeproject.TestKt$main$2$1.invokeSuspend(Test.kt:25)</span><br><span class="line">	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)</span><br><span class="line">	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)</span><br><span class="line">	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:570)</span><br><span class="line">	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:749)</span><br><span class="line">	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)</span><br><span class="line">	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)</span><br><span class="line">	Suppressed: kotlinx.coroutines.DiagnosticCoroutineContextException: [StandaloneCoroutine&#123;Cancelling&#125;@596502e1, Dispatchers.Default]</span><br><span class="line">after 5 seconds</span><br><span class="line">Handle java.lang.RuntimeException: RuntimeException in nested coroutine in try/catch</span><br></pre></td></tr></table></figure>
+
+<p>总结：抛出异常后，</p>
+<p>1）需要在Job链添加Handler捕获 </p>
+<p>2）在await()处re-throw的异常也要捕获。</p>
+<p>放一个表格总结一下对于Uncaught Exception(没有在协程体内被try&#x2F;catch的异常)的协程处理规律：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">launch</th>
+<th align="center">async</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">top level Coroutine</td>
+<td align="center">沿着Job上升</td>
+<td align="center">被deferred包装，在await处re-throw</td>
+</tr>
+<tr>
+<td align="center">child Coroutine</td>
+<td align="center">沿着Job上升</td>
+<td align="center">立刻沿着Job上升（即使不调用await），调用await时也re-throw</td>
+</tr>
+</tbody></table>
+<h3 id="4-coroutineScope函数"><a href="#4-coroutineScope函数" class="headerlink" title="4. coroutineScope函数"></a>4. coroutineScope函数</h3><p>根据它的函数注释，提炼出一下要点：</p>
+<ol>
+<li><strong>Creates a CoroutineScope</strong> and calls the specified suspend block with this scope.</li>
+<li>The provided scope inherits its coroutineContext from the outer scope, but <strong>overrides the context’s Job</strong>.</li>
+<li>When any child coroutine in this scope fails, this scope fails and all the rest of the children are cancelled（内部block有结构化并发）</li>
+<li>This function(is a <strong>suspend</strong> function) **returns as soon as the given block and all its children coroutines are completed.**（要注意，这是一个挂起函数，会阻塞调用它的协程，当它内部的结构化并发完成，这个函数才完成）</li>
+<li>The method may throw a CancellationException if the current job was cancelled externally or may <strong>throw a corresponding unhandled Throwable</strong> if there is any unhandled exception in this scope (for example, from a crashed coroutine that was started with launch in this scope)（内部有异常，在这个函数调用处re-throw）</li>
+</ol>
+<p><strong>关键要注意的是，不要把它和 <code>CoroutineScope</code>、 <code>launch</code> 、 <code>async</code> 等启动顶层协程或子协程的非挂起函数搞混就行。</strong></p>
+<p>换言之，不要被它的名字所误导，可以用try&#x2F;catch捕获它抛出的异常。</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> topLevelScope = CoroutineScope(Job() + <span class="keyword">object</span>: CoroutineExceptionHandler &#123;</span><br><span class="line">        <span class="keyword">override</span> <span class="keyword">val</span> key: CoroutineContext.Key&lt;*&gt;</span><br><span class="line">            <span class="keyword">get</span>() = CoroutineExceptionHandler.Key</span><br><span class="line"></span><br><span class="line">        <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">handleException</span><span class="params">(context: <span class="type">CoroutineContext</span>, exception: <span class="type">Throwable</span>)</span></span> &#123;</span><br><span class="line">            print(<span class="string">&quot;handle exception in coroutineexceptionhandler&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    topLevelScope.launch &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;<span class="comment">// 没有try/catch就在CoroutineExceptionHandler捕获</span></span><br><span class="line">            coroutineScope &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    <span class="keyword">throw</span> RuntimeException(<span class="string">&quot;RuntimeException in nested coroutine&quot;</span>)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (exception: Exception) &#123;</span><br><span class="line">            println(<span class="string">&quot;Handle <span class="variable">$exception</span> in try/catch&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Thread.sleep(<span class="number">100</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-supervisorScope函数"><a href="#5-supervisorScope函数" class="headerlink" title="5.  supervisorScope函数"></a>5.  supervisorScope函数</h3><p>下面的代码建立了如下结构图</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> topLevelScope = CoroutineScope(Job())</span><br><span class="line"></span><br><span class="line">    topLevelScope.launch &#123;</span><br><span class="line">        <span class="keyword">val</span> job1 = launch &#123;</span><br><span class="line">            println(<span class="string">&quot;starting Coroutine 1&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        supervisorScope &#123;</span><br><span class="line">            <span class="keyword">val</span> job2 = launch &#123;</span><br><span class="line">                println(<span class="string">&quot;starting Coroutine 2&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">val</span> job3 = launch &#123;</span><br><span class="line">                println(<span class="string">&quot;starting Coroutine 3&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Thread.sleep(<span class="number">100</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>… will create the following job hierarchy:</p>
+<p><img src="https://i0.wp.com/www.lukaslechner.com/wp-content/uploads/2020/08/Screenshot-2020-08-25-at-11.19.55.png?w=786&ssl=1"></p>
+<p>性质和 <code>coroutineScope</code> 很类似</p>
+<ol>
+<li>这是一个挂起函数，会阻塞调用它的协程，当它内部的结构化并发完成，这个函数才完成</li>
+</ol>
+<h4 id="1-内部启动的launch-x2F-async都是-top-level-coroutine"><a href="#1-内部启动的launch-x2F-async都是-top-level-coroutine" class="headerlink" title="1. 内部启动的launch&#x2F;async都是 top-level coroutine."></a>1. 内部启动的launch&#x2F;async都是 <code>top-level</code> coroutine.</h4><p>This also means we can now install a <code>CoroutineExceptionHandler</code> in them that is actually called:</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> coroutineExceptionHandler = CoroutineExceptionHandler &#123; coroutineContext, exception -&gt;</span><br><span class="line">        println(<span class="string">&quot;Handle <span class="variable">$exception</span> in CoroutineExceptionHandler&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> topLevelScope = CoroutineScope(Job())</span><br><span class="line"></span><br><span class="line">    topLevelScope.launch &#123;</span><br><span class="line">        <span class="keyword">val</span> job1 = launch &#123;</span><br><span class="line">            println(<span class="string">&quot;starting Coroutine 1&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        supervisorScope &#123;</span><br><span class="line">            <span class="keyword">val</span> job2 = launch(coroutineExceptionHandler) &#123;</span><br><span class="line">                println(<span class="string">&quot;starting Coroutine 2&quot;</span>)</span><br><span class="line">                <span class="keyword">throw</span> RuntimeException(<span class="string">&quot;Exception in Coroutine 2&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">val</span> job3 = launch &#123;</span><br><span class="line">                println(<span class="string">&quot;starting Coroutine 3&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Thread.sleep(<span class="number">100</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Output</span></span><br><span class="line"><span class="comment">// starting Coroutine 1</span></span><br><span class="line"><span class="comment">// starting Coroutine 2</span></span><br><span class="line"><span class="comment">// Handle java.lang.RuntimeException: Exception in Coroutine 2 in CoroutineExceptionHandler</span></span><br><span class="line"><span class="comment">// starting Coroutine 3</span></span><br></pre></td></tr></table></figure>
+
+<p>The fact that coroutines that are started directly in <code>supervisorScope</code> are <strong>top-level Coroutines</strong> also means that <code>async</code> Coroutines now encapsulate their exceptions in their <code>Deferred</code> objects …(3.1节的情况)</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ... other code is identical to example above</span></span><br><span class="line">supervisorScope &#123;</span><br><span class="line">    <span class="keyword">val</span> job2 = async &#123;</span><br><span class="line">        println(<span class="string">&quot;starting Coroutine 2&quot;</span>)</span><br><span class="line">        <span class="keyword">throw</span> RuntimeException(<span class="string">&quot;Exception in Coroutine 2&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Output: </span></span><br><span class="line"><span class="comment">// starting Coroutine 1</span></span><br><span class="line"><span class="comment">// starting Coroutine 2</span></span><br><span class="line"><span class="comment">// starting Coroutine 3</span></span><br></pre></td></tr></table></figure>
+
+<p>… and will only be re-thrown when calling <code>.await()</code></p>
+<h4 id="2-supervisorScope的一些报错逻辑"><a href="#2-supervisorScope的一些报错逻辑" class="headerlink" title="2. supervisorScope的一些报错逻辑"></a>2. supervisorScope的一些报错逻辑</h4><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 子协程异常</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> topLevelScope = CoroutineScope(Job())</span><br><span class="line"></span><br><span class="line">    topLevelScope.launch &#123;</span><br><span class="line">        <span class="keyword">val</span> job1 = launch &#123;</span><br><span class="line">            println(<span class="string">&quot;starting Coroutine 1&quot;</span>)</span><br><span class="line">            delay(<span class="number">6000</span>)</span><br><span class="line">            println(<span class="string">&quot;Coroutine 1 end&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        supervisorScope &#123;</span><br><span class="line">            <span class="keyword">val</span> job2 = launch &#123;</span><br><span class="line">                println(<span class="string">&quot;starting Coroutine 2&quot;</span>)</span><br><span class="line">                delay(<span class="number">3000</span>)</span><br><span class="line">                <span class="keyword">throw</span> IllegalStateException()<span class="comment">// 不影响 1）Job3 2）supervisorScope块 的代码</span></span><br><span class="line">                println(<span class="string">&quot;Coroutine 2 end&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">val</span> job3 = launch &#123;</span><br><span class="line">                println(<span class="string">&quot;starting Coroutine 3&quot;</span>)</span><br><span class="line">                delay(<span class="number">4000</span>)</span><br><span class="line">                println(<span class="string">&quot;Coroutine 3 end&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">            delay(<span class="number">5000</span>)</span><br><span class="line">            println(<span class="string">&quot;supervisorScope end&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Thread.sleep(<span class="number">80000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 本身supervisorScope block异常</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> topLevelScope = CoroutineScope(Job())</span><br><span class="line"></span><br><span class="line">    topLevelScope.launch &#123;</span><br><span class="line">        <span class="keyword">val</span> job1 = launch &#123;</span><br><span class="line">            println(<span class="string">&quot;starting Coroutine 1&quot;</span>)</span><br><span class="line">            delay(<span class="number">6000</span>)</span><br><span class="line">            println(<span class="string">&quot;Coroutine 1 end&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            supervisorScope &#123;</span><br><span class="line">                <span class="keyword">val</span> job2 = launch &#123;</span><br><span class="line">                    println(<span class="string">&quot;starting Coroutine 2&quot;</span>)</span><br><span class="line">                    delay(<span class="number">3000</span>)</span><br><span class="line">                    println(<span class="string">&quot;Coroutine 2 end&quot;</span>)</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">val</span> job3 = launch &#123;</span><br><span class="line">                    println(<span class="string">&quot;starting Coroutine 3&quot;</span>)</span><br><span class="line">                    delay(<span class="number">4000</span>)</span><br><span class="line">                    println(<span class="string">&quot;Coroutine 3 end&quot;</span>)</span><br><span class="line">                &#125;</span><br><span class="line">                delay(<span class="number">2000</span>)</span><br><span class="line">                <span class="keyword">throw</span> IllegalStateException(<span class="string">&quot;supervisorScope block exception&quot;</span>)<span class="comment">// 1） fails the scope with all its children 2）在supervisorScope函数调用处re-throw</span></span><br><span class="line">                delay(<span class="number">6000</span>)</span><br><span class="line">                println(<span class="string">&quot;supervisorScope end&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">            println(<span class="string">&quot;catch excception <span class="subst">$&#123;e.message&#125;</span> in try/catch&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Thread.sleep(<span class="number">80000</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>总结：</p>
+<table>
+<thead>
+<tr>
+<th>内部开的协程异常</th>
+<th>block块抛出异常</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>由于是顶层协程，可以给它们设置ExceptionHandler</td>
+<td>会在supevisorScope函数调用处re-throw</td>
+</tr>
+</tbody></table>
+<h3 id="附"><a href="#附" class="headerlink" title="附"></a>附</h3><h4 id="1。破坏Job链继承导致ExceptionHandler处理者改变"><a href="#1。破坏Job链继承导致ExceptionHandler处理者改变" class="headerlink" title="1。破坏Job链继承导致ExceptionHandler处理者改变"></a>1。破坏Job链继承导致ExceptionHandler处理者改变</h4><p><a href="https://jeckonly.github.io/2023/02/07/%E5%AD%90%E5%8D%8F%E7%A8%8B%E4%B8%8D%E8%A2%AB%E7%88%B6%E5%8D%8F%E7%A8%8B%E5%BD%B1%E5%93%8D%E7%9A%84%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5/">子协程不被父协程影响的例外情况</a></p>
+<p>我之前写有文章说过这种情况。如果child coroutine的Job是显式定义一个Job()，那么它不能算是“child coroutine”了，因为它不参与它parent的结构化并发，那么在下面的代码中</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> exceptionHandler1 = CoroutineExceptionHandler &#123; coroutineContext, throwable -&gt;</span><br><span class="line">        println(<span class="string">&quot;Handle <span class="variable">$throwable</span> in handler1&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> exceptionHandler2 = CoroutineExceptionHandler &#123; coroutineContext, throwable -&gt;</span><br><span class="line">        println(<span class="string">&quot;Handle <span class="variable">$throwable</span> in handler2&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> exceptionHandler3 = CoroutineExceptionHandler &#123; coroutineContext, throwable -&gt;</span><br><span class="line">        println(<span class="string">&quot;Handle <span class="variable">$throwable</span> in handler3&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> topLevelScope = CoroutineScope(exceptionHandler1)</span><br><span class="line">    topLevelScope.launch(exceptionHandler2) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            launch(exceptionHandler3 + Job()) &#123;</span><br><span class="line">                <span class="keyword">throw</span> RuntimeException(<span class="string">&quot;RuntimeException in nested coroutine&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (exception: Exception) &#123;</span><br><span class="line">            println(<span class="string">&quot;Handle <span class="variable">$exception</span> in try/catch&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    delay(<span class="number">5000</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果将会是：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Handle java.lang.RuntimeException: RuntimeException in nested coroutine in handler3</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Kotlin</category>
+        <category>协程</category>
+      </categories>
+      <tags>
+        <tag>协程</tag>
       </tags>
   </entry>
   <entry>
@@ -257,6 +391,34 @@
       </tags>
   </entry>
   <entry>
+    <title>远离使杀戮更容易</title>
+    <url>/2023/02/10/%E8%BF%9C%E7%A6%BB%E4%BD%BF%E6%9D%80%E6%88%AE%E6%9B%B4%E5%AE%B9%E6%98%93/</url>
+    <content><![CDATA[<p>原文</p>
+<hr>
+<p>在弗兰克·赫伯特（Frank Herbert）的经典科幻小说《沙丘》中，主人公必须压制他当下的动物本能，以此来证明自己是人类。他的手被放在一个邪恶的装置——一个会产生剧痛的黑盒子里。如果他把手从盒子里抽出来，负责看守的老妇人就会用毒针刺穿他的脖子，他就会死。她告诉他：“你听说过动物为了逃离陷阱而咬断自己一条腿的事吗？那是动物的把戏。如果是一个人，他会一直待在陷阱里，忍受痛苦，假装死亡，这样他才有可能杀死捕猎者，并消除对他的同类的威胁。”</p>
+<p>有些人天生比其他人更善于抑制情绪。事实上，这是与生俱来的，部分原因是他们的多巴胺受体的数量和性质异于常人。多巴胺受体是大脑中的分子，它们在多巴胺释放时会做出响应。遗传特征不同，多巴胺受体的情况也会有所差异。研究人员测量了不同人大脑中多巴胺受体的密度（受体的数量，以及它们之间距离的远近），并将其与这些人的“情绪分离”测量结果进行了比较。<br>情绪分离测试测量了一个人避免分享个人信息、避免与他人交往的倾向等特征。科学家们发现受体密度和与他人接触的倾向有直接关系，高密度的多巴胺受体与高水平的情绪分离有关。在另一项研究中，情绪分离得分最高的人将自己描述为“在人际关系中冷漠、社交冷淡、有报复心”。相比之下，情绪分离度最低的人则将自己描述为“过于热情、易被人利用”。</p>
+<p>大多数人的情绪分离程度介于最高和最低之间。我们既不冷漠也不会热情过度，我们的反应取决于具体情况。如果我们与周围的人在近体空间接触——靠得很近，直接接触，专注于此刻——当下分子回路会被激活，我们性格中温暖、热情的一面就会显现出来。而如果我们在远体空间跟人打交道——保持距离，抽象思考，专注于未来——我们性格中理性、克制的部分就更容易被看到。这两种不同的思维方式可以用“电车问题”来说明：</p>
+<p>一列失控的火车沿着铁轨疾驰而下，驶向5名工人。如果什么都不做，他们都会死。然而，把一个旁观者推向铁轨是有可能阻止火车的前进的。这个人的死会使火车减速，足以拯救5个工人的生命。你会把这个人推向铁轨吗？</p>
+<p>在这种情景下，大多数人都不会将这个旁观者推向轨道——他们无法亲手杀死一个人，即使是为了拯救5个人的生命。当下神经递质负责产生对他人的同理心，在大多数人身上，它都会压倒多巴胺精于盘算的理性。在这种情况下，当下的反应是如此强烈，因为旁观者离得太近，就在<strong>近体空间</strong>。要杀死他，我们必须用手接触他。除了最冷漠的人，其他人都做不到。</p>
+<p>但是，既然<strong>当下分子最强大的影响是在近体空间</strong>（我们五官所感知的当下世界），如果我们一步一步地后退，逐步减少当下分子对我们决策的影响，会发生什么？当我们离开当下分子的近体空间进入<strong>多巴胺能的远体空间</strong>时，我们用一条生命换5条生命的意愿是否会增加？</p>
+<p>让我们先从消除身体接触的当下感觉开始。想象一下，你站在一段距离之外看着事态发展。有一个开关，拉动它，就可以将列车从有5个人的轨道转移到只有一个人的轨道；而如果什么都不做，那5个人就会死。你会拉动开关吗？</p>
+<p>下面进一步把自己拉远。想象一下，你坐在距离遥远的另一座城市的办公桌旁。电话铃响了，一个语无伦次的铁路工人描述了这个情况。你在办公桌前就可以控制火车的行进路线。你可以按下一个开关，让火车转向只有一个人在上面的轨道，或者什么也不做，让火车撞向5个人。你会按下开关吗？</p>
+<p>最后，我们考虑最抽象的情况：抛弃所有的当下分子，让大脑完全为多巴胺掌控。假设你是一名运输系统工程师，正在设计铁路轨道的安全特性。你在铁轨旁安装了摄像头，能够准确提供实时的信息。你需要写一个控制开关的计算机程序，该程序将使用摄像机拍下的信息来选择让火车通过哪个轨道。你会将这个软件设定为为了救5个人而杀死一个人吗？</p>
+<p>以上几种场景各异，但结果是一样的：牺牲一条生命换取5条生命，或者牺牲5条生命挽救一个人。很少有人会愿意牺牲一个无辜的人，把他推向死亡。然而，如果是写一个管理轨道开关的软件来使生命损失最小化，就很少有人会犹豫了。这就好像有两个不同的人在评估情况：一个人的头脑是理性的，只根据理性来做决定；另一个人富有同情心，不管大局如何，都不愿杀人。一个人试图通过拯救最多的人来控制局势，另一个则不会。我们会选择哪个结果，在一定程度上取决于多巴胺回路中的活动。</p>
+<hr>
+<p>在了解到大脑对判断为属于 <strong>近体空间</strong> 的事件和属于 <strong>远体空间</strong> 的事件会产生截然不同的情绪和处理方法（理性还是非理性）之后，我联想到许久以前看过的一本有关藏传佛教的书。</p>
+<p>书中简述了一种 “放下” 的状态，一种不执著于当下，不困于痛苦，也不困于兴奋的一种超脱的状态，要达到这种状态，首先要放下对“我”的执着，类似于无我。如果一个人有焦虑，抑郁等情绪，这种状态应该是他所求之不得的。而实践时的方法则是：想象自己不是自己，以一个旁观者的角度来看自己的肉体，看自己遇上的事件，当自己逐渐越来越不以 <strong>遭遇者</strong> 的身份去体验不好的事情，而是以 <strong>旁观者</strong>的身份去看待事情的话——便能放下。</p>
+<p>没想到原来这还有脑科学的依据，我一直以为这只是一种心理学技巧。</p>
+<p>常听有人说，看科幻小说、电影等看多了，想像宇宙的宏大、人生的短暂、人类的渺小，不自觉地感到生活的不顺心似乎也没有什么值得在意，情绪变得平静。这其实也是一种从 <strong>远体空间</strong> 看事物所带来的结果吧。</p>
+]]></content>
+      <categories>
+        <category>读书</category>
+      </categories>
+      <tags>
+        <tag>情绪控制</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>转载：IntelliJ调试协程</title>
     <url>/2023/02/08/%E8%BD%AC%E8%BD%BD%EF%BC%9AIntelliJ%E8%B0%83%E8%AF%95%E5%8D%8F%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="Debug-coroutines-using-IntelliJ-IDEA-–-tutorial"><a href="#Debug-coroutines-using-IntelliJ-IDEA-–-tutorial" class="headerlink" title="Debug coroutines using IntelliJ IDEA – tutorial"></a>Debug coroutines using IntelliJ IDEA – tutorial</h1><p>Last modified: 07 February 2023</p>
@@ -334,34 +496,6 @@
       </categories>
       <tags>
         <tag>协程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>远离使杀戮更容易</title>
-    <url>/2023/02/10/%E8%BF%9C%E7%A6%BB%E4%BD%BF%E6%9D%80%E6%88%AE%E6%9B%B4%E5%AE%B9%E6%98%93/</url>
-    <content><![CDATA[<p>原文</p>
-<hr>
-<p>在弗兰克·赫伯特（Frank Herbert）的经典科幻小说《沙丘》中，主人公必须压制他当下的动物本能，以此来证明自己是人类。他的手被放在一个邪恶的装置——一个会产生剧痛的黑盒子里。如果他把手从盒子里抽出来，负责看守的老妇人就会用毒针刺穿他的脖子，他就会死。她告诉他：“你听说过动物为了逃离陷阱而咬断自己一条腿的事吗？那是动物的把戏。如果是一个人，他会一直待在陷阱里，忍受痛苦，假装死亡，这样他才有可能杀死捕猎者，并消除对他的同类的威胁。”</p>
-<p>有些人天生比其他人更善于抑制情绪。事实上，这是与生俱来的，部分原因是他们的多巴胺受体的数量和性质异于常人。多巴胺受体是大脑中的分子，它们在多巴胺释放时会做出响应。遗传特征不同，多巴胺受体的情况也会有所差异。研究人员测量了不同人大脑中多巴胺受体的密度（受体的数量，以及它们之间距离的远近），并将其与这些人的“情绪分离”测量结果进行了比较。<br>情绪分离测试测量了一个人避免分享个人信息、避免与他人交往的倾向等特征。科学家们发现受体密度和与他人接触的倾向有直接关系，高密度的多巴胺受体与高水平的情绪分离有关。在另一项研究中，情绪分离得分最高的人将自己描述为“在人际关系中冷漠、社交冷淡、有报复心”。相比之下，情绪分离度最低的人则将自己描述为“过于热情、易被人利用”。</p>
-<p>大多数人的情绪分离程度介于最高和最低之间。我们既不冷漠也不会热情过度，我们的反应取决于具体情况。如果我们与周围的人在近体空间接触——靠得很近，直接接触，专注于此刻——当下分子回路会被激活，我们性格中温暖、热情的一面就会显现出来。而如果我们在远体空间跟人打交道——保持距离，抽象思考，专注于未来——我们性格中理性、克制的部分就更容易被看到。这两种不同的思维方式可以用“电车问题”来说明：</p>
-<p>一列失控的火车沿着铁轨疾驰而下，驶向5名工人。如果什么都不做，他们都会死。然而，把一个旁观者推向铁轨是有可能阻止火车的前进的。这个人的死会使火车减速，足以拯救5个工人的生命。你会把这个人推向铁轨吗？</p>
-<p>在这种情景下，大多数人都不会将这个旁观者推向轨道——他们无法亲手杀死一个人，即使是为了拯救5个人的生命。当下神经递质负责产生对他人的同理心，在大多数人身上，它都会压倒多巴胺精于盘算的理性。在这种情况下，当下的反应是如此强烈，因为旁观者离得太近，就在<strong>近体空间</strong>。要杀死他，我们必须用手接触他。除了最冷漠的人，其他人都做不到。</p>
-<p>但是，既然<strong>当下分子最强大的影响是在近体空间</strong>（我们五官所感知的当下世界），如果我们一步一步地后退，逐步减少当下分子对我们决策的影响，会发生什么？当我们离开当下分子的近体空间进入<strong>多巴胺能的远体空间</strong>时，我们用一条生命换5条生命的意愿是否会增加？</p>
-<p>让我们先从消除身体接触的当下感觉开始。想象一下，你站在一段距离之外看着事态发展。有一个开关，拉动它，就可以将列车从有5个人的轨道转移到只有一个人的轨道；而如果什么都不做，那5个人就会死。你会拉动开关吗？</p>
-<p>下面进一步把自己拉远。想象一下，你坐在距离遥远的另一座城市的办公桌旁。电话铃响了，一个语无伦次的铁路工人描述了这个情况。你在办公桌前就可以控制火车的行进路线。你可以按下一个开关，让火车转向只有一个人在上面的轨道，或者什么也不做，让火车撞向5个人。你会按下开关吗？</p>
-<p>最后，我们考虑最抽象的情况：抛弃所有的当下分子，让大脑完全为多巴胺掌控。假设你是一名运输系统工程师，正在设计铁路轨道的安全特性。你在铁轨旁安装了摄像头，能够准确提供实时的信息。你需要写一个控制开关的计算机程序，该程序将使用摄像机拍下的信息来选择让火车通过哪个轨道。你会将这个软件设定为为了救5个人而杀死一个人吗？</p>
-<p>以上几种场景各异，但结果是一样的：牺牲一条生命换取5条生命，或者牺牲5条生命挽救一个人。很少有人会愿意牺牲一个无辜的人，把他推向死亡。然而，如果是写一个管理轨道开关的软件来使生命损失最小化，就很少有人会犹豫了。这就好像有两个不同的人在评估情况：一个人的头脑是理性的，只根据理性来做决定；另一个人富有同情心，不管大局如何，都不愿杀人。一个人试图通过拯救最多的人来控制局势，另一个则不会。我们会选择哪个结果，在一定程度上取决于多巴胺回路中的活动。</p>
-<hr>
-<p>在了解到大脑对判断为属于 <strong>近体空间</strong> 的事件和属于 <strong>远体空间</strong> 的事件会产生截然不同的情绪和处理方法（理性还是非理性）之后，我联想到许久以前看过的一本有关藏传佛教的书。</p>
-<p>书中简述了一种 “放下” 的状态，一种不执著于当下，不困于痛苦，也不困于兴奋的一种超脱的状态，要达到这种状态，首先要放下对“我”的执着，类似于无我。如果一个人有焦虑，抑郁等情绪，这种状态应该是他所求之不得的。而实践时的方法则是：想象自己不是自己，以一个旁观者的角度来看自己的肉体，看自己遇上的事件，当自己逐渐越来越不以 <strong>遭遇者</strong> 的身份去体验不好的事情，而是以 <strong>旁观者</strong>的身份去看待事情的话——便能放下。</p>
-<p>没想到原来这还有脑科学的依据，我一直以为这只是一种心理学技巧。</p>
-<p>常听有人说，看科幻小说、电影等看多了，想像宇宙的宏大、人生的短暂、人类的渺小，不自觉地感到生活的不顺心似乎也没有什么值得在意，情绪变得平静。这其实也是一种从 <strong>远体空间</strong> 看事物所带来的结果吧。</p>
-]]></content>
-      <categories>
-        <category>读书</category>
-      </categories>
-      <tags>
-        <tag>情绪控制</tag>
       </tags>
   </entry>
 </search>
