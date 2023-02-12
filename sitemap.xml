@@ -171,20 +171,6 @@
   </url>
   
   <url>
-    <loc>https://jeckonly.github.io/tags/%E8%A1%8C%E4%B8%BA%E5%BB%BA%E8%AE%AE/</loc>
-    <lastmod>2023-02-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jeckonly.github.io/tags/%E5%81%A5%E5%BA%B7/</loc>
-    <lastmod>2023-02-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jeckonly.github.io/tags/%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2023-02-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -199,7 +185,14 @@
   </url>
   
   <url>
-    <loc>https://jeckonly.github.io/tags/life/</loc>
+    <loc>https://jeckonly.github.io/tags/%E8%A1%8C%E4%B8%BA%E5%BB%BA%E8%AE%AE/</loc>
+    <lastmod>2023-02-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jeckonly.github.io/tags/%E5%81%A5%E5%BA%B7/</loc>
     <lastmod>2023-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -207,6 +200,13 @@
   
   <url>
     <loc>https://jeckonly.github.io/tags/leetcode/</loc>
+    <lastmod>2023-02-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jeckonly.github.io/tags/life/</loc>
     <lastmod>2023-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -243,14 +243,14 @@
   </url>
   
   <url>
-    <loc>https://jeckonly.github.io/categories/%E7%94%B5%E5%BD%B1/</loc>
+    <loc>https://jeckonly.github.io/categories/Java/</loc>
     <lastmod>2023-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jeckonly.github.io/categories/Java/</loc>
+    <loc>https://jeckonly.github.io/categories/%E7%94%B5%E5%BD%B1/</loc>
     <lastmod>2023-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -264,14 +264,14 @@
   </url>
   
   <url>
-    <loc>https://jeckonly.github.io/categories/life/</loc>
+    <loc>https://jeckonly.github.io/categories/leetcode/</loc>
     <lastmod>2023-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jeckonly.github.io/categories/leetcode/</loc>
+    <loc>https://jeckonly.github.io/categories/life/</loc>
     <lastmod>2023-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
