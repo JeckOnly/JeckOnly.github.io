@@ -102,31 +102,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Thread的UncaughtExceptionHandler</title>
-    <url>/2023/02/06/Thread%E7%9A%84UncaughtExceptionHandler/</url>
-    <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">mainFunction</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">val</span> t = thread(start = <span class="literal">false</span>) &#123;</span><br><span class="line">            Thread.sleep(<span class="number">1000</span>)</span><br><span class="line">            <span class="keyword">throw</span> IllegalStateException(<span class="string">&quot;!!!!!&quot;</span>)</span><br><span class="line">        &#125;.apply &#123;</span><br><span class="line">            setUncaughtExceptionHandler &#123; thread, throwable -&gt;</span><br><span class="line">                println(<span class="string">&quot;child&quot;</span> + throwable.message)</span><br><span class="line">            &#125;</span><br><span class="line">            start()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">        println(<span class="string">&quot;Main&quot;</span> + e.message)</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;end&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    mainFunction()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>最终输出是：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">end</span><br><span class="line">child!!!!!</span><br></pre></td></tr></table></figure>
-
-
-
-<p>try catch不能捕获在trycatch括号内开的子线程抛出的异常，可以为线程设置一个 <code>UncaughtExceptionHandler</code>。</p>
-<p>我联想到Coroutine中，try catch同样无法捕获括号内新开的<strong>子协程</strong>内抛出的错误，与之不同的是，协程的错误不是定义子协程的exception handler来处理，而是可以为TopLevelScope或Top level coroutine定义异常处理器。</p>
-<p>参考资料：</p>
-<p><a href="https://github.com/JeckOnly/passage/blob/master/Android/Kotin%20%E5%8D%8F%E7%A8%8B.md#1%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86">以前写的协程异常处理</a></p>
-<p><a href="https://cloud.tencent.com/developer/article/1652118">Java多线程捕获</a></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-        <category>并发</category>
-      </categories>
-      <tags>
-        <tag>线程</tag>
-        <tag>协程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Stutz&#39;s tools</title>
     <url>/2023/02/12/Stutz&#39;s%20tools/</url>
     <content><![CDATA[<p>原文： <a href="https://movie.douban.com/review/14824656/">https://movie.douban.com/review/14824656/</a></p>
@@ -187,6 +162,31 @@
       </tags>
   </entry>
   <entry>
+    <title>Thread的UncaughtExceptionHandler</title>
+    <url>/2023/02/06/Thread%E7%9A%84UncaughtExceptionHandler/</url>
+    <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">mainFunction</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">val</span> t = thread(start = <span class="literal">false</span>) &#123;</span><br><span class="line">            Thread.sleep(<span class="number">1000</span>)</span><br><span class="line">            <span class="keyword">throw</span> IllegalStateException(<span class="string">&quot;!!!!!&quot;</span>)</span><br><span class="line">        &#125;.apply &#123;</span><br><span class="line">            setUncaughtExceptionHandler &#123; thread, throwable -&gt;</span><br><span class="line">                println(<span class="string">&quot;child&quot;</span> + throwable.message)</span><br><span class="line">            &#125;</span><br><span class="line">            start()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">        println(<span class="string">&quot;Main&quot;</span> + e.message)</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;end&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    mainFunction()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最终输出是：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">end</span><br><span class="line">child!!!!!</span><br></pre></td></tr></table></figure>
+
+
+
+<p>try catch不能捕获在trycatch括号内开的子线程抛出的异常，可以为线程设置一个 <code>UncaughtExceptionHandler</code>。</p>
+<p>我联想到Coroutine中，try catch同样无法捕获括号内新开的<strong>子协程</strong>内抛出的错误，与之不同的是，协程的错误不是定义子协程的exception handler来处理，而是可以为TopLevelScope或Top level coroutine定义异常处理器。</p>
+<p>参考资料：</p>
+<p><a href="https://github.com/JeckOnly/passage/blob/master/Android/Kotin%20%E5%8D%8F%E7%A8%8B.md#1%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86">以前写的协程异常处理</a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1652118">Java多线程捕获</a></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+        <category>并发</category>
+      </categories>
+      <tags>
+        <tag>线程</tag>
+        <tag>协程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2023/02/04/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -205,6 +205,21 @@
 ]]></content>
   </entry>
   <entry>
+    <title>“穿山甲：被捕杀最多的动物”观看有感</title>
+    <url>/2023/02/14/%E2%80%9C%E7%A9%BF%E5%B1%B1%E7%94%B2%EF%BC%9A%E8%A2%AB%E6%8D%95%E6%9D%80%E6%9C%80%E5%A4%9A%E7%9A%84%E5%8A%A8%E7%89%A9%E2%80%9D%E8%A7%82%E7%9C%8B%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<p>这部记录片挺无聊的，一个女人，变卖家产，投身到非洲穿山甲的保护之中。成果在片中一点没说，就说时势很艰难，资金人力啥的都不够，中间记录的一大段都是女主在非洲的一个房子里和她养的一只穿山甲的日常，后面就说了她去亚洲越难和中国拜访，理由是因为亚洲对穿山甲鳞片的药用间接导致非洲穿山甲被大量捕杀所以要去看看。但逛了一圈似乎也只是了解了一些显而易见的事实fact。比如时势不容乐观，要抓紧时间行动。然后片尾就说为了让更多人了解穿山甲所以有一个摄影师来拍女主养的那只宠物的日常来发到网上。</p>
+<p>女主似乎说的很伟大，变卖家产无私地投入到保护这种动物之中，然后片中关于她的成果是微不足道的——养了一只可爱的穿山甲在家里。</p>
+<p>从数据上来说每年都有很多动物灭绝，为啥那么多人投入那么多人力物力去保护那几个物种。可能因为穿山甲比较可爱？老虎很威猛？比其他那些丑不拉几的频危动物更值得保护？</p>
+<p>既然选择保护这种而不保护那种，这就不是一种无私，这绝对带有私心。而目的是什么，对动保工作者本身能带来什么，只有他们知道。</p>
+<blockquote>
+<p>一个知乎回答很可爱：听说印第安人因为美洲没有马，所以没有发展出轮子，导致科技树受到影响，谁知道要灭绝的生物是不是下一匹马呢</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>电影</category>
+      </categories>
+  </entry>
+  <entry>
     <title>leetcode_50_螺旋矩阵</title>
     <url>/2023/02/09/leetcode-50-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<p>这道题看到很多解法都是边界法。然后看到另外一种有意思的解法。</p>
@@ -220,19 +235,11 @@
       </tags>
   </entry>
   <entry>
-    <title>“穿山甲：被捕杀最多的动物”观看有感</title>
-    <url>/2023/02/14/%E2%80%9C%E7%A9%BF%E5%B1%B1%E7%94%B2%EF%BC%9A%E8%A2%AB%E6%8D%95%E6%9D%80%E6%9C%80%E5%A4%9A%E7%9A%84%E5%8A%A8%E7%89%A9%E2%80%9D%E8%A7%82%E7%9C%8B%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<p>这部记录片挺无聊的，一个女人，变卖家产，投身到非洲穿山甲的保护之中。成果在片中一点没说，就说时势很艰难，资金人力啥的都不够，中间记录的一大段都是女主在非洲的一个房子里和她养的一只穿山甲的日常，后面就说了她去亚洲越难和中国拜访，理由是因为亚洲对穿山甲鳞片的药用间接导致非洲穿山甲被大量捕杀所以要去看看。但逛了一圈似乎也只是了解了一些显而易见的事实fact。比如时势不容乐观，要抓紧时间行动。然后片尾就说为了让更多人了解穿山甲所以有一个摄影师来拍女主养的那只宠物的日常来发到网上。</p>
-<p>女主似乎说的很伟大，变卖家产无私地投入到保护这种动物之中，然后片中关于她的成果是微不足道的——养了一只可爱的穿山甲在家里。</p>
-<p>从数据上来说每年都有很多动物灭绝，为啥那么多人投入那么多人力物力去保护那几个物种。可能因为穿山甲比较可爱？老虎很威猛？比其他那些丑不拉几的频危动物更值得保护？</p>
-<p>既然选择保护这种而不保护那种，这就不是一种无私，这绝对带有私心。而目的是什么，对动保工作者本身能带来什么，只有他们知道。</p>
-<blockquote>
-<p>一个知乎回答很可爱：听说印第安人因为美洲没有马，所以没有发展出轮子，导致科技树受到影响，谁知道要灭绝的生物是不是下一匹马呢</p>
-</blockquote>
+    <title>《擅长捉弄的高木同学剧场版》有感</title>
+    <url>/2023/02/16/%E3%80%8A%E6%93%85%E9%95%BF%E6%8D%89%E5%BC%84%E7%9A%84%E9%AB%98%E6%9C%A8%E5%90%8C%E5%AD%A6%E5%89%A7%E5%9C%BA%E7%89%88%E3%80%8B%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<p>TV动画的核心——羞涩、捉弄等元素在剧场版中占的比重实在可怜。中间养猫那场戏过了之后，不知道为啥西片就A了上去。连表白都还没有就直接来了一句——“我会让你幸福”。大哥你之前可是被盯着看都会脸红得像番茄的啊。</p>
+<p>强行结局而结局。带有太多的日式哀伤。</p>
 ]]></content>
-      <categories>
-        <category>电影</category>
-      </categories>
   </entry>
   <entry>
     <title>今天去医院看了智齿</title>
