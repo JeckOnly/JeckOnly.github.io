@@ -102,6 +102,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2023/02/04/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Stutz&#39;s tools</title>
     <url>/2023/02/12/Stutz&#39;s%20tools/</url>
     <content><![CDATA[<p>原文： <a href="https://movie.douban.com/review/14824656/">https://movie.douban.com/review/14824656/</a></p>
@@ -187,24 +205,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/02/04/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>“穿山甲：被捕杀最多的动物”观看有感</title>
     <url>/2023/02/14/%E2%80%9C%E7%A9%BF%E5%B1%B1%E7%94%B2%EF%BC%9A%E8%A2%AB%E6%8D%95%E6%9D%80%E6%9C%80%E5%A4%9A%E7%9A%84%E5%8A%A8%E7%89%A9%E2%80%9D%E8%A7%82%E7%9C%8B%E6%9C%89%E6%84%9F/</url>
     <content><![CDATA[<p>这部记录片挺无聊的，一个女人，变卖家产，投身到非洲穿山甲的保护之中。成果在片中一点没说，就说时势很艰难，资金人力啥的都不够，中间记录的一大段都是女主在非洲的一个房子里和她养的一只穿山甲的日常，后面就说了她去亚洲越难和中国拜访，理由是因为亚洲对穿山甲鳞片的药用间接导致非洲穿山甲被大量捕杀所以要去看看。但逛了一圈似乎也只是了解了一些显而易见的事实fact。比如时势不容乐观，要抓紧时间行动。然后片尾就说为了让更多人了解穿山甲所以有一个摄影师来拍女主养的那只宠物的日常来发到网上。</p>
@@ -233,6 +233,17 @@
       <tags>
         <tag>leetcode</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>《伊尼舍林的报丧女妖》有感</title>
+    <url>/2023/02/16/%E3%80%8A%E4%BC%8A%E5%B0%BC%E8%88%8D%E6%9E%97%E7%9A%84%E6%8A%A5%E4%B8%A7%E5%A5%B3%E5%A6%96%E3%80%8B%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<p>并不是一部恐怖片。报丧女妖是爱尔兰神话中传说在某人将要死去的时候便会开始哭号的神灵&#x2F;妖怪。</p>
+<p>若某一天，一个非常平常普通的一天，你的好朋友，突然不理你了，宣布不会再和你说话，如果你强迫他，试着去接近他，他就切下一根手指，你会有什么反应？我想都会和Padraic那般惊慌失措。、</p>
+<p>Colm在年纪已经不小的一个时刻突然醒悟不能继续浪费生命，他认为继续和Padraic做朋友、继续那些每天毫无意义的闲聊只是在浪费时间。他喜欢音乐，会拉提琴，崇拜莫扎特，想留下些什么在这个世界上——他希望有更多人认识他，在他死后会被人记住。</p>
+<p>而和他做了好几十年老朋友的“老实人”Padraic则是一个安分守己、教育程度比较低的nice man。也就是脾气很好，也会说笑，非常活在当下，在白天照顾几头牛羊晚上则去酒吧喝酒就感到一天十分满足的普通人。其实岛上的都是普通人吧，只不过Colm在某一天有了存在主义危机，觉得不能这么庸俗下去。</p>
+<p>Colm突然单方面宣布终结和Padraic的老朋友关系，Padraic自然是迷惑不解。Padraic的生活破碎了。他脑子比较简单，不理解Colm想过一种“更有意义”的生活。Colm说和他的闲聊一点意义都没有，只是在浪费生命，可几十年不都是这么过来的吗。</p>
+<p>后来就是互相伤害的故事了。</p>
+]]></content>
   </entry>
   <entry>
     <title>《擅长捉弄的高木同学剧场版》有感</title>
@@ -322,6 +333,45 @@
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlinx.coroutines.sync.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> mutex = Mutex()</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    withContext(Dispatchers.Default) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            <span class="comment">// 用锁保护每次自增</span></span><br><span class="line">            mutex.withLock &#123;</span><br><span class="line">                counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
 
 <p>此示例中锁是细粒度的，因此会付出一些代价。但是对于某些必须定期修改共享状态的场景，它是一个不错的选择，但是没有自然线程可以限制此状态。</p>
+]]></content>
+      <categories>
+        <category>Kotlin</category>
+        <category>协程</category>
+      </categories>
+      <tags>
+        <tag>协程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>子协程不被父协程影响的例外情况</title>
+    <url>/2023/02/07/%E5%AD%90%E5%8D%8F%E7%A8%8B%E4%B8%8D%E8%A2%AB%E7%88%B6%E5%8D%8F%E7%A8%8B%E5%BD%B1%E5%93%8D%E7%9A%84%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5/</url>
+    <content><![CDATA[<p>协程中的所谓 <strong>结构化并发</strong>，就是指 <strong>父协程和子协程一起有组织有预谋地合作干活</strong>，如果不讨论<code>scupervisorScope&#123;&#125;</code>的话，大致上内涵如下：</p>
+<ol>
+<li>子协程fail——报错，父协程和其他子协程都cancel.</li>
+<li>子协程cancel，父协程和其他子协程<strong>没事</strong>。</li>
+<li>父协程fail，它所有子协程cancel。</li>
+<li>父协程cancel，它所有子协程cancel。</li>
+</ol>
+<blockquote>
+<p>子协程指<code>CoroutineScope</code>.launch&#x2F;async调用的结果。为避免混乱，不讨论 <code>coroutineScope</code>\ <code>supervisorScope</code>。</p>
+</blockquote>
+<p><a href="https://gist.github.com/JeckOnly/646ee60e16591468c405f59d8245880d">上面四个情况的案例</a></p>
+<p>但也有例外，</p>
+<p>当一个协程被其它协程在 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a> 中启动的时候， 它将通过 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/coroutine-context.html">CoroutineScope.coroutineContext</a> 来承袭上下文(除了Job会是一个新实例，其他的例如调度器都继承下来)，并且这个新协程的 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a> 将会成为父协程作业的子Job。当一个父协程被取消的时候，所有它的子协程也会被递归的取消。</p>
+<p>However, this parent-child relation can be explicitly overriden in one of two ways:</p>
+<ol>
+<li>When a different scope is explicitly specified when launching a coroutine (for example, <code>GlobalScope.launch</code>), then it does not inherit a <code>Job</code> from the parent scope.</li>
+<li>When a different <code>Job</code> object is passed as the context for the new coroutine (as shown in the example below), then it overrides the <code>Job</code> of the parent scope.</li>
+</ol>
+<p>In both cases, the launched coroutine is not tied to the scope it was launched from and operates independently.</p>
+<p>第一种情况：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="comment">// 启动一个协程来处理某种传入请求（request）</span></span><br><span class="line">    <span class="keyword">val</span> request = launch &#123;</span><br><span class="line">        <span class="comment">// 一个TopLevelScope</span></span><br><span class="line">        CoroutineScope(context = Dispatchers.Default).launch &#123;</span><br><span class="line">            println(<span class="string">&quot;NewTopLevelScope job1: I run in my own Job and execute independently!&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;NewTopLevelScope job1: I am not affected by cancellation of the request&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 另一个则承袭了父协程的上下文</span></span><br><span class="line">        launch &#123;</span><br><span class="line">            delay(<span class="number">100</span>)</span><br><span class="line">            println(<span class="string">&quot;ChildCoroutine job2: I am a child of the request coroutine&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;ChildCoroutine job2: I will not execute this line if my parent request is cancelled&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">500</span>)</span><br><span class="line">    request.cancel() <span class="comment">// 取消请求（request）的执行</span></span><br><span class="line">    println(<span class="string">&quot;main: Who has survived request cancellation?&quot;</span>)</span><br><span class="line">    delay(<span class="number">1000</span>) <span class="comment">// 主线程延迟一秒钟来看看发生了什么</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果</span><br><span class="line">NewTopLevelScope job1: I run <span class="keyword">in</span> my own Job and execute independently!</span><br><span class="line">ChildCoroutine job2: I am a child of the request coroutine</span><br><span class="line">main: Who has survived request cancellation?</span><br><span class="line">NewTopLevelScope job1: I am not affected <span class="keyword">by</span> cancellation of the request</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>第二种情况：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="comment">// 启动一个协程来处理某种传入请求（request）</span></span><br><span class="line">    <span class="keyword">val</span> request = launch &#123;</span><br><span class="line">        <span class="comment">// 生成了两个子作业</span></span><br><span class="line">        launch(Job()) &#123;</span><br><span class="line">            println(<span class="string">&quot;job1: I run in my own Job and execute independently!&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;job1: I am not affected by cancellation of the request&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 另一个则承袭了父协程的上下文</span></span><br><span class="line">        launch &#123;</span><br><span class="line">            delay(<span class="number">100</span>)</span><br><span class="line">            println(<span class="string">&quot;job2: I am a child of the request coroutine&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;job2: I will not execute this line if my parent request is cancelled&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">500</span>)</span><br><span class="line">    request.cancel() <span class="comment">// 取消请求（request）的执行</span></span><br><span class="line">    println(<span class="string">&quot;main: Who has survived request cancellation?&quot;</span>)</span><br><span class="line">    delay(<span class="number">1000</span>) <span class="comment">// 主线程延迟一秒钟来看看发生了什么</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果</span><br><span class="line">job1: I run <span class="keyword">in</span> my own Job and execute independently!</span><br><span class="line">job2: I am a child of the request coroutine</span><br><span class="line">main: Who has survived request cancellation?</span><br><span class="line">job1: I am not affected <span class="keyword">by</span> cancellation of the request</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>要注意，无论如何，子协程的Job都是一个新实例，和Parent的Job不是同一个实例。我想区别在于 <strong>隐式创建时</strong> 带上了一些父子协程的信息。</p>
+<p>参考资料：<a href="https://book.kotlincn.net/text/coroutine-context-and-dispatchers.html">协程上下文和调度器</a></p>
 ]]></content>
       <categories>
         <category>Kotlin</category>
@@ -456,45 +506,6 @@
 
 <p>结果将会是：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Handle java.lang.RuntimeException: RuntimeException in nested coroutine in handler3</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Kotlin</category>
-        <category>协程</category>
-      </categories>
-      <tags>
-        <tag>协程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>子协程不被父协程影响的例外情况</title>
-    <url>/2023/02/07/%E5%AD%90%E5%8D%8F%E7%A8%8B%E4%B8%8D%E8%A2%AB%E7%88%B6%E5%8D%8F%E7%A8%8B%E5%BD%B1%E5%93%8D%E7%9A%84%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5/</url>
-    <content><![CDATA[<p>协程中的所谓 <strong>结构化并发</strong>，就是指 <strong>父协程和子协程一起有组织有预谋地合作干活</strong>，如果不讨论<code>scupervisorScope&#123;&#125;</code>的话，大致上内涵如下：</p>
-<ol>
-<li>子协程fail——报错，父协程和其他子协程都cancel.</li>
-<li>子协程cancel，父协程和其他子协程<strong>没事</strong>。</li>
-<li>父协程fail，它所有子协程cancel。</li>
-<li>父协程cancel，它所有子协程cancel。</li>
-</ol>
-<blockquote>
-<p>子协程指<code>CoroutineScope</code>.launch&#x2F;async调用的结果。为避免混乱，不讨论 <code>coroutineScope</code>\ <code>supervisorScope</code>。</p>
-</blockquote>
-<p><a href="https://gist.github.com/JeckOnly/646ee60e16591468c405f59d8245880d">上面四个情况的案例</a></p>
-<p>但也有例外，</p>
-<p>当一个协程被其它协程在 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a> 中启动的时候， 它将通过 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/coroutine-context.html">CoroutineScope.coroutineContext</a> 来承袭上下文(除了Job会是一个新实例，其他的例如调度器都继承下来)，并且这个新协程的 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a> 将会成为父协程作业的子Job。当一个父协程被取消的时候，所有它的子协程也会被递归的取消。</p>
-<p>However, this parent-child relation can be explicitly overriden in one of two ways:</p>
-<ol>
-<li>When a different scope is explicitly specified when launching a coroutine (for example, <code>GlobalScope.launch</code>), then it does not inherit a <code>Job</code> from the parent scope.</li>
-<li>When a different <code>Job</code> object is passed as the context for the new coroutine (as shown in the example below), then it overrides the <code>Job</code> of the parent scope.</li>
-</ol>
-<p>In both cases, the launched coroutine is not tied to the scope it was launched from and operates independently.</p>
-<p>第一种情况：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="comment">// 启动一个协程来处理某种传入请求（request）</span></span><br><span class="line">    <span class="keyword">val</span> request = launch &#123;</span><br><span class="line">        <span class="comment">// 一个TopLevelScope</span></span><br><span class="line">        CoroutineScope(context = Dispatchers.Default).launch &#123;</span><br><span class="line">            println(<span class="string">&quot;NewTopLevelScope job1: I run in my own Job and execute independently!&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;NewTopLevelScope job1: I am not affected by cancellation of the request&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 另一个则承袭了父协程的上下文</span></span><br><span class="line">        launch &#123;</span><br><span class="line">            delay(<span class="number">100</span>)</span><br><span class="line">            println(<span class="string">&quot;ChildCoroutine job2: I am a child of the request coroutine&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;ChildCoroutine job2: I will not execute this line if my parent request is cancelled&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">500</span>)</span><br><span class="line">    request.cancel() <span class="comment">// 取消请求（request）的执行</span></span><br><span class="line">    println(<span class="string">&quot;main: Who has survived request cancellation?&quot;</span>)</span><br><span class="line">    delay(<span class="number">1000</span>) <span class="comment">// 主线程延迟一秒钟来看看发生了什么</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果</span><br><span class="line">NewTopLevelScope job1: I run <span class="keyword">in</span> my own Job and execute independently!</span><br><span class="line">ChildCoroutine job2: I am a child of the request coroutine</span><br><span class="line">main: Who has survived request cancellation?</span><br><span class="line">NewTopLevelScope job1: I am not affected <span class="keyword">by</span> cancellation of the request</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>第二种情况：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="comment">// 启动一个协程来处理某种传入请求（request）</span></span><br><span class="line">    <span class="keyword">val</span> request = launch &#123;</span><br><span class="line">        <span class="comment">// 生成了两个子作业</span></span><br><span class="line">        launch(Job()) &#123;</span><br><span class="line">            println(<span class="string">&quot;job1: I run in my own Job and execute independently!&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;job1: I am not affected by cancellation of the request&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 另一个则承袭了父协程的上下文</span></span><br><span class="line">        launch &#123;</span><br><span class="line">            delay(<span class="number">100</span>)</span><br><span class="line">            println(<span class="string">&quot;job2: I am a child of the request coroutine&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;job2: I will not execute this line if my parent request is cancelled&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">500</span>)</span><br><span class="line">    request.cancel() <span class="comment">// 取消请求（request）的执行</span></span><br><span class="line">    println(<span class="string">&quot;main: Who has survived request cancellation?&quot;</span>)</span><br><span class="line">    delay(<span class="number">1000</span>) <span class="comment">// 主线程延迟一秒钟来看看发生了什么</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果</span><br><span class="line">job1: I run <span class="keyword">in</span> my own Job and execute independently!</span><br><span class="line">job2: I am a child of the request coroutine</span><br><span class="line">main: Who has survived request cancellation?</span><br><span class="line">job1: I am not affected <span class="keyword">by</span> cancellation of the request</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-<p>要注意，无论如何，子协程的Job都是一个新实例，和Parent的Job不是同一个实例。我想区别在于 <strong>隐式创建时</strong> 带上了一些父子协程的信息。</p>
-<p>参考资料：<a href="https://book.kotlincn.net/text/coroutine-context-and-dispatchers.html">协程上下文和调度器</a></p>
 ]]></content>
       <categories>
         <category>Kotlin</category>
