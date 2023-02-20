@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>After reading The Little Prince</title>
-    <url>/2023/02/14/After%20reading%20The%20Little%20Prince/</url>
-    <content><![CDATA[<p>I finished reading ‘The Little Prince’ from last night to this afternoon. It’s my first time finishing an entire book in English. Even though there were many words I didn’t know, I didn’t give up. </p>
-<p>After reading the last page, I felt a little tired but delighted with the job I had done. I believe that if I continue to read English books, I can gradually improve my English proficiency.</p>
-<p>The last time I read this book was almost a few years ago, and since then, so many things have happened. After reading the last page, many thoughts filled my mind. This book made me think about dreams, work, money, and so on.</p>
-<p>Thanks ChatGpt for correcting my grammar.</p>
-]]></content>
-      <categories>
-        <category>读书</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Flow异常处理</title>
     <url>/2023/02/09/Flow%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</url>
     <content><![CDATA[<p>它们的函数注释一言难尽，建议别看，onCompletion的注释不太对。</p>
@@ -59,6 +47,18 @@
         <category>Kotlin</category>
         <category>协程</category>
         <category>Flow</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>After reading The Little Prince</title>
+    <url>/2023/02/14/After%20reading%20The%20Little%20Prince/</url>
+    <content><![CDATA[<p>I finished reading ‘The Little Prince’ from last night to this afternoon. It’s my first time finishing an entire book in English. Even though there were many words I didn’t know, I didn’t give up. </p>
+<p>After reading the last page, I felt a little tired but delighted with the job I had done. I believe that if I continue to read English books, I can gradually improve my English proficiency.</p>
+<p>The last time I read this book was almost a few years ago, and since then, so many things have happened. After reading the last page, many thoughts filled my mind. This book made me think about dreams, work, money, and so on.</p>
+<p>Thanks ChatGpt for correcting my grammar.</p>
+]]></content>
+      <categories>
+        <category>读书</category>
       </categories>
   </entry>
   <entry>
@@ -185,6 +185,26 @@
         <tag>线程</tag>
         <tag>协程</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>coroutineScope vs supervisorScope</title>
+    <url>/2023/02/20/coroutineScope%20vs%20supervisorScope/</url>
+    <content><![CDATA[<p>总结并不完全，只列出一些主要异同。</p>
+<h3 id="同"><a href="#同" class="headerlink" title="同"></a>同</h3><h4 id="1-内部子协程及作用域本身都完成了函数才完成"><a href="#1-内部子协程及作用域本身都完成了函数才完成" class="headerlink" title="1 内部子协程及作用域本身都完成了函数才完成"></a>1 内部子协程及作用域本身都完成了函数才完成</h4><blockquote>
+<p>This function returns as soon as the given block and all its child coroutines are completed.</p>
+</blockquote>
+<h4 id="2-都不参与函数调用处所在的scope的结构化并发"><a href="#2-都不参与函数调用处所在的scope的结构化并发" class="headerlink" title="2 都不参与函数调用处所在的scope的结构化并发"></a>2 都不参与函数调用处所在的scope的结构化并发</h4><p>在函数调用处 re-throw exception。</p>
+<h3 id="异"><a href="#异" class="headerlink" title="异"></a>异</h3><p>主要体现在异常情况下的 parent-child 取消逻辑。</p>
+<h4 id="coroutineScope是双向的取消"><a href="#coroutineScope是双向的取消" class="headerlink" title="coroutineScope是双向的取消"></a>coroutineScope是双向的取消</h4><h5 id="1"><a href="#1" class="headerlink" title="1"></a>1</h5><p>子协程发生异常 -&gt; coroutineScope作用域整个取消 -&gt; 其他子协程也被取消</p>
+<h5 id="2"><a href="#2" class="headerlink" title="2"></a>2</h5><p>coroutineScope取消&#x2F;作用域本身异常 -&gt; 取消内部所有子协程</p>
+<h4 id="supervisorScope是单向的取消"><a href="#supervisorScope是单向的取消" class="headerlink" title="supervisorScope是单向的取消"></a>supervisorScope是单向的取消</h4><h5 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h5><p>supervisorScope取消&#x2F;作用域本身异常 -&gt; 取消内部所有子协程。</p>
+<p>但是内部的子协程异常不会导致supervisorScope作用域的取消。需要像顶层协程那样给子协程设置Handler为他们设置独立的错误处理器，不设置的话没有处理就会打印异常信息。</p>
+<p>可以从博客中另外一篇《协程异常处理总结》了解更多。</p>
+]]></content>
+      <categories>
+        <category>Kotlin</category>
+        <category>协程</category>
+      </categories>
   </entry>
   <entry>
     <title>Hello World</title>
