@@ -13,6 +13,46 @@
       </categories>
   </entry>
   <entry>
+    <title>After watching Shutter Island</title>
+    <url>/2023/02/20/After%20watching%20Shutter%20Island/</url>
+    <content><![CDATA[<ul>
+<li><p>How we doing this morning?</p>
+</li>
+<li><p>Good. And you?</p>
+</li>
+<li><p>Can’t complain.</p>
+</li>
+<li><p>So what’s our next move?</p>
+</li>
+<li><p>You tell me.</p>
+</li>
+<li><p>We gotta get off this rock, chuck.Get back to the mainland.Whatever the hell’s going on here, it’s bad.</p>
+</li>
+<li><p>……</p>
+</li>
+<li><p>Dont worry, partner, they’re not gonna catch us.</p>
+</li>
+<li><p>That’s right. We’re too smart for them.</p>
+</li>
+<li><p>Yeah, we are, aren’t we?</p>
+</li>
+<li><p>……</p>
+</li>
+<li><p>You know, this place makes me wonder…</p>
+</li>
+<li><p>Yeah, what’s that, boss?</p>
+</li>
+<li><p>Which would be worse, to live as a monster or to die as a good man?</p>
+</li>
+<li><p>Teddy?</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>电影</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Android存储系统概况</title>
     <url>/2023/02/24/Android%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%86%B5/</url>
     <content><![CDATA[<p>在api 28 29 30 31 33都进行测试过。</p>
@@ -73,46 +113,6 @@
       <categories>
         <category>Android</category>
         <category>应用数据和文件</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>After watching Shutter Island</title>
-    <url>/2023/02/20/After%20watching%20Shutter%20Island/</url>
-    <content><![CDATA[<ul>
-<li><p>How we doing this morning?</p>
-</li>
-<li><p>Good. And you?</p>
-</li>
-<li><p>Can’t complain.</p>
-</li>
-<li><p>So what’s our next move?</p>
-</li>
-<li><p>You tell me.</p>
-</li>
-<li><p>We gotta get off this rock, chuck.Get back to the mainland.Whatever the hell’s going on here, it’s bad.</p>
-</li>
-<li><p>……</p>
-</li>
-<li><p>Dont worry, partner, they’re not gonna catch us.</p>
-</li>
-<li><p>That’s right. We’re too smart for them.</p>
-</li>
-<li><p>Yeah, we are, aren’t we?</p>
-</li>
-<li><p>……</p>
-</li>
-<li><p>You know, this place makes me wonder…</p>
-</li>
-<li><p>Yeah, what’s that, boss?</p>
-</li>
-<li><p>Which would be worse, to live as a monster or to die as a good man?</p>
-</li>
-<li><p>Teddy?</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>电影</category>
       </categories>
   </entry>
   <entry>
@@ -277,19 +277,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ViewModel_cheatsheet</title>
-    <url>/2023/02/27/ViewModel-cheatsheet/</url>
-    <content><![CDATA[<p><img src="https://developer.android.com/static/images/topic/libraries/architecture/viewmodel-apis-cheatsheet.png"></p>
-<p>保存一下链接</p>
-<p><a href="https://developer.android.com/static/images/topic/libraries/architecture/viewmodel-apis-cheatsheet.png">cheat sheet</a></p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>架构</category>
-        <category>架构组件</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Thread的UncaughtExceptionHandler</title>
     <url>/2023/02/06/Thread%E7%9A%84UncaughtExceptionHandler/</url>
     <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">mainFunction</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">val</span> t = thread(start = <span class="literal">false</span>) &#123;</span><br><span class="line">            Thread.sleep(<span class="number">1000</span>)</span><br><span class="line">            <span class="keyword">throw</span> IllegalStateException(<span class="string">&quot;!!!!!&quot;</span>)</span><br><span class="line">        &#125;.apply &#123;</span><br><span class="line">            setUncaughtExceptionHandler &#123; thread, throwable -&gt;</span><br><span class="line">                println(<span class="string">&quot;child&quot;</span> + throwable.message)</span><br><span class="line">            &#125;</span><br><span class="line">            start()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">        println(<span class="string">&quot;Main&quot;</span> + e.message)</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;end&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    mainFunction()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -313,6 +300,19 @@
         <tag>线程</tag>
         <tag>协程</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>ViewModel_cheatsheet</title>
+    <url>/2023/02/27/ViewModel-cheatsheet/</url>
+    <content><![CDATA[<p><img src="https://developer.android.com/static/images/topic/libraries/architecture/viewmodel-apis-cheatsheet.png"></p>
+<p>保存一下链接</p>
+<p><a href="https://developer.android.com/static/images/topic/libraries/architecture/viewmodel-apis-cheatsheet.png">cheat sheet</a></p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>架构</category>
+        <category>架构组件</category>
+      </categories>
   </entry>
   <entry>
     <title>coroutineScope vs supervisorScope</title>
@@ -353,6 +353,21 @@
 ]]></content>
   </entry>
   <entry>
+    <title>“穿山甲：被捕杀最多的动物”观看有感</title>
+    <url>/2023/02/14/%E2%80%9C%E7%A9%BF%E5%B1%B1%E7%94%B2%EF%BC%9A%E8%A2%AB%E6%8D%95%E6%9D%80%E6%9C%80%E5%A4%9A%E7%9A%84%E5%8A%A8%E7%89%A9%E2%80%9D%E8%A7%82%E7%9C%8B%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<p>这部记录片挺无聊的，一个女人，变卖家产，投身到非洲穿山甲的保护之中。成果在片中一点没说，就说时势很艰难，资金人力啥的都不够，中间记录的一大段都是女主在非洲的一个房子里和她养的一只穿山甲的日常，后面就说了她去亚洲越难和中国拜访，理由是因为亚洲对穿山甲鳞片的药用间接导致非洲穿山甲被大量捕杀所以要去看看。但逛了一圈似乎也只是了解了一些显而易见的事实fact。比如时势不容乐观，要抓紧时间行动。然后片尾就说为了让更多人了解穿山甲所以有一个摄影师来拍女主养的那只宠物的日常来发到网上。</p>
+<p>女主似乎说的很伟大，变卖家产无私地投入到保护这种动物之中，然后片中关于她的成果是微不足道的——养了一只可爱的穿山甲在家里。</p>
+<p>从数据上来说每年都有很多动物灭绝，为啥那么多人投入那么多人力物力去保护那几个物种。可能因为穿山甲比较可爱？老虎很威猛？比其他那些丑不拉几的频危动物更值得保护？</p>
+<p>既然选择保护这种而不保护那种，这就不是一种无私，这绝对带有私心。而目的是什么，对动保工作者本身能带来什么，只有他们知道。</p>
+<blockquote>
+<p>一个知乎回答很可爱：听说印第安人因为美洲没有马，所以没有发展出轮子，导致科技树受到影响，谁知道要灭绝的生物是不是下一匹马呢</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>电影</category>
+      </categories>
+  </entry>
+  <entry>
     <title>leetcode_50_螺旋矩阵</title>
     <url>/2023/02/09/leetcode-50-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<p>这道题看到很多解法都是边界法。然后看到另外一种有意思的解法。</p>
@@ -368,15 +383,11 @@
       </tags>
   </entry>
   <entry>
-    <title>“穿山甲：被捕杀最多的动物”观看有感</title>
-    <url>/2023/02/14/%E2%80%9C%E7%A9%BF%E5%B1%B1%E7%94%B2%EF%BC%9A%E8%A2%AB%E6%8D%95%E6%9D%80%E6%9C%80%E5%A4%9A%E7%9A%84%E5%8A%A8%E7%89%A9%E2%80%9D%E8%A7%82%E7%9C%8B%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<p>这部记录片挺无聊的，一个女人，变卖家产，投身到非洲穿山甲的保护之中。成果在片中一点没说，就说时势很艰难，资金人力啥的都不够，中间记录的一大段都是女主在非洲的一个房子里和她养的一只穿山甲的日常，后面就说了她去亚洲越难和中国拜访，理由是因为亚洲对穿山甲鳞片的药用间接导致非洲穿山甲被大量捕杀所以要去看看。但逛了一圈似乎也只是了解了一些显而易见的事实fact。比如时势不容乐观，要抓紧时间行动。然后片尾就说为了让更多人了解穿山甲所以有一个摄影师来拍女主养的那只宠物的日常来发到网上。</p>
-<p>女主似乎说的很伟大，变卖家产无私地投入到保护这种动物之中，然后片中关于她的成果是微不足道的——养了一只可爱的穿山甲在家里。</p>
-<p>从数据上来说每年都有很多动物灭绝，为啥那么多人投入那么多人力物力去保护那几个物种。可能因为穿山甲比较可爱？老虎很威猛？比其他那些丑不拉几的频危动物更值得保护？</p>
-<p>既然选择保护这种而不保护那种，这就不是一种无私，这绝对带有私心。而目的是什么，对动保工作者本身能带来什么，只有他们知道。</p>
-<blockquote>
-<p>一个知乎回答很可爱：听说印第安人因为美洲没有马，所以没有发展出轮子，导致科技树受到影响，谁知道要灭绝的生物是不是下一匹马呢</p>
-</blockquote>
+    <title>《东邪西毒》</title>
+    <url>/2023/02/23/%E3%80%8A%E4%B8%9C%E9%82%AA%E8%A5%BF%E6%AF%92%E3%80%8B/</url>
+    <content><![CDATA[<p>欧阳锋从小是孤儿，和他哥哥一起生活。他从小就学会了如何保护自己。若要使自己不受伤害，他在一开始就拒绝。他爱着一个女人，但就像一个自卑的小孩，不敢说出口，他怕被拒绝会受伤。其实那个女人也喜欢他，但她年轻气盛，她和他赌气，就是要欧阳锋亲口说出”我喜欢你“才和他结婚。在要嫁给他哥哥的那个晚上，欧阳锋想要带她走，她却死活不跟他走。</p>
+<p>后来，和黄药师对话时说：”我只希望他说一句话，他都不肯说，他太自信了，以为我一定会嫁给他，谁知道我嫁给了他哥哥。在我们结婚那天，他要我跟他走，我没答应。为什么要到失去的时候才去争取？既然是这样，我不会让他得到。“</p>
+<p>最后，欧阳锋只身一人离开白驼山，在沙漠中做起了杀手中介；她悔恨着失去的美好年华没和他在一起。</p>
 ]]></content>
       <categories>
         <category>电影</category>
@@ -397,11 +408,20 @@
       </categories>
   </entry>
   <entry>
-    <title>《东邪西毒》</title>
-    <url>/2023/02/23/%E3%80%8A%E4%B8%9C%E9%82%AA%E8%A5%BF%E6%AF%92%E3%80%8B/</url>
-    <content><![CDATA[<p>欧阳锋从小是孤儿，和他哥哥一起生活。他从小就学会了如何保护自己。若要使自己不受伤害，他在一开始就拒绝。他爱着一个女人，但就像一个自卑的小孩，不敢说出口，他怕被拒绝会受伤。其实那个女人也喜欢他，但她年轻气盛，她和他赌气，就是要欧阳锋亲口说出”我喜欢你“才和他结婚。在要嫁给他哥哥的那个晚上，欧阳锋想要带她走，她却死活不跟他走。</p>
-<p>后来，和黄药师对话时说：”我只希望他说一句话，他都不肯说，他太自信了，以为我一定会嫁给他，谁知道我嫁给了他哥哥。在我们结婚那天，他要我跟他走，我没答应。为什么要到失去的时候才去争取？既然是这样，我不会让他得到。“</p>
-<p>最后，欧阳锋只身一人离开白驼山，在沙漠中做起了杀手中介；她悔恨着失去的美好年华没和他在一起。</p>
+    <title>《重庆森林》感</title>
+    <url>/2023/02/22/%E3%80%8A%E9%87%8D%E5%BA%86%E6%A3%AE%E6%9E%97%E3%80%8B%E6%84%9F/</url>
+    <content><![CDATA[<p>很深刻的，诠释了都市里人与人之间的冷漠，但也让两个人的相遇变得如此缘分与美妙。在看的时候，会感受到一种类似于自己就是海洋中的一座孤岛的孤独感。有一个作家写的小说也可以让我有一种感觉，那就是村上春树。</p>
+<p>村上的小说带有太多奇幻的成分，重庆森林也带有一点奇幻感，它们都让不可思议的情节无缝衔接地发生在日常之中。第一个故事的杀手，第二个故事的”海螺姑娘“，都让这个很世俗的城市带着点荒诞。</p>
+]]></content>
+      <categories>
+        <category>电影</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>《擅长捉弄的高木同学剧场版》有感</title>
+    <url>/2023/02/16/%E3%80%8A%E6%93%85%E9%95%BF%E6%8D%89%E5%BC%84%E7%9A%84%E9%AB%98%E6%9C%A8%E5%90%8C%E5%AD%A6%E5%89%A7%E5%9C%BA%E7%89%88%E3%80%8B%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<p>TV动画的核心——羞涩、捉弄等元素在剧场版中占的比重实在可怜。中间养猫那场戏过了之后，不知道为啥西片就A了上去。连表白都还没有就直接来了一句——“我会让你幸福”。大哥你之前可是被盯着看都会脸红得像番茄的啊。</p>
+<p>强行结局而结局。带有太多的日式哀伤。</p>
 ]]></content>
       <categories>
         <category>电影</category>
@@ -420,16 +440,6 @@
       </categories>
   </entry>
   <entry>
-    <title>《擅长捉弄的高木同学剧场版》有感</title>
-    <url>/2023/02/16/%E3%80%8A%E6%93%85%E9%95%BF%E6%8D%89%E5%BC%84%E7%9A%84%E9%AB%98%E6%9C%A8%E5%90%8C%E5%AD%A6%E5%89%A7%E5%9C%BA%E7%89%88%E3%80%8B%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<p>TV动画的核心——羞涩、捉弄等元素在剧场版中占的比重实在可怜。中间养猫那场戏过了之后，不知道为啥西片就A了上去。连表白都还没有就直接来了一句——“我会让你幸福”。大哥你之前可是被盯着看都会脸红得像番茄的啊。</p>
-<p>强行结局而结局。带有太多的日式哀伤。</p>
-]]></content>
-      <categories>
-        <category>电影</category>
-      </categories>
-  </entry>
-  <entry>
     <title>不要尝试多任务工作</title>
     <url>/2023/02/19/%E4%B8%8D%E8%A6%81%E5%B0%9D%E8%AF%95%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%B7%A5%E4%BD%9C/</url>
     <content><![CDATA[<p>全神贯注可以提升几乎一切体验。<br>——凯利·麦戈尼加尔，斯坦福商学院管理学讲师</p>
@@ -441,16 +451,6 @@
 ]]></content>
       <categories>
         <category>读书</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>《重庆森林》感</title>
-    <url>/2023/02/22/%E3%80%8A%E9%87%8D%E5%BA%86%E6%A3%AE%E6%9E%97%E3%80%8B%E6%84%9F/</url>
-    <content><![CDATA[<p>很深刻的，诠释了都市里人与人之间的冷漠，但也让两个人的相遇变得如此缘分与美妙。在看的时候，会感受到一种类似于自己就是海洋中的一座孤岛的孤独感。有一个作家写的小说也可以让我有一种感觉，那就是村上春树。</p>
-<p>村上的小说带有太多奇幻的成分，重庆森林也带有一点奇幻感，它们都让不可思议的情节无缝衔接地发生在日常之中。第一个故事的杀手，第二个故事的”海螺姑娘“，都让这个很世俗的城市带着点荒诞。</p>
-]]></content>
-      <categories>
-        <category>电影</category>
       </categories>
   </entry>
   <entry>
@@ -542,97 +542,6 @@
       <tags>
         <tag>协程</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>单身的意义</title>
-    <url>/2023/02/23/%E5%8D%95%E8%BA%AB%E7%9A%84%E6%84%8F%E4%B9%89/</url>
-    <content><![CDATA[<p>One of the most important preconditions of a good relationship is a satisfactory perspective on being single </p>
-<p>The more we are happy to be on our own the more we will be able to exercise the correct degree of caution around finding a new companion</p>
-<p>The Bedrock of true love is Happy singledom</p>
-<blockquote>
-<p>真爱的基石是快乐的单身生活</p>
-</blockquote>
-<p>Unfortunately, our societies do very little to help us be calm or at ease in our own company</p>
-<blockquote>
-<p>不幸的是，我们的社会并没有教我们如何在一个人的时候保持冷静和自在</p>
-</blockquote>
-<p>Singleton is framed as an involuntary depressing and always hopefully temporary State</p>
-<blockquote>
-<p>单身被描绘成一个不自愿的、绝望的，并且是希望尽快摆脱的临时状态。</p>
-</blockquote>
-<p>The notion that someone might want or need to be on their own perhaps for a long while terrifies a world shaped by Legions of silently miserable couples who need confirmation that they have not chosen the wrong path</p>
-<blockquote>
-<p>一个人可能想要或认为自己需要独自生活很长一段时间的想法让这个世界感到恐惧，这个世界由大量默默忍耐痛苦的夫妻组成，他们需要得到确认，证明他们没有选择错误的道路。</p>
-</blockquote>
-<p>To enforce the idea of what single people are missing advertisers can never have enough of showing off tantalizing images of happy couples walking hand in hand  on beaches </p>
-<p>And most entertainment venues, holiday destinations, and social occasions feel compelled to patronize overcharge, and otherwise demean anyone who has the impudence to venture out on their own</p>
-<blockquote>
-<p>大多数娱乐场所, 度假胜地和社交场合都觉得有必要对那些胆敢自己冒险的人收更多的费用，否则就会贬低那些人</p>
-</blockquote>
-<p>Unfortunately being miserable while single fatally undermines our judgment about who we might get together with </p>
-<p>When someone is starving they will eat anything </p>
-<p>Dostoyevsky wrote a harrowing short story about a famished child who eats a candle made of pig fat and we’re equally liable in emotional desperation to run into the nearest nightclub to secure a chump and will be appalled to find beside us at Daybreak </p>
-<p>We eventually learn being in an unsatisfactory relationship is clearly worse </p>
-<p>That is even more lonely than being alone </p>
-<p>The central challenge of being alone is coping with the fear of what singlehood means </p>
-<p>Being alone is bearable in relation to how normal that highly nebulous yet highly influential concept the condition feels to us at any given point </p>
-<blockquote>
-<p>孤独是可以忍受的，但这和”孤独“这种高度模糊但极具影响力的概念在任何特定时刻对我们的感觉有多正常相关。</p>
-</blockquote>
-<p>It can either be a break from an honorably busy life or sure evidence that we are an unwanted wretched disgusting and emotionally diseased being</p>
-<blockquote>
-<p>它可以看作是繁忙生活中的休憩，也可以用来去证明我们是一个不受欢迎的、令人厌恶的、情感上有疾病的人。</p>
-</blockquote>
-<p>This is tricky but ultimately very hopeful for it suggests that if only we could work on what being alone means to us we could theoretically endure long periods alone.</p>
-<p>To build ourselves a new mental model of what being alone should truly mean we might rehearse a few of the following arguments</p>
-<ol>
-<li>Despite what an unfriendly voice inside our heads might tell us,  we are the ones who can choose whether or not to be alone</li>
-</ol>
-<p>Our solitude is willed rather than imposed </p>
-<p>No one ever needs to be alone so long as they don’t mind who they are with, but we do mind the wrong kind of company is a great deal lonelier for us than being by ourselves </p>
-<p>That is, it’s further from what matters to us more grating in its insincerity and more of a reminder of disconnection and misunderstanding than is the conversation we can have in the quiet of our own minds</p>
-<blockquote>
-<p>也就是说，它离我们真正关心的东西更遥远，它的虚伪更令人讨厌，它更提醒我们，与我们在自己内心平静的对话相比，它是一种脱节和误解</p>
-</blockquote>
-<p>Being alone is not proof that we have been rejected by the world </p>
-<blockquote>
-<p>独自一人并不代表被这个世界所拒绝</p>
-</blockquote>
-<p>It’s a sign that we’ve taken a good look at the available options and have -with wisdom- done some rejecting ourselves </p>
-<blockquote>
-<p>反而表明，我们曾经好好地审视了可以做出的选择，并且明智地选择了”不“</p>
-</blockquote>
-<p>Another big thought is that we need to appreciate how long it will take to find someone given how choosy we are for very good reasons </p>
-<p>We aren’t just looking for anyone</p>
-<p>The right candidate will be no less easy to find than a great job or a beautiful house</p>
-<p>It might take many months probably years </p>
-<p>Expectations matter </p>
-<p>If we regard a decade as a plausible time frame then six months we’ll Skip by</p>
-<p>There is no better guarantee of a successful relationship than knowing that we could and can manage perfectly well on our own</p>
-<p>It means that we will only look for someone who can deeply contribute to our life not someone who can do the laundry with us or keep us company on Sunday evenings </p>
-<blockquote>
-<p>这意味着我们只会寻找一个可以深深地融入我们生命的人，而不是一个能和我们一起洗衣服或在周日晚上陪伴我们的人</p>
-</blockquote>
-<p>This gives us the strength to back out of unsatisfactory unions as quickly as we should </p>
-<blockquote>
-<p>这给了我们力量去尽早地离开一段不满意的关系</p>
-</blockquote>
-<p>Being a couple can’t and shouldn’t mean that we are utterly reliant on the other for our self-esteem, our daily self-management or for the meeting of our domestic needs </p>
-<blockquote>
-<p>成为一对夫妻不能也不应该意味着我们把自尊、日常自我管理或感受家庭的心理需求完全托付给对方</p>
-</blockquote>
-<p>When we have under our belt a significant experience of thriving on our own we will be able to cope with the inevitable points at which even a very nice partner can’t sustain us </p>
-<blockquote>
-<p>当我们拥有独自茁壮成长的深刻经验时，我们将能够应对一些即使是一个很好的伴侣也无法给予援手的坎</p>
-</blockquote>
-<p>We’ll be less demanding , more competent and more forensic in what we seek from a lover </p>
-<p>It turns out that our willingness to stay on our own is what centrally predicts how likely we’ll be to find and bring to fruition a relationship with someone else </p>
-<p>Being at ease with being single is the needed secure platform from which to make a sane and wise choice about who to create a joint life with</p>
-<p><a href="https://www.youtube.com/watch?v=aAnTwyCJdf0&t=168s&ab_channel=TheSchoolofLife">视频版</a></p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
   </entry>
   <entry>
     <title>协程异常处理总结</title>
@@ -769,6 +678,113 @@
       </tags>
   </entry>
   <entry>
+    <title>单身的意义</title>
+    <url>/2023/02/23/%E5%8D%95%E8%BA%AB%E7%9A%84%E6%84%8F%E4%B9%89/</url>
+    <content><![CDATA[<p>One of the most important preconditions of a good relationship is a satisfactory perspective on being single </p>
+<p>The more we are happy to be on our own the more we will be able to exercise the correct degree of caution around finding a new companion</p>
+<p>The Bedrock of true love is Happy singledom</p>
+<blockquote>
+<p>真爱的基石是快乐的单身生活</p>
+</blockquote>
+<p>Unfortunately, our societies do very little to help us be calm or at ease in our own company</p>
+<blockquote>
+<p>不幸的是，我们的社会并没有教我们如何在一个人的时候保持冷静和自在</p>
+</blockquote>
+<p>Singleton is framed as an involuntary depressing and always hopefully temporary State</p>
+<blockquote>
+<p>单身被描绘成一个不自愿的、绝望的，并且是希望尽快摆脱的临时状态。</p>
+</blockquote>
+<p>The notion that someone might want or need to be on their own perhaps for a long while terrifies a world shaped by Legions of silently miserable couples who need confirmation that they have not chosen the wrong path</p>
+<blockquote>
+<p>一个人可能想要或认为自己需要独自生活很长一段时间的想法让这个世界感到恐惧，这个世界由大量默默忍耐痛苦的夫妻组成，他们需要得到确认，证明他们没有选择错误的道路。</p>
+</blockquote>
+<p>To enforce the idea of what single people are missing advertisers can never have enough of showing off tantalizing images of happy couples walking hand in hand  on beaches </p>
+<p>And most entertainment venues, holiday destinations, and social occasions feel compelled to patronize overcharge, and otherwise demean anyone who has the impudence to venture out on their own</p>
+<blockquote>
+<p>大多数娱乐场所, 度假胜地和社交场合都觉得有必要对那些胆敢自己冒险的人收更多的费用，否则就会贬低那些人</p>
+</blockquote>
+<p>Unfortunately being miserable while single fatally undermines our judgment about who we might get together with </p>
+<p>When someone is starving they will eat anything </p>
+<p>Dostoyevsky wrote a harrowing short story about a famished child who eats a candle made of pig fat and we’re equally liable in emotional desperation to run into the nearest nightclub to secure a chump and will be appalled to find beside us at Daybreak </p>
+<p>We eventually learn being in an unsatisfactory relationship is clearly worse </p>
+<p>That is even more lonely than being alone </p>
+<p>The central challenge of being alone is coping with the fear of what singlehood means </p>
+<p>Being alone is bearable in relation to how normal that highly nebulous yet highly influential concept the condition feels to us at any given point </p>
+<blockquote>
+<p>孤独是可以忍受的，但这和”孤独“这种高度模糊但极具影响力的概念在任何特定时刻对我们的感觉有多正常相关。</p>
+</blockquote>
+<p>It can either be a break from an honorably busy life or sure evidence that we are an unwanted wretched disgusting and emotionally diseased being</p>
+<blockquote>
+<p>它可以看作是繁忙生活中的休憩，也可以用来去证明我们是一个不受欢迎的、令人厌恶的、情感上有疾病的人。</p>
+</blockquote>
+<p>This is tricky but ultimately very hopeful for it suggests that if only we could work on what being alone means to us we could theoretically endure long periods alone.</p>
+<p>To build ourselves a new mental model of what being alone should truly mean we might rehearse a few of the following arguments</p>
+<ol>
+<li>Despite what an unfriendly voice inside our heads might tell us,  we are the ones who can choose whether or not to be alone</li>
+</ol>
+<p>Our solitude is willed rather than imposed </p>
+<p>No one ever needs to be alone so long as they don’t mind who they are with, but we do mind the wrong kind of company is a great deal lonelier for us than being by ourselves </p>
+<p>That is, it’s further from what matters to us more grating in its insincerity and more of a reminder of disconnection and misunderstanding than is the conversation we can have in the quiet of our own minds</p>
+<blockquote>
+<p>也就是说，它离我们真正关心的东西更遥远，它的虚伪更令人讨厌，它更提醒我们，与我们在自己内心平静的对话相比，它是一种脱节和误解</p>
+</blockquote>
+<p>Being alone is not proof that we have been rejected by the world </p>
+<blockquote>
+<p>独自一人并不代表被这个世界所拒绝</p>
+</blockquote>
+<p>It’s a sign that we’ve taken a good look at the available options and have -with wisdom- done some rejecting ourselves </p>
+<blockquote>
+<p>反而表明，我们曾经好好地审视了可以做出的选择，并且明智地选择了”不“</p>
+</blockquote>
+<p>Another big thought is that we need to appreciate how long it will take to find someone given how choosy we are for very good reasons </p>
+<p>We aren’t just looking for anyone</p>
+<p>The right candidate will be no less easy to find than a great job or a beautiful house</p>
+<p>It might take many months probably years </p>
+<p>Expectations matter </p>
+<p>If we regard a decade as a plausible time frame then six months we’ll Skip by</p>
+<p>There is no better guarantee of a successful relationship than knowing that we could and can manage perfectly well on our own</p>
+<p>It means that we will only look for someone who can deeply contribute to our life not someone who can do the laundry with us or keep us company on Sunday evenings </p>
+<blockquote>
+<p>这意味着我们只会寻找一个可以深深地融入我们生命的人，而不是一个能和我们一起洗衣服或在周日晚上陪伴我们的人</p>
+</blockquote>
+<p>This gives us the strength to back out of unsatisfactory unions as quickly as we should </p>
+<blockquote>
+<p>这给了我们力量去尽早地离开一段不满意的关系</p>
+</blockquote>
+<p>Being a couple can’t and shouldn’t mean that we are utterly reliant on the other for our self-esteem, our daily self-management or for the meeting of our domestic needs </p>
+<blockquote>
+<p>成为一对夫妻不能也不应该意味着我们把自尊、日常自我管理或感受家庭的心理需求完全托付给对方</p>
+</blockquote>
+<p>When we have under our belt a significant experience of thriving on our own we will be able to cope with the inevitable points at which even a very nice partner can’t sustain us </p>
+<blockquote>
+<p>当我们拥有独自茁壮成长的深刻经验时，我们将能够应对一些即使是一个很好的伴侣也无法给予援手的坎</p>
+</blockquote>
+<p>We’ll be less demanding , more competent and more forensic in what we seek from a lover </p>
+<p>It turns out that our willingness to stay on our own is what centrally predicts how likely we’ll be to find and bring to fruition a relationship with someone else </p>
+<p>Being at ease with being single is the needed secure platform from which to make a sane and wise choice about who to create a joint life with</p>
+<p><a href="https://www.youtube.com/watch?v=aAnTwyCJdf0&t=168s&ab_channel=TheSchoolofLife">视频版</a></p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>去年春天的阴霾</title>
+    <url>/2023/02/25/%E5%8E%BB%E5%B9%B4%E6%98%A5%E5%A4%A9%E7%9A%84%E9%98%B4%E9%9C%BE/</url>
+    <content><![CDATA[<p>我不想去写，但有这个必要去回忆。</p>
+<p>在《东邪西毒》开头，张国荣饰演的欧阳锋有一句台词：看来你的年纪也有四十出头了，这四十多年来，总有些事你是不愿再提，或是有些人你不想再见，有的人曾经对不起你。</p>
+<p>其实不用四十出头，从十多岁开始，每个人都有一些纠葛的事，不愿想起来。可越是不想回忆起来，就越难以忘记。欧阳锋喝了醉生梦死尚且忘不了，何况我今天没喝酒。只喝了一瓶250ml的纯牛奶。</p>
+<p>那是去年春天的事，差不多上一年的这个时候。我去到一个陌生的环境，但不得不去适应它。我以为我对我的情绪和行为控制良好，但每过一段时间去看，都是漏洞百出，里面满是焦虑不安，自卑怨恨，和爱的人的争执。不用说，伤害她已是一个事实，她没忘记，我也没忘记。</p>
+<p>其实还有一些人，当初也是把酒言欢。但就像我许久不肯面对当初的我一般，渐渐没了联系。我也不清楚是不是仅仅没联系我，如果是的话，反而能让我接受，的确做了一些幼稚的事情。</p>
+<p>”每个人都会经过这个阶段，见到一座山，就想知道山后面是什么。我很想告诉他，可能翻过山后面，你会发现没什么特别。回望之下，可能会觉得这一边更好。“</p>
+<p>去年春天的山，到底有没有翻过去，在现在看来，是没有的。或许在以后会发现，我已在山的另一边。但山后面还有山。</p>
+<p>”小时候总想知道沙漠那边是什么，走过去，才知道沙漠那边还是沙漠。“</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+  </entry>
+  <entry>
     <title>子协程不被父协程影响的例外情况</title>
     <url>/2023/02/07/%E5%AD%90%E5%8D%8F%E7%A8%8B%E4%B8%8D%E8%A2%AB%E7%88%B6%E5%8D%8F%E7%A8%8B%E5%BD%B1%E5%93%8D%E7%9A%84%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5/</url>
     <content><![CDATA[<p>协程中的所谓 <strong>结构化并发</strong>，就是指 <strong>父协程和子协程一起有组织有预谋地合作干活</strong>，如果不讨论<code>scupervisorScope&#123;&#125;</code>的话，大致上内涵如下：</p>
@@ -858,22 +874,6 @@
       </categories>
   </entry>
   <entry>
-    <title>去年春天的阴霾</title>
-    <url>/2023/02/25/%E5%8E%BB%E5%B9%B4%E6%98%A5%E5%A4%A9%E7%9A%84%E9%98%B4%E9%9C%BE/</url>
-    <content><![CDATA[<p>我不想去写，但有这个必要去回忆。</p>
-<p>在《东邪西毒》开头，张国荣饰演的欧阳锋有一句台词：看来你的年纪也有四十出头了，这四十多年来，总有些事你是不愿再提，或是有些人你不想再见，有的人曾经对不起你。</p>
-<p>其实不用四十出头，从十多岁开始，每个人都有一些纠葛的事，不愿想起来。可越是不想回忆起来，就越难以忘记。欧阳锋喝了醉生梦死尚且忘不了，何况我今天没喝酒。只喝了一瓶250ml的纯牛奶。</p>
-<p>那是去年春天的事，差不多上一年的这个时候。我去到一个陌生的环境，但不得不去适应它。我以为我对我的情绪和行为控制良好，但每过一段时间去看，都是漏洞百出，里面满是焦虑不安，自卑怨恨，和爱的人的争执。不用说，伤害她已是一个事实，她没忘记，我也没忘记。</p>
-<p>其实还有一些人，当初也是把酒言欢。但就像我许久不肯面对当初的我一般，渐渐没了联系。我也不清楚是不是仅仅没联系我，如果是的话，反而能让我接受，的确做了一些幼稚的事情。</p>
-<p>”每个人都会经过这个阶段，见到一座山，就想知道山后面是什么。我很想告诉他，可能翻过山后面，你会发现没什么特别。回望之下，可能会觉得这一边更好。“</p>
-<p>去年春天的山，到底有没有翻过去，在现在看来，是没有的。或许在以后会发现，我已在山的另一边。但山后面还有山。</p>
-<p>”小时候总想知道沙漠那边是什么，走过去，才知道沙漠那边还是沙漠。“</p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-  </entry>
-  <entry>
     <title>小云第一局Valorant</title>
     <url>/2023/02/06/%E5%B0%8F%E4%BA%91%E7%AC%AC%E4%B8%80%E5%B1%80Valorant/</url>
     <content><![CDATA[<p>小云今天完完整整地打了一局Valorant，之前都是零零碎碎地打。不得不说对于一个新手来说，还行。不过我们也是今天她玩了才知道她晕三D，她说吃饭时都没啥胃口。我也是第一次实际看到晕三D的情况。</p>
@@ -913,16 +913,6 @@
         <tag>行为建议</tag>
         <tag>健康</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>王家卫《手》</title>
-    <url>/2023/02/24/%E7%8E%8B%E5%AE%B6%E5%8D%AB%E3%80%8A%E6%89%8B%E3%80%8B/</url>
-    <content><![CDATA[<p>大半生的痴恋起源于第一次被她手。</p>
-<p>第一次总是难以忘怀。</p>
-]]></content>
-      <categories>
-        <category>电影</category>
-      </categories>
   </entry>
   <entry>
     <title>转载：IntelliJ调试协程</title>
@@ -1003,6 +993,16 @@
       <tags>
         <tag>协程</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>王家卫《手》</title>
+    <url>/2023/02/24/%E7%8E%8B%E5%AE%B6%E5%8D%AB%E3%80%8A%E6%89%8B%E3%80%8B/</url>
+    <content><![CDATA[<p>大半生的痴恋起源于第一次被她手。</p>
+<p>第一次总是难以忘怀。</p>
+]]></content>
+      <categories>
+        <category>电影</category>
+      </categories>
   </entry>
   <entry>
     <title>远离使杀戮更容易</title>
