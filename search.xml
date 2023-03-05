@@ -76,6 +76,58 @@
       </categories>
   </entry>
   <entry>
+    <title>After watching Shutter Island</title>
+    <url>/2023/02/20/After%20watching%20Shutter%20Island/</url>
+    <content><![CDATA[<ul>
+<li><p>How we doing this morning?</p>
+</li>
+<li><p>Good. And you?</p>
+</li>
+<li><p>Can’t complain.</p>
+</li>
+<li><p>So what’s our next move?</p>
+</li>
+<li><p>You tell me.</p>
+</li>
+<li><p>We gotta get off this rock, chuck.Get back to the mainland.Whatever the hell’s going on here, it’s bad.</p>
+</li>
+<li><p>……</p>
+</li>
+<li><p>Dont worry, partner, they’re not gonna catch us.</p>
+</li>
+<li><p>That’s right. We’re too smart for them.</p>
+</li>
+<li><p>Yeah, we are, aren’t we?</p>
+</li>
+<li><p>……</p>
+</li>
+<li><p>You know, this place makes me wonder…</p>
+</li>
+<li><p>Yeah, what’s that, boss?</p>
+</li>
+<li><p>Which would be worse, to live as a monster or to die as a good man?</p>
+</li>
+<li><p>Teddy?</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>电影</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Android权限有感</title>
+    <url>/2023/02/22/Android%E6%9D%83%E9%99%90%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<p>看了一晚的PermissionX系列文章，guolin写的挺好的。再次感慨Android系统的权限分类的请求的复杂。</p>
+<p>在横向上，权限分为普通，危险，特殊三个级别。普通的只需要manifest中声明，危险则是运行时请求，特殊则是利用Intent导向一个特定界面来开启。</p>
+<p>纵向上，随着Android版本的变化，要 <strong>做某一个功能</strong>，需要的权限 <strong>可能不一样</strong>；在高版本中，要用高版本的方法；在判断手机版本低时，要用旧方法。等等不言而喻。</p>
+<p>干。</p>
+]]></content>
+      <categories>
+        <category>编程感想</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Flow异常处理</title>
     <url>/2023/02/09/Flow%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</url>
     <content><![CDATA[<p>它们的函数注释一言难尽，建议别看，onCompletion的注释不太对。</p>
@@ -127,58 +179,6 @@
         <category>Kotlin</category>
         <category>协程</category>
         <category>Flow</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Android权限有感</title>
-    <url>/2023/02/22/Android%E6%9D%83%E9%99%90%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<p>看了一晚的PermissionX系列文章，guolin写的挺好的。再次感慨Android系统的权限分类的请求的复杂。</p>
-<p>在横向上，权限分为普通，危险，特殊三个级别。普通的只需要manifest中声明，危险则是运行时请求，特殊则是利用Intent导向一个特定界面来开启。</p>
-<p>纵向上，随着Android版本的变化，要 <strong>做某一个功能</strong>，需要的权限 <strong>可能不一样</strong>；在高版本中，要用高版本的方法；在判断手机版本低时，要用旧方法。等等不言而喻。</p>
-<p>干。</p>
-]]></content>
-      <categories>
-        <category>编程感想</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>After watching Shutter Island</title>
-    <url>/2023/02/20/After%20watching%20Shutter%20Island/</url>
-    <content><![CDATA[<ul>
-<li><p>How we doing this morning?</p>
-</li>
-<li><p>Good. And you?</p>
-</li>
-<li><p>Can’t complain.</p>
-</li>
-<li><p>So what’s our next move?</p>
-</li>
-<li><p>You tell me.</p>
-</li>
-<li><p>We gotta get off this rock, chuck.Get back to the mainland.Whatever the hell’s going on here, it’s bad.</p>
-</li>
-<li><p>……</p>
-</li>
-<li><p>Dont worry, partner, they’re not gonna catch us.</p>
-</li>
-<li><p>That’s right. We’re too smart for them.</p>
-</li>
-<li><p>Yeah, we are, aren’t we?</p>
-</li>
-<li><p>……</p>
-</li>
-<li><p>You know, this place makes me wonder…</p>
-</li>
-<li><p>Yeah, what’s that, boss?</p>
-</li>
-<li><p>Which would be worse, to live as a monster or to die as a good man?</p>
-</li>
-<li><p>Teddy?</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>电影</category>
       </categories>
   </entry>
   <entry>
@@ -349,6 +349,19 @@
       </tags>
   </entry>
   <entry>
+    <title>ViewModel_cheatsheet</title>
+    <url>/2023/02/27/ViewModel-cheatsheet/</url>
+    <content><![CDATA[<p><img src="https://developer.android.com/static/images/topic/libraries/architecture/viewmodel-apis-cheatsheet.png"></p>
+<p>保存一下链接</p>
+<p><a href="https://developer.android.com/static/images/topic/libraries/architecture/viewmodel-apis-cheatsheet.png">cheat sheet</a></p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>架构</category>
+        <category>架构组件</category>
+      </categories>
+  </entry>
+  <entry>
     <title>channelFlow的并发emit</title>
     <url>/2023/03/02/channelFlow%E7%9A%84%E5%B9%B6%E5%8F%91emit/</url>
     <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    channelFlow&lt;<span class="built_in">Int</span>&gt; &#123;</span><br><span class="line">        withContext(Dispatchers.IO) &#123;</span><br><span class="line">            send(<span class="number">1</span>)<span class="comment">// send而不是flow</span></span><br><span class="line">        &#125;</span><br><span class="line">        withContext(Dispatchers.Default) &#123;</span><br><span class="line">            send(<span class="number">2</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;.map &#123; it * <span class="number">2</span> &#125;</span><br><span class="line">        .collect &#123;</span><br><span class="line">            println(it)</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -384,19 +397,6 @@
       </categories>
   </entry>
   <entry>
-    <title>ViewModel_cheatsheet</title>
-    <url>/2023/02/27/ViewModel-cheatsheet/</url>
-    <content><![CDATA[<p><img src="https://developer.android.com/static/images/topic/libraries/architecture/viewmodel-apis-cheatsheet.png"></p>
-<p>保存一下链接</p>
-<p><a href="https://developer.android.com/static/images/topic/libraries/architecture/viewmodel-apis-cheatsheet.png">cheat sheet</a></p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>架构</category>
-        <category>架构组件</category>
-      </categories>
-  </entry>
-  <entry>
     <title>coroutineScope vs supervisorScope</title>
     <url>/2023/02/20/coroutineScope%20vs%20supervisorScope/</url>
     <content><![CDATA[<p>总结并不完全，只列出一些主要异同。</p>
@@ -417,6 +417,21 @@
       </categories>
   </entry>
   <entry>
+    <title>leetcode_50_螺旋矩阵</title>
+    <url>/2023/02/09/leetcode-50-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</url>
+    <content><![CDATA[<p>这道题看到很多解法都是边界法。然后看到另外一种有意思的解法。</p>
+<p>用一个队列，储存四种 <strong>行为</strong>，即 event，这个行为不合法之后，循环下一个行为，直到行为的开始也不合法。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> <span class="type">Optional</span>, <span class="type">List</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> ListNode <span class="keyword">import</span> ListNode</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 50</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">spiralOrder</span>(<span class="params">self, matrix: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line">        toDoList = [[<span class="number">0</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">0</span>], [<span class="number">0</span>, -<span class="number">1</span>], [-<span class="number">1</span>, <span class="number">0</span>]]</span><br><span class="line">        result = []</span><br><span class="line">        x = <span class="number">0</span></span><br><span class="line">        y = <span class="number">0</span></span><br><span class="line">        m = <span class="built_in">len</span>(matrix)</span><br><span class="line">        n = <span class="built_in">len</span>(matrix[<span class="number">0</span>])</span><br><span class="line">        errorNum = <span class="number">101</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 初始化</span></span><br><span class="line">        result.append(matrix[x][y]) <span class="comment"># 要先处理第一个数啦</span></span><br><span class="line">        matrix[x][y] = errorNum</span><br><span class="line">        temp = toDoList.pop(<span class="number">0</span>)</span><br><span class="line">        toDoList.append(temp)</span><br><span class="line">        toDoX = temp[<span class="number">0</span>]</span><br><span class="line">        toDOY = temp[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 开始循环</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> ((x + toDoX &lt; m) <span class="keyword">and</span> (y + toDOY &lt; n) <span class="keyword">and</span> (matrix[x + toDoX][y + toDOY] != errorNum)):</span><br><span class="line">                temp = toDoList.pop(<span class="number">0</span>)</span><br><span class="line">                toDoList.append(temp)</span><br><span class="line">                toDoX = temp[<span class="number">0</span>]</span><br><span class="line">                toDOY = temp[<span class="number">1</span>]</span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> ((x + toDoX &lt; m) <span class="keyword">and</span> (y + toDOY &lt; n) <span class="keyword">and</span> (matrix[x + toDoX][y + toDOY] != errorNum)):</span><br><span class="line">                    <span class="comment"># 新的开始都不合法了说明该结束了</span></span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="comment"># 下一个值合法</span></span><br><span class="line">                x += toDoX</span><br><span class="line">                y += toDOY</span><br><span class="line">                result.append(matrix[x][y])</span><br><span class="line">                matrix[x][y] = errorNum</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    solution = Solution()</span><br><span class="line">    matric = [[<span class="number">1</span>]]</span><br><span class="line">    <span class="built_in">print</span>(solution.spiralOrder(matric))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2023/02/04/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -433,21 +448,6 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>leetcode_50_螺旋矩阵</title>
-    <url>/2023/02/09/leetcode-50-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</url>
-    <content><![CDATA[<p>这道题看到很多解法都是边界法。然后看到另外一种有意思的解法。</p>
-<p>用一个队列，储存四种 <strong>行为</strong>，即 event，这个行为不合法之后，循环下一个行为，直到行为的开始也不合法。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> <span class="type">Optional</span>, <span class="type">List</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> ListNode <span class="keyword">import</span> ListNode</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 50</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">spiralOrder</span>(<span class="params">self, matrix: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line">        toDoList = [[<span class="number">0</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">0</span>], [<span class="number">0</span>, -<span class="number">1</span>], [-<span class="number">1</span>, <span class="number">0</span>]]</span><br><span class="line">        result = []</span><br><span class="line">        x = <span class="number">0</span></span><br><span class="line">        y = <span class="number">0</span></span><br><span class="line">        m = <span class="built_in">len</span>(matrix)</span><br><span class="line">        n = <span class="built_in">len</span>(matrix[<span class="number">0</span>])</span><br><span class="line">        errorNum = <span class="number">101</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 初始化</span></span><br><span class="line">        result.append(matrix[x][y]) <span class="comment"># 要先处理第一个数啦</span></span><br><span class="line">        matrix[x][y] = errorNum</span><br><span class="line">        temp = toDoList.pop(<span class="number">0</span>)</span><br><span class="line">        toDoList.append(temp)</span><br><span class="line">        toDoX = temp[<span class="number">0</span>]</span><br><span class="line">        toDOY = temp[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 开始循环</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> ((x + toDoX &lt; m) <span class="keyword">and</span> (y + toDOY &lt; n) <span class="keyword">and</span> (matrix[x + toDoX][y + toDOY] != errorNum)):</span><br><span class="line">                temp = toDoList.pop(<span class="number">0</span>)</span><br><span class="line">                toDoList.append(temp)</span><br><span class="line">                toDoX = temp[<span class="number">0</span>]</span><br><span class="line">                toDOY = temp[<span class="number">1</span>]</span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> ((x + toDoX &lt; m) <span class="keyword">and</span> (y + toDOY &lt; n) <span class="keyword">and</span> (matrix[x + toDoX][y + toDOY] != errorNum)):</span><br><span class="line">                    <span class="comment"># 新的开始都不合法了说明该结束了</span></span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="comment"># 下一个值合法</span></span><br><span class="line">                x += toDoX</span><br><span class="line">                y += toDOY</span><br><span class="line">                result.append(matrix[x][y])</span><br><span class="line">                matrix[x][y] = errorNum</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    solution = Solution()</span><br><span class="line">    matric = [[<span class="number">1</span>]]</span><br><span class="line">    <span class="built_in">print</span>(solution.spiralOrder(matric))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>leetcode</category>
-      </categories>
-      <tags>
-        <tag>leetcode</tag>
-      </tags>
   </entry>
   <entry>
     <title>select优先选择第一个可用的clause</title>
@@ -610,42 +610,6 @@
       </tags>
   </entry>
   <entry>
-    <title>协程中的NonCancellable</title>
-    <url>/2023/02/12/%E5%8D%8F%E7%A8%8B%E4%B8%AD%E7%9A%84NonCancellable/</url>
-    <content><![CDATA[<p>NonCancellable其实是一个特殊的Job，看它的注释：</p>
-<blockquote>
-<p>A non-cancelable job that is always active. It is <strong>designed for withContext</strong> function to prevent cancellation of code blocks that need to <strong>be executed without cancellation</strong>.</p>
-<p>（设计目的是让withContext块在取消时也可以运行）</p>
-<p>Use it like this:<br>withContext(NonCancellable) {<br>    &#x2F;&#x2F; this code will not be cancelled<br>}</p>
-<p>WARNING: This object is <strong>not designed</strong> to be used with <code>launch, async</code>, and other coroutine builders. if you write launch(NonCancellable) { … } then not only the newly launched job will not be cancelled when the parent is cancelled, the whole parent-child relation between parent and child is severed. The parent will not wait for the child’s completion, nor will be cancelled when the child crashed.</p>
-<p>换言之，不建议在launch async上用——因为它破坏了结构化并发</p>
-</blockquote>
-<p>正常来说，</p>
-<ol>
-<li>在进入withContext块之前，如果<strong>已经cancel</strong>了，那么<strong>不会进入</strong>，</li>
-<li>如果已经进入了，然后被<strong>cancel</strong>，在块中有<code>delay</code>这种可取消挂起函数，会抛出<code>cancellationException</code>结束<code>withContext</code>块</li>
-<li>如果在<code>withContext</code>结束返回值的时候检测到取消，会丢弃返回值并抛出<code>cancellationException</code></li>
-</ol>
-<p>那么NonCancellable可以帮助它：</p>
-<ol>
-<li>如果<strong>已经cancel</strong>了，那么<strong>依然进入</strong></li>
-<li>如果已经进入了，然后被<strong>cancel</strong>，在块中有<code>delay</code>这种可取消挂起函数，忽略</li>
-<li>如果在<code>withContext</code>结束返回值的时候检测到取消，忽略</li>
-</ol>
-<p>换言之，不参与结构化并发。</p>
-<p>其实不用<code>NonCancellable</code>，自己显示定义一个<code>Job()</code>也可以做到。</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line">    <span class="keyword">val</span> job = launch(Dispatchers.IO) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            repeat(<span class="number">2</span>) &#123; i -&gt;</span><br><span class="line">                println(<span class="string">&quot;job: I&#x27;m sleeping <span class="variable">$i</span> ...&quot;</span>)</span><br><span class="line">                delay(<span class="number">500L</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            cancel()</span><br><span class="line">            withContext(NonCancellable) &#123; <span class="comment">// NonCancellable / Job()</span></span><br><span class="line">                println(<span class="string">&quot;job: I&#x27;m running finally&quot;</span>)</span><br><span class="line">                delay(<span class="number">1000L</span>)</span><br><span class="line">                println(<span class="string">&quot;job: And I&#x27;ve just delayed for 1 sec because I&#x27;m non-cancellable&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">1500</span>) <span class="comment">// 延迟一段时间</span></span><br><span class="line">    println(<span class="string">&quot;main: I&#x27;m tired of waiting!&quot;</span>)</span><br><span class="line">    job.cancelAndJoin() <span class="comment">// 取消该作业并等待它结束</span></span><br><span class="line">    println(<span class="string">&quot;main: Now I can quit.&quot;</span>)</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">job: I<span class="string">&#x27;m sleeping 0 ...</span></span><br><span class="line"><span class="string">job: I&#x27;</span>m sleeping <span class="number">1</span> ...</span><br><span class="line">job: I<span class="string">&#x27;m running finally</span></span><br><span class="line"><span class="string">main: I&#x27;</span>m tired of waiting!</span><br><span class="line">job: And I<span class="string">&#x27;ve just delayed for 1 sec because I&#x27;</span>m non-cancellable</span><br><span class="line">main: Now I can quit.</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Kotlin</category>
-        <category>协程</category>
-      </categories>
-      <tags>
-        <tag>协程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>你不需要变得卓越</title>
     <url>/2023/03/01/%E4%BD%A0%E4%B8%8D%E9%9C%80%E8%A6%81%E5%8D%93%E8%B6%8A/</url>
     <content><![CDATA[<blockquote>
@@ -769,95 +733,40 @@
       </categories>
   </entry>
   <entry>
-    <title>单身的意义</title>
-    <url>/2023/02/23/%E5%8D%95%E8%BA%AB%E7%9A%84%E6%84%8F%E4%B9%89/</url>
-    <content><![CDATA[<p>One of the most important preconditions of a good relationship is a satisfactory perspective on being single </p>
-<p>The more we are happy to be on our own the more we will be able to exercise the correct degree of caution around finding a new companion</p>
-<p>The Bedrock of true love is Happy singledom</p>
+    <title>协程中的NonCancellable</title>
+    <url>/2023/02/12/%E5%8D%8F%E7%A8%8B%E4%B8%AD%E7%9A%84NonCancellable/</url>
+    <content><![CDATA[<p>NonCancellable其实是一个特殊的Job，看它的注释：</p>
 <blockquote>
-<p>真爱的基石是快乐的单身生活</p>
+<p>A non-cancelable job that is always active. It is <strong>designed for withContext</strong> function to prevent cancellation of code blocks that need to <strong>be executed without cancellation</strong>.</p>
+<p>（设计目的是让withContext块在取消时也可以运行）</p>
+<p>Use it like this:<br>withContext(NonCancellable) {<br>    &#x2F;&#x2F; this code will not be cancelled<br>}</p>
+<p>WARNING: This object is <strong>not designed</strong> to be used with <code>launch, async</code>, and other coroutine builders. if you write launch(NonCancellable) { … } then not only the newly launched job will not be cancelled when the parent is cancelled, the whole parent-child relation between parent and child is severed. The parent will not wait for the child’s completion, nor will be cancelled when the child crashed.</p>
+<p>换言之，不建议在launch async上用——因为它破坏了结构化并发</p>
 </blockquote>
-<p>Unfortunately, our societies do very little to help us be calm or at ease in our own company</p>
-<blockquote>
-<p>不幸的是，我们的社会并没有教我们如何在一个人的时候保持冷静和自在</p>
-</blockquote>
-<p>Singleton is framed as an involuntary depressing and always hopefully temporary State</p>
-<blockquote>
-<p>单身被描绘成一个不自愿的、绝望的，并且是希望尽快摆脱的临时状态。</p>
-</blockquote>
-<p>The notion that someone might want or need to be on their own perhaps for a long while terrifies a world shaped by Legions of silently miserable couples who need confirmation that they have not chosen the wrong path</p>
-<blockquote>
-<p>一个人可能想要或认为自己需要独自生活很长一段时间的想法让这个世界感到恐惧，这个世界由大量默默忍耐痛苦的夫妻组成，他们需要得到确认，证明他们没有选择错误的道路。</p>
-</blockquote>
-<p>To enforce the idea of what single people are missing advertisers can never have enough of showing off tantalizing images of happy couples walking hand in hand  on beaches </p>
-<p>And most entertainment venues, holiday destinations, and social occasions feel compelled to patronize overcharge, and otherwise demean anyone who has the impudence to venture out on their own</p>
-<blockquote>
-<p>大多数娱乐场所, 度假胜地和社交场合都觉得有必要对那些胆敢自己冒险的人收更多的费用，否则就会贬低那些人</p>
-</blockquote>
-<p>Unfortunately being miserable while single fatally undermines our judgment about who we might get together with </p>
-<p>When someone is starving they will eat anything </p>
-<p>Dostoyevsky wrote a harrowing short story about a famished child who eats a candle made of pig fat and we’re equally liable in emotional desperation to run into the nearest nightclub to secure a chump and will be appalled to find beside us at Daybreak </p>
-<p>We eventually learn being in an unsatisfactory relationship is clearly worse </p>
-<p>That is even more lonely than being alone </p>
-<p>The central challenge of being alone is coping with the fear of what singlehood means </p>
-<p>Being alone is bearable in relation to how normal that highly nebulous yet highly influential concept the condition feels to us at any given point </p>
-<blockquote>
-<p>孤独是可以忍受的，但这和”孤独“这种高度模糊但极具影响力的概念在任何特定时刻对我们的感觉有多正常相关。</p>
-</blockquote>
-<p>It can either be a break from an honorably busy life or sure evidence that we are an unwanted wretched disgusting and emotionally diseased being</p>
-<blockquote>
-<p>它可以看作是繁忙生活中的休憩，也可以用来去证明我们是一个不受欢迎的、令人厌恶的、情感上有疾病的人。</p>
-</blockquote>
-<p>This is tricky but ultimately very hopeful for it suggests that if only we could work on what being alone means to us we could theoretically endure long periods alone.</p>
-<p>To build ourselves a new mental model of what being alone should truly mean we might rehearse a few of the following arguments</p>
+<p>正常来说，</p>
 <ol>
-<li>Despite what an unfriendly voice inside our heads might tell us,  we are the ones who can choose whether or not to be alone</li>
+<li>在进入withContext块之前，如果<strong>已经cancel</strong>了，那么<strong>不会进入</strong>，</li>
+<li>如果已经进入了，然后被<strong>cancel</strong>，在块中有<code>delay</code>这种可取消挂起函数，会抛出<code>cancellationException</code>结束<code>withContext</code>块</li>
+<li>如果在<code>withContext</code>结束返回值的时候检测到取消，会丢弃返回值并抛出<code>cancellationException</code></li>
 </ol>
-<p>Our solitude is willed rather than imposed </p>
-<p>No one ever needs to be alone so long as they don’t mind who they are with, but we do mind the wrong kind of company is a great deal lonelier for us than being by ourselves </p>
-<p>That is, it’s further from what matters to us more grating in its insincerity and more of a reminder of disconnection and misunderstanding than is the conversation we can have in the quiet of our own minds</p>
-<blockquote>
-<p>也就是说，它离我们真正关心的东西更遥远，它的虚伪更令人讨厌，它更提醒我们，与我们在自己内心平静的对话相比，它是一种脱节和误解</p>
-</blockquote>
-<p>Being alone is not proof that we have been rejected by the world </p>
-<blockquote>
-<p>独自一人并不代表被这个世界所拒绝</p>
-</blockquote>
-<p>It’s a sign that we’ve taken a good look at the available options and have -with wisdom- done some rejecting ourselves </p>
-<blockquote>
-<p>反而表明，我们曾经好好地审视了可以做出的选择，并且明智地选择了”不“</p>
-</blockquote>
-<p>Another big thought is that we need to appreciate how long it will take to find someone given how choosy we are for very good reasons </p>
-<p>We aren’t just looking for anyone</p>
-<p>The right candidate will be no less easy to find than a great job or a beautiful house</p>
-<p>It might take many months probably years </p>
-<p>Expectations matter </p>
-<p>If we regard a decade as a plausible time frame then six months we’ll Skip by</p>
-<p>There is no better guarantee of a successful relationship than knowing that we could and can manage perfectly well on our own</p>
-<p>It means that we will only look for someone who can deeply contribute to our life not someone who can do the laundry with us or keep us company on Sunday evenings </p>
-<blockquote>
-<p>这意味着我们只会寻找一个可以深深地融入我们生命的人，而不是一个能和我们一起洗衣服或在周日晚上陪伴我们的人</p>
-</blockquote>
-<p>This gives us the strength to back out of unsatisfactory unions as quickly as we should </p>
-<blockquote>
-<p>这给了我们力量去尽早地离开一段不满意的关系</p>
-</blockquote>
-<p>Being a couple can’t and shouldn’t mean that we are utterly reliant on the other for our self-esteem, our daily self-management or for the meeting of our domestic needs </p>
-<blockquote>
-<p>成为一对夫妻不能也不应该意味着我们把自尊、日常自我管理或感受家庭的心理需求完全托付给对方</p>
-</blockquote>
-<p>When we have under our belt a significant experience of thriving on our own we will be able to cope with the inevitable points at which even a very nice partner can’t sustain us </p>
-<blockquote>
-<p>当我们拥有独自茁壮成长的深刻经验时，我们将能够应对一些即使是一个很好的伴侣也无法给予援手的坎</p>
-</blockquote>
-<p>We’ll be less demanding , more competent and more forensic in what we seek from a lover </p>
-<p>It turns out that our willingness to stay on our own is what centrally predicts how likely we’ll be to find and bring to fruition a relationship with someone else </p>
-<p>Being at ease with being single is the needed secure platform from which to make a sane and wise choice about who to create a joint life with</p>
-<p><a href="https://www.youtube.com/watch?v=aAnTwyCJdf0&t=168s&ab_channel=TheSchoolofLife">视频版</a></p>
+<p>那么NonCancellable可以帮助它：</p>
+<ol>
+<li>如果<strong>已经cancel</strong>了，那么<strong>依然进入</strong></li>
+<li>如果已经进入了，然后被<strong>cancel</strong>，在块中有<code>delay</code>这种可取消挂起函数，忽略</li>
+<li>如果在<code>withContext</code>结束返回值的时候检测到取消，忽略</li>
+</ol>
+<p>换言之，不参与结构化并发。</p>
+<p>其实不用<code>NonCancellable</code>，自己显示定义一个<code>Job()</code>也可以做到。</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line">    <span class="keyword">val</span> job = launch(Dispatchers.IO) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            repeat(<span class="number">2</span>) &#123; i -&gt;</span><br><span class="line">                println(<span class="string">&quot;job: I&#x27;m sleeping <span class="variable">$i</span> ...&quot;</span>)</span><br><span class="line">                delay(<span class="number">500L</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            cancel()</span><br><span class="line">            withContext(NonCancellable) &#123; <span class="comment">// NonCancellable / Job()</span></span><br><span class="line">                println(<span class="string">&quot;job: I&#x27;m running finally&quot;</span>)</span><br><span class="line">                delay(<span class="number">1000L</span>)</span><br><span class="line">                println(<span class="string">&quot;job: And I&#x27;ve just delayed for 1 sec because I&#x27;m non-cancellable&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">1500</span>) <span class="comment">// 延迟一段时间</span></span><br><span class="line">    println(<span class="string">&quot;main: I&#x27;m tired of waiting!&quot;</span>)</span><br><span class="line">    job.cancelAndJoin() <span class="comment">// 取消该作业并等待它结束</span></span><br><span class="line">    println(<span class="string">&quot;main: Now I can quit.&quot;</span>)</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">job: I<span class="string">&#x27;m sleeping 0 ...</span></span><br><span class="line"><span class="string">job: I&#x27;</span>m sleeping <span class="number">1</span> ...</span><br><span class="line">job: I<span class="string">&#x27;m running finally</span></span><br><span class="line"><span class="string">main: I&#x27;</span>m tired of waiting!</span><br><span class="line">job: And I<span class="string">&#x27;ve just delayed for 1 sec because I&#x27;</span>m non-cancellable</span><br><span class="line">main: Now I can quit.</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>life</category>
+        <category>Kotlin</category>
+        <category>协程</category>
       </categories>
+      <tags>
+        <tag>协程</tag>
+      </tags>
   </entry>
   <entry>
     <title>协程异常处理总结</title>
@@ -1019,6 +928,165 @@
       </tags>
   </entry>
   <entry>
+    <title>去年春天的阴霾</title>
+    <url>/2023/02/25/%E5%8E%BB%E5%B9%B4%E6%98%A5%E5%A4%A9%E7%9A%84%E9%98%B4%E9%9C%BE/</url>
+    <content><![CDATA[<p>我不想去写，但有这个必要去回忆。</p>
+<p>在《东邪西毒》开头，张国荣饰演的欧阳锋有一句台词：看来你的年纪也有四十出头了，这四十多年来，总有些事你是不愿再提，或是有些人你不想再见，有的人曾经对不起你。</p>
+<p>其实不用四十出头，从十多岁开始，每个人都有一些纠葛的事，不愿想起来。可越是不想回忆起来，就越难以忘记。欧阳锋喝了醉生梦死尚且忘不了，何况我今天没喝酒。只喝了一瓶250ml的纯牛奶。</p>
+<p>那是去年春天的事，差不多上一年的这个时候。我去到一个陌生的环境，但不得不去适应它。我以为我对我的情绪和行为控制良好，但每过一段时间去看，都是漏洞百出，里面满是焦虑不安，自卑怨恨，和爱的人的争执。不用说，伤害她已是一个事实，她没忘记，我也没忘记。</p>
+<p>其实还有一些人，当初也是把酒言欢。但就像我许久不肯面对当初的我一般，渐渐没了联系。我也不清楚是不是仅仅没联系我，如果是的话，反而能让我接受，的确做了一些幼稚的事情。</p>
+<p>”每个人都会经过这个阶段，见到一座山，就想知道山后面是什么。我很想告诉他，可能翻过山后面，你会发现没什么特别。回望之下，可能会觉得这一边更好。“</p>
+<p>去年春天的山，到底有没有翻过去，在现在看来，是没有的。或许在以后会发现，我已在山的另一边。但山后面还有山。</p>
+<p>”小时候总想知道沙漠那边是什么，走过去，才知道沙漠那边还是沙漠。“</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>子协程不被父协程影响的例外情况</title>
+    <url>/2023/02/07/%E5%AD%90%E5%8D%8F%E7%A8%8B%E4%B8%8D%E8%A2%AB%E7%88%B6%E5%8D%8F%E7%A8%8B%E5%BD%B1%E5%93%8D%E7%9A%84%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5/</url>
+    <content><![CDATA[<p>协程中的所谓 <strong>结构化并发</strong>，就是指 <strong>父协程和子协程一起有组织有预谋地合作干活</strong>，如果不讨论<code>scupervisorScope&#123;&#125;</code>的话，大致上内涵如下：</p>
+<ol>
+<li>子协程fail——报错，父协程和其他子协程都cancel.</li>
+<li>子协程cancel，父协程和其他子协程<strong>没事</strong>。</li>
+<li>父协程fail，它所有子协程cancel。</li>
+<li>父协程cancel，它所有子协程cancel。</li>
+</ol>
+<blockquote>
+<p>子协程指<code>CoroutineScope</code>.launch&#x2F;async调用的结果。为避免混乱，不讨论 <code>coroutineScope</code>\ <code>supervisorScope</code>。</p>
+</blockquote>
+<p><a href="https://gist.github.com/JeckOnly/646ee60e16591468c405f59d8245880d">上面四个情况的案例</a></p>
+<p>但也有例外，</p>
+<p>当一个协程被其它协程在 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a> 中启动的时候， 它将通过 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/coroutine-context.html">CoroutineScope.coroutineContext</a> 来承袭上下文(除了Job会是一个新实例，其他的例如调度器都继承下来)，并且这个新协程的 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a> 将会成为父协程作业的子Job。当一个父协程被取消的时候，所有它的子协程也会被递归的取消。</p>
+<p>However, this parent-child relation can be explicitly overriden in one of two ways:</p>
+<ol>
+<li>When a different scope is explicitly specified when launching a coroutine (for example, <code>GlobalScope.launch</code>), then it does not inherit a <code>Job</code> from the parent scope.</li>
+<li>When a different <code>Job</code> object is passed as the context for the new coroutine (as shown in the example below), then it overrides the <code>Job</code> of the parent scope.</li>
+</ol>
+<p>In both cases, the launched coroutine is not tied to the scope it was launched from and operates independently.</p>
+<p>第一种情况：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="comment">// 启动一个协程来处理某种传入请求（request）</span></span><br><span class="line">    <span class="keyword">val</span> request = launch &#123;</span><br><span class="line">        <span class="comment">// 一个TopLevelScope</span></span><br><span class="line">        CoroutineScope(context = Dispatchers.Default).launch &#123;</span><br><span class="line">            println(<span class="string">&quot;NewTopLevelScope job1: I run in my own Job and execute independently!&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;NewTopLevelScope job1: I am not affected by cancellation of the request&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 另一个则承袭了父协程的上下文</span></span><br><span class="line">        launch &#123;</span><br><span class="line">            delay(<span class="number">100</span>)</span><br><span class="line">            println(<span class="string">&quot;ChildCoroutine job2: I am a child of the request coroutine&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;ChildCoroutine job2: I will not execute this line if my parent request is cancelled&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">500</span>)</span><br><span class="line">    request.cancel() <span class="comment">// 取消请求（request）的执行</span></span><br><span class="line">    println(<span class="string">&quot;main: Who has survived request cancellation?&quot;</span>)</span><br><span class="line">    delay(<span class="number">1000</span>) <span class="comment">// 主线程延迟一秒钟来看看发生了什么</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果</span><br><span class="line">NewTopLevelScope job1: I run <span class="keyword">in</span> my own Job and execute independently!</span><br><span class="line">ChildCoroutine job2: I am a child of the request coroutine</span><br><span class="line">main: Who has survived request cancellation?</span><br><span class="line">NewTopLevelScope job1: I am not affected <span class="keyword">by</span> cancellation of the request</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>第二种情况：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="comment">// 启动一个协程来处理某种传入请求（request）</span></span><br><span class="line">    <span class="keyword">val</span> request = launch &#123;</span><br><span class="line">        <span class="comment">// 生成了两个子作业</span></span><br><span class="line">        launch(Job()) &#123;</span><br><span class="line">            println(<span class="string">&quot;job1: I run in my own Job and execute independently!&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;job1: I am not affected by cancellation of the request&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 另一个则承袭了父协程的上下文</span></span><br><span class="line">        launch &#123;</span><br><span class="line">            delay(<span class="number">100</span>)</span><br><span class="line">            println(<span class="string">&quot;job2: I am a child of the request coroutine&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;job2: I will not execute this line if my parent request is cancelled&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">500</span>)</span><br><span class="line">    request.cancel() <span class="comment">// 取消请求（request）的执行</span></span><br><span class="line">    println(<span class="string">&quot;main: Who has survived request cancellation?&quot;</span>)</span><br><span class="line">    delay(<span class="number">1000</span>) <span class="comment">// 主线程延迟一秒钟来看看发生了什么</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果</span><br><span class="line">job1: I run <span class="keyword">in</span> my own Job and execute independently!</span><br><span class="line">job2: I am a child of the request coroutine</span><br><span class="line">main: Who has survived request cancellation?</span><br><span class="line">job1: I am not affected <span class="keyword">by</span> cancellation of the request</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>要注意，无论如何，子协程的Job都是一个新实例，和Parent的Job不是同一个实例。我想区别在于 <strong>隐式创建时</strong> 带上了一些父子协程的信息。</p>
+<p>参考资料：<a href="https://book.kotlincn.net/text/coroutine-context-and-dispatchers.html">协程上下文和调度器</a></p>
+]]></content>
+      <categories>
+        <category>Kotlin</category>
+        <category>协程</category>
+      </categories>
+      <tags>
+        <tag>协程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>单身的意义</title>
+    <url>/2023/02/23/%E5%8D%95%E8%BA%AB%E7%9A%84%E6%84%8F%E4%B9%89/</url>
+    <content><![CDATA[<p>One of the most important preconditions of a good relationship is a satisfactory perspective on being single </p>
+<p>The more we are happy to be on our own the more we will be able to exercise the correct degree of caution around finding a new companion</p>
+<p>The Bedrock of true love is Happy singledom</p>
+<blockquote>
+<p>真爱的基石是快乐的单身生活</p>
+</blockquote>
+<p>Unfortunately, our societies do very little to help us be calm or at ease in our own company</p>
+<blockquote>
+<p>不幸的是，我们的社会并没有教我们如何在一个人的时候保持冷静和自在</p>
+</blockquote>
+<p>Singleton is framed as an involuntary depressing and always hopefully temporary State</p>
+<blockquote>
+<p>单身被描绘成一个不自愿的、绝望的，并且是希望尽快摆脱的临时状态。</p>
+</blockquote>
+<p>The notion that someone might want or need to be on their own perhaps for a long while terrifies a world shaped by Legions of silently miserable couples who need confirmation that they have not chosen the wrong path</p>
+<blockquote>
+<p>一个人可能想要或认为自己需要独自生活很长一段时间的想法让这个世界感到恐惧，这个世界由大量默默忍耐痛苦的夫妻组成，他们需要得到确认，证明他们没有选择错误的道路。</p>
+</blockquote>
+<p>To enforce the idea of what single people are missing advertisers can never have enough of showing off tantalizing images of happy couples walking hand in hand  on beaches </p>
+<p>And most entertainment venues, holiday destinations, and social occasions feel compelled to patronize overcharge, and otherwise demean anyone who has the impudence to venture out on their own</p>
+<blockquote>
+<p>大多数娱乐场所, 度假胜地和社交场合都觉得有必要对那些胆敢自己冒险的人收更多的费用，否则就会贬低那些人</p>
+</blockquote>
+<p>Unfortunately being miserable while single fatally undermines our judgment about who we might get together with </p>
+<p>When someone is starving they will eat anything </p>
+<p>Dostoyevsky wrote a harrowing short story about a famished child who eats a candle made of pig fat and we’re equally liable in emotional desperation to run into the nearest nightclub to secure a chump and will be appalled to find beside us at Daybreak </p>
+<p>We eventually learn being in an unsatisfactory relationship is clearly worse </p>
+<p>That is even more lonely than being alone </p>
+<p>The central challenge of being alone is coping with the fear of what singlehood means </p>
+<p>Being alone is bearable in relation to how normal that highly nebulous yet highly influential concept the condition feels to us at any given point </p>
+<blockquote>
+<p>孤独是可以忍受的，但这和”孤独“这种高度模糊但极具影响力的概念在任何特定时刻对我们的感觉有多正常相关。</p>
+</blockquote>
+<p>It can either be a break from an honorably busy life or sure evidence that we are an unwanted wretched disgusting and emotionally diseased being</p>
+<blockquote>
+<p>它可以看作是繁忙生活中的休憩，也可以用来去证明我们是一个不受欢迎的、令人厌恶的、情感上有疾病的人。</p>
+</blockquote>
+<p>This is tricky but ultimately very hopeful for it suggests that if only we could work on what being alone means to us we could theoretically endure long periods alone.</p>
+<p>To build ourselves a new mental model of what being alone should truly mean we might rehearse a few of the following arguments</p>
+<ol>
+<li>Despite what an unfriendly voice inside our heads might tell us,  we are the ones who can choose whether or not to be alone</li>
+</ol>
+<p>Our solitude is willed rather than imposed </p>
+<p>No one ever needs to be alone so long as they don’t mind who they are with, but we do mind the wrong kind of company is a great deal lonelier for us than being by ourselves </p>
+<p>That is, it’s further from what matters to us more grating in its insincerity and more of a reminder of disconnection and misunderstanding than is the conversation we can have in the quiet of our own minds</p>
+<blockquote>
+<p>也就是说，它离我们真正关心的东西更遥远，它的虚伪更令人讨厌，它更提醒我们，与我们在自己内心平静的对话相比，它是一种脱节和误解</p>
+</blockquote>
+<p>Being alone is not proof that we have been rejected by the world </p>
+<blockquote>
+<p>独自一人并不代表被这个世界所拒绝</p>
+</blockquote>
+<p>It’s a sign that we’ve taken a good look at the available options and have -with wisdom- done some rejecting ourselves </p>
+<blockquote>
+<p>反而表明，我们曾经好好地审视了可以做出的选择，并且明智地选择了”不“</p>
+</blockquote>
+<p>Another big thought is that we need to appreciate how long it will take to find someone given how choosy we are for very good reasons </p>
+<p>We aren’t just looking for anyone</p>
+<p>The right candidate will be no less easy to find than a great job or a beautiful house</p>
+<p>It might take many months probably years </p>
+<p>Expectations matter </p>
+<p>If we regard a decade as a plausible time frame then six months we’ll Skip by</p>
+<p>There is no better guarantee of a successful relationship than knowing that we could and can manage perfectly well on our own</p>
+<p>It means that we will only look for someone who can deeply contribute to our life not someone who can do the laundry with us or keep us company on Sunday evenings </p>
+<blockquote>
+<p>这意味着我们只会寻找一个可以深深地融入我们生命的人，而不是一个能和我们一起洗衣服或在周日晚上陪伴我们的人</p>
+</blockquote>
+<p>This gives us the strength to back out of unsatisfactory unions as quickly as we should </p>
+<blockquote>
+<p>这给了我们力量去尽早地离开一段不满意的关系</p>
+</blockquote>
+<p>Being a couple can’t and shouldn’t mean that we are utterly reliant on the other for our self-esteem, our daily self-management or for the meeting of our domestic needs </p>
+<blockquote>
+<p>成为一对夫妻不能也不应该意味着我们把自尊、日常自我管理或感受家庭的心理需求完全托付给对方</p>
+</blockquote>
+<p>When we have under our belt a significant experience of thriving on our own we will be able to cope with the inevitable points at which even a very nice partner can’t sustain us </p>
+<blockquote>
+<p>当我们拥有独自茁壮成长的深刻经验时，我们将能够应对一些即使是一个很好的伴侣也无法给予援手的坎</p>
+</blockquote>
+<p>We’ll be less demanding , more competent and more forensic in what we seek from a lover </p>
+<p>It turns out that our willingness to stay on our own is what centrally predicts how likely we’ll be to find and bring to fruition a relationship with someone else </p>
+<p>Being at ease with being single is the needed secure platform from which to make a sane and wise choice about who to create a joint life with</p>
+<p><a href="https://www.youtube.com/watch?v=aAnTwyCJdf0&t=168s&ab_channel=TheSchoolofLife">视频版</a></p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>小云第一局Valorant</title>
+    <url>/2023/02/06/%E5%B0%8F%E4%BA%91%E7%AC%AC%E4%B8%80%E5%B1%80Valorant/</url>
+    <content><![CDATA[<p>小云今天完完整整地打了一局Valorant，之前都是零零碎碎地打。不得不说对于一个新手来说，还行。不过我们也是今天她玩了才知道她晕三D，她说吃饭时都没啥胃口。我也是第一次实际看到晕三D的情况。</p>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>小云</tag>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>学习Moshi</title>
     <url>/2023/02/21/%E5%AD%A6%E4%B9%A0Moshi/</url>
     <content><![CDATA[<h1 id="vs-Gson"><a href="#vs-Gson" class="headerlink" title="vs Gson"></a>vs Gson</h1><p>Gson的仓库介绍：Gson is a Java library that can be used to convert Java Objects into their JSON representation. It can also be used to convert a JSON string to an equivalent Java object. </p>
@@ -1066,74 +1134,6 @@
       <categories>
         <category>库</category>
         <category>Moshi</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>小云第一局Valorant</title>
-    <url>/2023/02/06/%E5%B0%8F%E4%BA%91%E7%AC%AC%E4%B8%80%E5%B1%80Valorant/</url>
-    <content><![CDATA[<p>小云今天完完整整地打了一局Valorant，之前都是零零碎碎地打。不得不说对于一个新手来说，还行。不过我们也是今天她玩了才知道她晕三D，她说吃饭时都没啥胃口。我也是第一次实际看到晕三D的情况。</p>
-]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>小云</tag>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>子协程不被父协程影响的例外情况</title>
-    <url>/2023/02/07/%E5%AD%90%E5%8D%8F%E7%A8%8B%E4%B8%8D%E8%A2%AB%E7%88%B6%E5%8D%8F%E7%A8%8B%E5%BD%B1%E5%93%8D%E7%9A%84%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5/</url>
-    <content><![CDATA[<p>协程中的所谓 <strong>结构化并发</strong>，就是指 <strong>父协程和子协程一起有组织有预谋地合作干活</strong>，如果不讨论<code>scupervisorScope&#123;&#125;</code>的话，大致上内涵如下：</p>
-<ol>
-<li>子协程fail——报错，父协程和其他子协程都cancel.</li>
-<li>子协程cancel，父协程和其他子协程<strong>没事</strong>。</li>
-<li>父协程fail，它所有子协程cancel。</li>
-<li>父协程cancel，它所有子协程cancel。</li>
-</ol>
-<blockquote>
-<p>子协程指<code>CoroutineScope</code>.launch&#x2F;async调用的结果。为避免混乱，不讨论 <code>coroutineScope</code>\ <code>supervisorScope</code>。</p>
-</blockquote>
-<p><a href="https://gist.github.com/JeckOnly/646ee60e16591468c405f59d8245880d">上面四个情况的案例</a></p>
-<p>但也有例外，</p>
-<p>当一个协程被其它协程在 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a> 中启动的时候， 它将通过 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/coroutine-context.html">CoroutineScope.coroutineContext</a> 来承袭上下文(除了Job会是一个新实例，其他的例如调度器都继承下来)，并且这个新协程的 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a> 将会成为父协程作业的子Job。当一个父协程被取消的时候，所有它的子协程也会被递归的取消。</p>
-<p>However, this parent-child relation can be explicitly overriden in one of two ways:</p>
-<ol>
-<li>When a different scope is explicitly specified when launching a coroutine (for example, <code>GlobalScope.launch</code>), then it does not inherit a <code>Job</code> from the parent scope.</li>
-<li>When a different <code>Job</code> object is passed as the context for the new coroutine (as shown in the example below), then it overrides the <code>Job</code> of the parent scope.</li>
-</ol>
-<p>In both cases, the launched coroutine is not tied to the scope it was launched from and operates independently.</p>
-<p>第一种情况：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="comment">// 启动一个协程来处理某种传入请求（request）</span></span><br><span class="line">    <span class="keyword">val</span> request = launch &#123;</span><br><span class="line">        <span class="comment">// 一个TopLevelScope</span></span><br><span class="line">        CoroutineScope(context = Dispatchers.Default).launch &#123;</span><br><span class="line">            println(<span class="string">&quot;NewTopLevelScope job1: I run in my own Job and execute independently!&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;NewTopLevelScope job1: I am not affected by cancellation of the request&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 另一个则承袭了父协程的上下文</span></span><br><span class="line">        launch &#123;</span><br><span class="line">            delay(<span class="number">100</span>)</span><br><span class="line">            println(<span class="string">&quot;ChildCoroutine job2: I am a child of the request coroutine&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;ChildCoroutine job2: I will not execute this line if my parent request is cancelled&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">500</span>)</span><br><span class="line">    request.cancel() <span class="comment">// 取消请求（request）的执行</span></span><br><span class="line">    println(<span class="string">&quot;main: Who has survived request cancellation?&quot;</span>)</span><br><span class="line">    delay(<span class="number">1000</span>) <span class="comment">// 主线程延迟一秒钟来看看发生了什么</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果</span><br><span class="line">NewTopLevelScope job1: I run <span class="keyword">in</span> my own Job and execute independently!</span><br><span class="line">ChildCoroutine job2: I am a child of the request coroutine</span><br><span class="line">main: Who has survived request cancellation?</span><br><span class="line">NewTopLevelScope job1: I am not affected <span class="keyword">by</span> cancellation of the request</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>第二种情况：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="comment">// 启动一个协程来处理某种传入请求（request）</span></span><br><span class="line">    <span class="keyword">val</span> request = launch &#123;</span><br><span class="line">        <span class="comment">// 生成了两个子作业</span></span><br><span class="line">        launch(Job()) &#123;</span><br><span class="line">            println(<span class="string">&quot;job1: I run in my own Job and execute independently!&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;job1: I am not affected by cancellation of the request&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 另一个则承袭了父协程的上下文</span></span><br><span class="line">        launch &#123;</span><br><span class="line">            delay(<span class="number">100</span>)</span><br><span class="line">            println(<span class="string">&quot;job2: I am a child of the request coroutine&quot;</span>)</span><br><span class="line">            delay(<span class="number">1000</span>)</span><br><span class="line">            println(<span class="string">&quot;job2: I will not execute this line if my parent request is cancelled&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">500</span>)</span><br><span class="line">    request.cancel() <span class="comment">// 取消请求（request）的执行</span></span><br><span class="line">    println(<span class="string">&quot;main: Who has survived request cancellation?&quot;</span>)</span><br><span class="line">    delay(<span class="number">1000</span>) <span class="comment">// 主线程延迟一秒钟来看看发生了什么</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果</span><br><span class="line">job1: I run <span class="keyword">in</span> my own Job and execute independently!</span><br><span class="line">job2: I am a child of the request coroutine</span><br><span class="line">main: Who has survived request cancellation?</span><br><span class="line">job1: I am not affected <span class="keyword">by</span> cancellation of the request</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-<p>要注意，无论如何，子协程的Job都是一个新实例，和Parent的Job不是同一个实例。我想区别在于 <strong>隐式创建时</strong> 带上了一些父子协程的信息。</p>
-<p>参考资料：<a href="https://book.kotlincn.net/text/coroutine-context-and-dispatchers.html">协程上下文和调度器</a></p>
-]]></content>
-      <categories>
-        <category>Kotlin</category>
-        <category>协程</category>
-      </categories>
-      <tags>
-        <tag>协程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>去年春天的阴霾</title>
-    <url>/2023/02/25/%E5%8E%BB%E5%B9%B4%E6%98%A5%E5%A4%A9%E7%9A%84%E9%98%B4%E9%9C%BE/</url>
-    <content><![CDATA[<p>我不想去写，但有这个必要去回忆。</p>
-<p>在《东邪西毒》开头，张国荣饰演的欧阳锋有一句台词：看来你的年纪也有四十出头了，这四十多年来，总有些事你是不愿再提，或是有些人你不想再见，有的人曾经对不起你。</p>
-<p>其实不用四十出头，从十多岁开始，每个人都有一些纠葛的事，不愿想起来。可越是不想回忆起来，就越难以忘记。欧阳锋喝了醉生梦死尚且忘不了，何况我今天没喝酒。只喝了一瓶250ml的纯牛奶。</p>
-<p>那是去年春天的事，差不多上一年的这个时候。我去到一个陌生的环境，但不得不去适应它。我以为我对我的情绪和行为控制良好，但每过一段时间去看，都是漏洞百出，里面满是焦虑不安，自卑怨恨，和爱的人的争执。不用说，伤害她已是一个事实，她没忘记，我也没忘记。</p>
-<p>其实还有一些人，当初也是把酒言欢。但就像我许久不肯面对当初的我一般，渐渐没了联系。我也不清楚是不是仅仅没联系我，如果是的话，反而能让我接受，的确做了一些幼稚的事情。</p>
-<p>”每个人都会经过这个阶段，见到一座山，就想知道山后面是什么。我很想告诉他，可能翻过山后面，你会发现没什么特别。回望之下，可能会觉得这一边更好。“</p>
-<p>去年春天的山，到底有没有翻过去，在现在看来，是没有的。或许在以后会发现，我已在山的另一边。但山后面还有山。</p>
-<p>”小时候总想知道沙漠那边是什么，走过去，才知道沙漠那边还是沙漠。“</p>
-]]></content>
-      <categories>
-        <category>life</category>
       </categories>
   </entry>
   <entry>
@@ -1204,6 +1204,16 @@
 ]]></content>
       <categories>
         <category>life</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>王家卫《手》</title>
+    <url>/2023/02/24/%E7%8E%8B%E5%AE%B6%E5%8D%AB%E3%80%8A%E6%89%8B%E3%80%8B/</url>
+    <content><![CDATA[<p>大半生的痴恋起源于第一次被她手。</p>
+<p>第一次总是难以忘怀。</p>
+]]></content>
+      <categories>
+        <category>电影</category>
       </categories>
   </entry>
   <entry>
@@ -1285,16 +1295,6 @@
       <tags>
         <tag>协程</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>王家卫《手》</title>
-    <url>/2023/02/24/%E7%8E%8B%E5%AE%B6%E5%8D%AB%E3%80%8A%E6%89%8B%E3%80%8B/</url>
-    <content><![CDATA[<p>大半生的痴恋起源于第一次被她手。</p>
-<p>第一次总是难以忘怀。</p>
-]]></content>
-      <categories>
-        <category>电影</category>
-      </categories>
   </entry>
   <entry>
     <title>远离使杀戮更容易</title>
