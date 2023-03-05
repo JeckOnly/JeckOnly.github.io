@@ -13,46 +13,6 @@
       </categories>
   </entry>
   <entry>
-    <title>After watching Shutter Island</title>
-    <url>/2023/02/20/After%20watching%20Shutter%20Island/</url>
-    <content><![CDATA[<ul>
-<li><p>How we doing this morning?</p>
-</li>
-<li><p>Good. And you?</p>
-</li>
-<li><p>Can’t complain.</p>
-</li>
-<li><p>So what’s our next move?</p>
-</li>
-<li><p>You tell me.</p>
-</li>
-<li><p>We gotta get off this rock, chuck.Get back to the mainland.Whatever the hell’s going on here, it’s bad.</p>
-</li>
-<li><p>……</p>
-</li>
-<li><p>Dont worry, partner, they’re not gonna catch us.</p>
-</li>
-<li><p>That’s right. We’re too smart for them.</p>
-</li>
-<li><p>Yeah, we are, aren’t we?</p>
-</li>
-<li><p>……</p>
-</li>
-<li><p>You know, this place makes me wonder…</p>
-</li>
-<li><p>Yeah, what’s that, boss?</p>
-</li>
-<li><p>Which would be worse, to live as a monster or to die as a good man?</p>
-</li>
-<li><p>Teddy?</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>电影</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Android存储系统概况</title>
     <url>/2023/02/24/Android%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%86%B5/</url>
     <content><![CDATA[<p>在api 28 29 30 31 33都进行测试过。</p>
@@ -116,6 +76,58 @@
       </categories>
   </entry>
   <entry>
+    <title>After watching Shutter Island</title>
+    <url>/2023/02/20/After%20watching%20Shutter%20Island/</url>
+    <content><![CDATA[<ul>
+<li><p>How we doing this morning?</p>
+</li>
+<li><p>Good. And you?</p>
+</li>
+<li><p>Can’t complain.</p>
+</li>
+<li><p>So what’s our next move?</p>
+</li>
+<li><p>You tell me.</p>
+</li>
+<li><p>We gotta get off this rock, chuck.Get back to the mainland.Whatever the hell’s going on here, it’s bad.</p>
+</li>
+<li><p>……</p>
+</li>
+<li><p>Dont worry, partner, they’re not gonna catch us.</p>
+</li>
+<li><p>That’s right. We’re too smart for them.</p>
+</li>
+<li><p>Yeah, we are, aren’t we?</p>
+</li>
+<li><p>……</p>
+</li>
+<li><p>You know, this place makes me wonder…</p>
+</li>
+<li><p>Yeah, what’s that, boss?</p>
+</li>
+<li><p>Which would be worse, to live as a monster or to die as a good man?</p>
+</li>
+<li><p>Teddy?</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>电影</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Android权限有感</title>
+    <url>/2023/02/22/Android%E6%9D%83%E9%99%90%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<p>看了一晚的PermissionX系列文章，guolin写的挺好的。再次感慨Android系统的权限分类的请求的复杂。</p>
+<p>在横向上，权限分为普通，危险，特殊三个级别。普通的只需要manifest中声明，危险则是运行时请求，特殊则是利用Intent导向一个特定界面来开启。</p>
+<p>纵向上，随着Android版本的变化，要 <strong>做某一个功能</strong>，需要的权限 <strong>可能不一样</strong>；在高版本中，要用高版本的方法；在判断手机版本低时，要用旧方法。等等不言而喻。</p>
+<p>干。</p>
+]]></content>
+      <categories>
+        <category>编程感想</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Flow异常处理</title>
     <url>/2023/02/09/Flow%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</url>
     <content><![CDATA[<p>它们的函数注释一言难尽，建议别看，onCompletion的注释不太对。</p>
@@ -167,18 +179,6 @@
         <category>Kotlin</category>
         <category>协程</category>
         <category>Flow</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Android权限有感</title>
-    <url>/2023/02/22/Android%E6%9D%83%E9%99%90%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<p>看了一晚的PermissionX系列文章，guolin写的挺好的。再次感慨Android系统的权限分类的请求的复杂。</p>
-<p>在横向上，权限分为普通，危险，特殊三个级别。普通的只需要manifest中声明，危险则是运行时请求，特殊则是利用Intent导向一个特定界面来开启。</p>
-<p>纵向上，随着Android版本的变化，要 <strong>做某一个功能</strong>，需要的权限 <strong>可能不一样</strong>；在高版本中，要用高版本的方法；在判断手机版本低时，要用旧方法。等等不言而喻。</p>
-<p>干。</p>
-]]></content>
-      <categories>
-        <category>编程感想</category>
       </categories>
   </entry>
   <entry>
@@ -450,31 +450,6 @@
       </tags>
   </entry>
   <entry>
-    <title>select优先选择第一个可用的clause</title>
-    <url>/2023/03/03/select%E4%BC%98%E5%85%88%E9%80%89%E6%8B%A9%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%94%A8%E7%9A%84clause/</url>
-    <content><![CDATA[<p>when more than one clause are ready, select will choose the first one. Pls take a look at the code below:</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">selectAorB</span><span class="params">(a: <span class="type">ReceiveChannel</span>&lt;<span class="type">String</span>&gt;, b: <span class="type">ReceiveChannel</span>&lt;<span class="type">String</span>&gt;)</span></span>: String =</span><br><span class="line">    select&lt;String&gt; &#123;</span><br><span class="line">        a.onReceiveCatching &#123; it -&gt;</span><br><span class="line">            <span class="keyword">val</span> value = it.getOrNull()</span><br><span class="line">            <span class="keyword">if</span> (value != <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="string">&quot;a -&gt; &#x27;<span class="variable">$value</span>&#x27;&quot;</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="string">&quot;Channel &#x27;a&#x27; is closed&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        b.onReceiveCatching &#123; it -&gt;</span><br><span class="line">            <span class="keyword">val</span> value = it.getOrNull()</span><br><span class="line">            <span class="keyword">if</span> (value != <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="string">&quot;b -&gt; &#x27;<span class="variable">$value</span>&#x27;&quot;</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="string">&quot;Channel &#x27;b&#x27; is closed&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line">    <span class="keyword">val</span> a = produce&lt;String&gt; &#123;</span><br><span class="line">        repeat(<span class="number">4</span>) &#123; send(<span class="string">&quot;Hello <span class="variable">$it</span>&quot;</span>) &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> b = produce&lt;String&gt; &#123;</span><br><span class="line">        repeat(<span class="number">4</span>) &#123; send(<span class="string">&quot;World <span class="variable">$it</span>&quot;</span>) &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    repeat(<span class="number">10</span>) &#123; <span class="comment">// 打印最早的八个结果</span></span><br><span class="line">        println(selectAorB(a, b))</span><br><span class="line">    &#125;</span><br><span class="line">    coroutineContext.cancelChildren()</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>The output result is </p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">a -&gt; <span class="string">&#x27;Hello 0&#x27;</span></span><br><span class="line">a -&gt; <span class="string">&#x27;Hello 1&#x27;</span></span><br><span class="line">b -&gt; <span class="string">&#x27;World 0&#x27;</span></span><br><span class="line">a -&gt; <span class="string">&#x27;Hello 2&#x27;</span></span><br><span class="line">a -&gt; <span class="string">&#x27;Hello 3&#x27;</span></span><br><span class="line">b -&gt; <span class="string">&#x27;World 1&#x27;</span></span><br><span class="line">Channel <span class="string">&#x27;a&#x27;</span> <span class="keyword">is</span> closed</span><br><span class="line">Channel <span class="string">&#x27;a&#x27;</span> <span class="keyword">is</span> closed</span><br><span class="line">Channel <span class="string">&#x27;a&#x27;</span> <span class="keyword">is</span> closed</span><br><span class="line">Channel <span class="string">&#x27;a&#x27;</span> <span class="keyword">is</span> closed</span><br></pre></td></tr></table></figure>
-
-<p>Why the result is “aabaab” and all the last is “Channel ‘a’ is closed” that will be return by <code>onReceive</code>  called on channel a when it is closed?</p>
-<p>OK, first, why all the last is “Channel ‘a’ is closed” is because select will always choose the first clause that is ready to use. In this case, after “a -&gt; ‘Hello 0’” is printed 4 times, channel a had been closed. So the <code>onReceiveCatching</code> invoked on channel a will always return immediatly. It won’t be suspended anymore.</p>
-<p>Second, why there is two “a” followed by 1 “b”?</p>
-<p>Based on this <a href="https://github.com/Kotlin/kotlinx.coroutines/issues/111#issuecomment-327716427">issue</a>, I try to answer this question. There is three coroutine instance in the program, one main coroutine and the two last coroutine to run channel.</p>
-<p>因为是运行了main，然后是先后创建 a, b channel。所以一开始的coroutine 队列是序号1所示。</p>
-<p><img src="https://i.pinimg.com/564x/87/be/14/87be144c68d4163c77e9d281548e045f.jpg"></p>
-<p>然后main在执行select的过程中没有收到值，所以就挂起了。这时候队列如序号2</p>
-<p>然后a channel发送了一个值，main的状态变为receive a，a发送的值可以看作被 <strong>接收</strong> 了，所以a可以再执行一次send，因为这两个都是<strong>capacity为0的rendezvous channel</strong>, 所以这次a就挂起了，这时候a的状态为准备发送的状态。这时候队列如序号3</p>
-<p>然后b准备发送值，但不得不挂起，因为没有接收啊，所以b进入准备发送的状态。这时候队列如序号5.</p>
-<p>main coroutine 终于 resume了，然后它先打印 a给它的，然后又看了看，现在有两个 a, b 都准备发送。<strong>根据select 的优先级</strong>， 它选了a先，然后再b，所以就打印”aab“了。然后这时候队列如序号6.进入下一个循环。</p>
-]]></content>
-      <categories>
-        <category>Kotlin</category>
-        <category>协程</category>
-      </categories>
-  </entry>
-  <entry>
     <title>“穿山甲：被捕杀最多的动物”观看有感</title>
     <url>/2023/02/14/%E2%80%9C%E7%A9%BF%E5%B1%B1%E7%94%B2%EF%BC%9A%E8%A2%AB%E6%8D%95%E6%9D%80%E6%9C%80%E5%A4%9A%E7%9A%84%E5%8A%A8%E7%89%A9%E2%80%9D%E8%A7%82%E7%9C%8B%E6%9C%89%E6%84%9F/</url>
     <content><![CDATA[<p>这部记录片挺无聊的，一个女人，变卖家产，投身到非洲穿山甲的保护之中。成果在片中一点没说，就说时势很艰难，资金人力啥的都不够，中间记录的一大段都是女主在非洲的一个房子里和她养的一只穿山甲的日常，后面就说了她去亚洲越难和中国拜访，理由是因为亚洲对穿山甲鳞片的药用间接导致非洲穿山甲被大量捕杀所以要去看看。但逛了一圈似乎也只是了解了一些显而易见的事实fact。比如时势不容乐观，要抓紧时间行动。然后片尾就说为了让更多人了解穿山甲所以有一个摄影师来拍女主养的那只宠物的日常来发到网上。</p>
@@ -501,6 +476,41 @@
       </categories>
   </entry>
   <entry>
+    <title>select优先选择第一个可用的clause</title>
+    <url>/2023/03/03/select%E4%BC%98%E5%85%88%E9%80%89%E6%8B%A9%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%94%A8%E7%9A%84clause/</url>
+    <content><![CDATA[<p>when more than one clause are ready, select will choose the first one. Pls take a look at the code below:</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">selectAorB</span><span class="params">(a: <span class="type">ReceiveChannel</span>&lt;<span class="type">String</span>&gt;, b: <span class="type">ReceiveChannel</span>&lt;<span class="type">String</span>&gt;)</span></span>: String =</span><br><span class="line">    select&lt;String&gt; &#123;</span><br><span class="line">        a.onReceiveCatching &#123; it -&gt;</span><br><span class="line">            <span class="keyword">val</span> value = it.getOrNull()</span><br><span class="line">            <span class="keyword">if</span> (value != <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="string">&quot;a -&gt; &#x27;<span class="variable">$value</span>&#x27;&quot;</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="string">&quot;Channel &#x27;a&#x27; is closed&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        b.onReceiveCatching &#123; it -&gt;</span><br><span class="line">            <span class="keyword">val</span> value = it.getOrNull()</span><br><span class="line">            <span class="keyword">if</span> (value != <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="string">&quot;b -&gt; &#x27;<span class="variable">$value</span>&#x27;&quot;</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="string">&quot;Channel &#x27;b&#x27; is closed&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line">    <span class="keyword">val</span> a = produce&lt;String&gt; &#123;</span><br><span class="line">        repeat(<span class="number">4</span>) &#123; send(<span class="string">&quot;Hello <span class="variable">$it</span>&quot;</span>) &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> b = produce&lt;String&gt; &#123;</span><br><span class="line">        repeat(<span class="number">4</span>) &#123; send(<span class="string">&quot;World <span class="variable">$it</span>&quot;</span>) &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    repeat(<span class="number">10</span>) &#123; <span class="comment">// 打印最早的八个结果</span></span><br><span class="line">        println(selectAorB(a, b))</span><br><span class="line">    &#125;</span><br><span class="line">    coroutineContext.cancelChildren()</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The output result is </p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">a -&gt; <span class="string">&#x27;Hello 0&#x27;</span></span><br><span class="line">a -&gt; <span class="string">&#x27;Hello 1&#x27;</span></span><br><span class="line">b -&gt; <span class="string">&#x27;World 0&#x27;</span></span><br><span class="line">a -&gt; <span class="string">&#x27;Hello 2&#x27;</span></span><br><span class="line">a -&gt; <span class="string">&#x27;Hello 3&#x27;</span></span><br><span class="line">b -&gt; <span class="string">&#x27;World 1&#x27;</span></span><br><span class="line">Channel <span class="string">&#x27;a&#x27;</span> <span class="keyword">is</span> closed</span><br><span class="line">Channel <span class="string">&#x27;a&#x27;</span> <span class="keyword">is</span> closed</span><br><span class="line">Channel <span class="string">&#x27;a&#x27;</span> <span class="keyword">is</span> closed</span><br><span class="line">Channel <span class="string">&#x27;a&#x27;</span> <span class="keyword">is</span> closed</span><br></pre></td></tr></table></figure>
+
+<p>Why the result is “aabaab” and all the last is “Channel ‘a’ is closed” that will be return by <code>onReceive</code>  called on channel a when it is closed?</p>
+<p>OK, first, why all the last is “Channel ‘a’ is closed” is because select will always choose the first clause that is ready to use. In this case, after “a -&gt; ‘Hello 0’” is printed 4 times, channel a had been closed. So the <code>onReceiveCatching</code> invoked on channel a will always return immediatly. It won’t be suspended anymore.</p>
+<p>Second, why there is two “a” followed by 1 “b”?</p>
+<p>Based on this <a href="https://github.com/Kotlin/kotlinx.coroutines/issues/111#issuecomment-327716427">issue</a>, I try to answer this question. There is three coroutine instance in the program, one main coroutine and the two last coroutine to run channel.</p>
+<p>因为是运行了main，然后是先后创建 a, b channel。所以一开始的coroutine 队列是序号1所示。</p>
+<p><img src="https://i.pinimg.com/564x/87/be/14/87be144c68d4163c77e9d281548e045f.jpg"></p>
+<p>然后main在执行select的过程中没有收到值，所以就挂起了。这时候队列如序号2</p>
+<p>然后a channel发送了一个值，main的状态变为receive a，a发送的值可以看作被 <strong>接收</strong> 了，所以a可以再执行一次send，因为这两个都是<strong>capacity为0的rendezvous channel</strong>, 所以这次a就挂起了，这时候a的状态为准备发送的状态。这时候队列如序号3</p>
+<p>然后b准备发送值，但不得不挂起，因为没有接收啊，所以b进入准备发送的状态。这时候队列如序号5.</p>
+<p>main coroutine 终于 resume了，然后它先打印 a给它的，然后又看了看，现在有两个 a, b 都准备发送。<strong>根据select 的优先级</strong>， 它选了a先，然后再b，所以就打印”aab“了。然后这时候队列如序号6.进入下一个循环。</p>
+]]></content>
+      <categories>
+        <category>Kotlin</category>
+        <category>协程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>《擅长捉弄的高木同学剧场版》有感</title>
+    <url>/2023/02/16/%E3%80%8A%E6%93%85%E9%95%BF%E6%8D%89%E5%BC%84%E7%9A%84%E9%AB%98%E6%9C%A8%E5%90%8C%E5%AD%A6%E5%89%A7%E5%9C%BA%E7%89%88%E3%80%8B%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<p>TV动画的核心——羞涩、捉弄等元素在剧场版中占的比重实在可怜。中间养猫那场戏过了之后，不知道为啥西片就A了上去。连表白都还没有就直接来了一句——“我会让你幸福”。大哥你之前可是被盯着看都会脸红得像番茄的啊。</p>
+<p>强行结局而结局。带有太多的日式哀伤。</p>
+]]></content>
+      <categories>
+        <category>电影</category>
+      </categories>
+  </entry>
+  <entry>
     <title>《伊尼舍林的报丧女妖》有感</title>
     <url>/2023/02/16/%E3%80%8A%E4%BC%8A%E5%B0%BC%E8%88%8D%E6%9E%97%E7%9A%84%E6%8A%A5%E4%B8%A7%E5%A5%B3%E5%A6%96%E3%80%8B%E6%9C%89%E6%84%9F/</url>
     <content><![CDATA[<p>并不是一部恐怖片。报丧女妖是爱尔兰神话中传说在某人将要死去的时候便会开始哭号的神灵&#x2F;妖怪。</p>
@@ -509,16 +519,6 @@
 <p>而和他做了好几十年老朋友的“老实人”Padraic则是一个安分守己、教育程度比较低的nice man。也就是脾气很好，也会说笑，非常活在当下，在白天照顾几头牛羊晚上则去酒吧喝酒就感到一天十分满足的普通人。其实岛上的都是普通人吧，只不过Colm在某一天有了存在主义危机，觉得不能这么庸俗下去。</p>
 <p>Colm突然单方面宣布终结和Padraic的老朋友关系，Padraic自然是迷惑不解。Padraic的生活破碎了。他脑子比较简单，不理解Colm想过一种“更有意义”的生活。Colm说和他的闲聊一点意义都没有，只是在浪费生命，可几十年不都是这么过来的吗。</p>
 <p>后来就是互相伤害的故事了。</p>
-]]></content>
-      <categories>
-        <category>电影</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>《擅长捉弄的高木同学剧场版》有感</title>
-    <url>/2023/02/16/%E3%80%8A%E6%93%85%E9%95%BF%E6%8D%89%E5%BC%84%E7%9A%84%E9%AB%98%E6%9C%A8%E5%90%8C%E5%AD%A6%E5%89%A7%E5%9C%BA%E7%89%88%E3%80%8B%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<p>TV动画的核心——羞涩、捉弄等元素在剧场版中占的比重实在可怜。中间养猫那场戏过了之后，不知道为啥西片就A了上去。连表白都还没有就直接来了一句——“我会让你幸福”。大哥你之前可是被盯着看都会脸红得像番茄的啊。</p>
-<p>强行结局而结局。带有太多的日式哀伤。</p>
 ]]></content>
       <categories>
         <category>电影</category>
@@ -557,16 +557,6 @@
       </categories>
   </entry>
   <entry>
-    <title>《重庆森林》感</title>
-    <url>/2023/02/22/%E3%80%8A%E9%87%8D%E5%BA%86%E6%A3%AE%E6%9E%97%E3%80%8B%E6%84%9F/</url>
-    <content><![CDATA[<p>很深刻的，诠释了都市里人与人之间的冷漠，但也让两个人的相遇变得如此缘分与美妙。在看的时候，会感受到一种类似于自己就是海洋中的一座孤岛的孤独感。有一个作家写的小说也可以让我有一种感觉，那就是村上春树。</p>
-<p>村上的小说带有太多奇幻的成分，重庆森林也带有一点奇幻感，它们都让不可思议的情节无缝衔接地发生在日常之中。第一个故事的杀手，第二个故事的”海螺姑娘“，都让这个很世俗的城市带着点荒诞。</p>
-]]></content>
-      <categories>
-        <category>电影</category>
-      </categories>
-  </entry>
-  <entry>
     <title>不要尝试多任务工作</title>
     <url>/2023/02/19/%E4%B8%8D%E8%A6%81%E5%B0%9D%E8%AF%95%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%B7%A5%E4%BD%9C/</url>
     <content><![CDATA[<p>全神贯注可以提升几乎一切体验。<br>——凯利·麦戈尼加尔，斯坦福商学院管理学讲师</p>
@@ -578,6 +568,16 @@
 ]]></content>
       <categories>
         <category>读书</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>《重庆森林》感</title>
+    <url>/2023/02/22/%E3%80%8A%E9%87%8D%E5%BA%86%E6%A3%AE%E6%9E%97%E3%80%8B%E6%84%9F/</url>
+    <content><![CDATA[<p>很深刻的，诠释了都市里人与人之间的冷漠，但也让两个人的相遇变得如此缘分与美妙。在看的时候，会感受到一种类似于自己就是海洋中的一座孤岛的孤独感。有一个作家写的小说也可以让我有一种感觉，那就是村上春树。</p>
+<p>村上的小说带有太多奇幻的成分，重庆森林也带有一点奇幻感，它们都让不可思议的情节无缝衔接地发生在日常之中。第一个故事的杀手，第二个故事的”海螺姑娘“，都让这个很世俗的城市带着点荒诞。</p>
+]]></content>
+      <categories>
+        <category>电影</category>
       </categories>
   </entry>
   <entry>
@@ -759,6 +759,31 @@
 <p>其实不用<code>NonCancellable</code>，自己显示定义一个<code>Job()</code>也可以做到。</p>
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line">    <span class="keyword">val</span> job = launch(Dispatchers.IO) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            repeat(<span class="number">2</span>) &#123; i -&gt;</span><br><span class="line">                println(<span class="string">&quot;job: I&#x27;m sleeping <span class="variable">$i</span> ...&quot;</span>)</span><br><span class="line">                delay(<span class="number">500L</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            cancel()</span><br><span class="line">            withContext(NonCancellable) &#123; <span class="comment">// NonCancellable / Job()</span></span><br><span class="line">                println(<span class="string">&quot;job: I&#x27;m running finally&quot;</span>)</span><br><span class="line">                delay(<span class="number">1000L</span>)</span><br><span class="line">                println(<span class="string">&quot;job: And I&#x27;ve just delayed for 1 sec because I&#x27;m non-cancellable&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">1500</span>) <span class="comment">// 延迟一段时间</span></span><br><span class="line">    println(<span class="string">&quot;main: I&#x27;m tired of waiting!&quot;</span>)</span><br><span class="line">    job.cancelAndJoin() <span class="comment">// 取消该作业并等待它结束</span></span><br><span class="line">    println(<span class="string">&quot;main: Now I can quit.&quot;</span>)</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">job: I<span class="string">&#x27;m sleeping 0 ...</span></span><br><span class="line"><span class="string">job: I&#x27;</span>m sleeping <span class="number">1</span> ...</span><br><span class="line">job: I<span class="string">&#x27;m running finally</span></span><br><span class="line"><span class="string">main: I&#x27;</span>m tired of waiting!</span><br><span class="line">job: And I<span class="string">&#x27;ve just delayed for 1 sec because I&#x27;</span>m non-cancellable</span><br><span class="line">main: Now I can quit.</span><br></pre></td></tr></table></figure>
 
+]]></content>
+      <categories>
+        <category>Kotlin</category>
+        <category>协程</category>
+      </categories>
+      <tags>
+        <tag>协程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>协程互斥-Mutex</title>
+    <url>/2023/02/13/%E5%8D%8F%E7%A8%8B%E4%BA%92%E6%96%A5-Mutex/</url>
+    <content><![CDATA[<h2 id="以细粒度限制线程"><a href="#以细粒度限制线程" class="headerlink" title="以细粒度限制线程"></a>以细粒度限制线程</h2><p><em>限制线程</em> 是解决共享可变状态问题的一种方案：对特定共享状态的所有访问权都限制在单个线程中。它通常应用于 UI 程序中：所有 UI 状态都局限于单个事件分发线程或应用主线程中。这在协程中很容易实现，通过使用一个单线程上下文：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> counterContext = newSingleThreadContext(<span class="string">&quot;CounterContext&quot;</span>)</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    withContext(Dispatchers.Default) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            <span class="comment">// 将每次自增限制在单线程上下文中</span></span><br><span class="line">            withContext(counterContext) &#123;</span><br><span class="line">                counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
+
+<p>这段代码运行非常缓慢，因为它进行了 <em>细粒度</em> 的线程限制。每个增量操作都得使用 <code>withContext(counterContext)</code> 块从多线程 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-default.html">Dispatchers.Default</a> 上下文切换到单线程上下文。</p>
+<h2 id="以粗粒度限制线程"><a href="#以粗粒度限制线程" class="headerlink" title="以粗粒度限制线程"></a>以粗粒度限制线程</h2><p>在实践中，线程限制是在大段代码中执行的，例如：状态更新类业务逻辑中大部分都是限于单线程中。下面的示例演示了这种情况， 在单线程上下文中运行每个协程。</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> counterContext = newSingleThreadContext(<span class="string">&quot;CounterContext&quot;</span>)</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    <span class="comment">// 将一切都限制在单线程上下文中</span></span><br><span class="line">    withContext(counterContext) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            counter++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
+
+<p>这段代码运行更快而且打印出了正确的结果。</p>
+<h2 id="互斥"><a href="#互斥" class="headerlink" title="互斥"></a>互斥</h2><p>该问题的互斥解决方案：使用<strong>永远不会同时执行</strong>的 <em>关键代码块</em> 来保护共享状态的所有修改。在阻塞的世界中，你通常会为此目的使用 <code>synchronized</code> 或者 <code>ReentrantLock</code>。 在协程中的替代品叫做 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/index.html">Mutex</a> 。它具有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/lock.html">lock</a> 和 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/unlock.html">unlock</a> 方法， 可以隔离关键的部分。关键的区别在于 <code>Mutex.lock()</code> 是一个挂起函数，它不会阻塞线程。（但会挂起协程）</p>
+<p>还有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/with-lock.html">withLock</a> 扩展函数，可以方便的替代常用的 <code>mutex.lock(); try &#123; …… &#125; finally &#123; mutex.unlock() &#125;</code> 模式：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlinx.coroutines.sync.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> mutex = Mutex()</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    withContext(Dispatchers.Default) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            <span class="comment">// 用锁保护每次自增</span></span><br><span class="line">            mutex.withLock &#123;</span><br><span class="line">                counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
+
+<p>此示例中锁是细粒度的，因此会付出一些代价。但是对于某些必须定期修改共享状态的场景，它是一个不错的选择，但是没有自然线程可以限制此状态。</p>
 ]]></content>
       <categories>
         <category>Kotlin</category>
@@ -994,29 +1019,20 @@
       </categories>
   </entry>
   <entry>
-    <title>协程互斥-Mutex</title>
-    <url>/2023/02/13/%E5%8D%8F%E7%A8%8B%E4%BA%92%E6%96%A5-Mutex/</url>
-    <content><![CDATA[<h2 id="以细粒度限制线程"><a href="#以细粒度限制线程" class="headerlink" title="以细粒度限制线程"></a>以细粒度限制线程</h2><p><em>限制线程</em> 是解决共享可变状态问题的一种方案：对特定共享状态的所有访问权都限制在单个线程中。它通常应用于 UI 程序中：所有 UI 状态都局限于单个事件分发线程或应用主线程中。这在协程中很容易实现，通过使用一个单线程上下文：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> counterContext = newSingleThreadContext(<span class="string">&quot;CounterContext&quot;</span>)</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    withContext(Dispatchers.Default) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            <span class="comment">// 将每次自增限制在单线程上下文中</span></span><br><span class="line">            withContext(counterContext) &#123;</span><br><span class="line">                counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
-
-<p>这段代码运行非常缓慢，因为它进行了 <em>细粒度</em> 的线程限制。每个增量操作都得使用 <code>withContext(counterContext)</code> 块从多线程 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-default.html">Dispatchers.Default</a> 上下文切换到单线程上下文。</p>
-<h2 id="以粗粒度限制线程"><a href="#以粗粒度限制线程" class="headerlink" title="以粗粒度限制线程"></a>以粗粒度限制线程</h2><p>在实践中，线程限制是在大段代码中执行的，例如：状态更新类业务逻辑中大部分都是限于单线程中。下面的示例演示了这种情况， 在单线程上下文中运行每个协程。</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> counterContext = newSingleThreadContext(<span class="string">&quot;CounterContext&quot;</span>)</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    <span class="comment">// 将一切都限制在单线程上下文中</span></span><br><span class="line">    withContext(counterContext) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            counter++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
-
-<p>这段代码运行更快而且打印出了正确的结果。</p>
-<h2 id="互斥"><a href="#互斥" class="headerlink" title="互斥"></a>互斥</h2><p>该问题的互斥解决方案：使用<strong>永远不会同时执行</strong>的 <em>关键代码块</em> 来保护共享状态的所有修改。在阻塞的世界中，你通常会为此目的使用 <code>synchronized</code> 或者 <code>ReentrantLock</code>。 在协程中的替代品叫做 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/index.html">Mutex</a> 。它具有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/lock.html">lock</a> 和 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/unlock.html">unlock</a> 方法， 可以隔离关键的部分。关键的区别在于 <code>Mutex.lock()</code> 是一个挂起函数，它不会阻塞线程。（但会挂起协程）</p>
-<p>还有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/with-lock.html">withLock</a> 扩展函数，可以方便的替代常用的 <code>mutex.lock(); try &#123; …… &#125; finally &#123; mutex.unlock() &#125;</code> 模式：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlinx.coroutines.sync.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> mutex = Mutex()</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    withContext(Dispatchers.Default) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            <span class="comment">// 用锁保护每次自增</span></span><br><span class="line">            mutex.withLock &#123;</span><br><span class="line">                counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
-
-<p>此示例中锁是细粒度的，因此会付出一些代价。但是对于某些必须定期修改共享状态的场景，它是一个不错的选择，但是没有自然线程可以限制此状态。</p>
+    <title>去年春天的阴霾</title>
+    <url>/2023/02/25/%E5%8E%BB%E5%B9%B4%E6%98%A5%E5%A4%A9%E7%9A%84%E9%98%B4%E9%9C%BE/</url>
+    <content><![CDATA[<p>我不想去写，但有这个必要去回忆。</p>
+<p>在《东邪西毒》开头，张国荣饰演的欧阳锋有一句台词：看来你的年纪也有四十出头了，这四十多年来，总有些事你是不愿再提，或是有些人你不想再见，有的人曾经对不起你。</p>
+<p>其实不用四十出头，从十多岁开始，每个人都有一些纠葛的事，不愿想起来。可越是不想回忆起来，就越难以忘记。欧阳锋喝了醉生梦死尚且忘不了，何况我今天没喝酒。只喝了一瓶250ml的纯牛奶。</p>
+<p>那是去年春天的事，差不多上一年的这个时候。我去到一个陌生的环境，但不得不去适应它。我以为我对我的情绪和行为控制良好，但每过一段时间去看，都是漏洞百出，里面满是焦虑不安，自卑怨恨，和爱的人的争执。不用说，伤害她已是一个事实，她没忘记，我也没忘记。</p>
+<p>其实还有一些人，当初也是把酒言欢。但就像我许久不肯面对当初的我一般，渐渐没了联系。我也不清楚是不是仅仅没联系我，如果是的话，反而能让我接受，的确做了一些幼稚的事情。</p>
+<p>”每个人都会经过这个阶段，见到一座山，就想知道山后面是什么。我很想告诉他，可能翻过山后面，你会发现没什么特别。回望之下，可能会觉得这一边更好。“</p>
+<p>去年春天的山，到底有没有翻过去，在现在看来，是没有的。或许在以后会发现，我已在山的另一边。但山后面还有山。</p>
+<p>”小时候总想知道沙漠那边是什么，走过去，才知道沙漠那边还是沙漠。“</p>
 ]]></content>
       <categories>
-        <category>Kotlin</category>
-        <category>协程</category>
+        <category>life</category>
       </categories>
-      <tags>
-        <tag>协程</tag>
-      </tags>
   </entry>
   <entry>
     <title>子协程不被父协程影响的例外情况</title>
@@ -1056,22 +1072,6 @@
       <tags>
         <tag>协程</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>去年春天的阴霾</title>
-    <url>/2023/02/25/%E5%8E%BB%E5%B9%B4%E6%98%A5%E5%A4%A9%E7%9A%84%E9%98%B4%E9%9C%BE/</url>
-    <content><![CDATA[<p>我不想去写，但有这个必要去回忆。</p>
-<p>在《东邪西毒》开头，张国荣饰演的欧阳锋有一句台词：看来你的年纪也有四十出头了，这四十多年来，总有些事你是不愿再提，或是有些人你不想再见，有的人曾经对不起你。</p>
-<p>其实不用四十出头，从十多岁开始，每个人都有一些纠葛的事，不愿想起来。可越是不想回忆起来，就越难以忘记。欧阳锋喝了醉生梦死尚且忘不了，何况我今天没喝酒。只喝了一瓶250ml的纯牛奶。</p>
-<p>那是去年春天的事，差不多上一年的这个时候。我去到一个陌生的环境，但不得不去适应它。我以为我对我的情绪和行为控制良好，但每过一段时间去看，都是漏洞百出，里面满是焦虑不安，自卑怨恨，和爱的人的争执。不用说，伤害她已是一个事实，她没忘记，我也没忘记。</p>
-<p>其实还有一些人，当初也是把酒言欢。但就像我许久不肯面对当初的我一般，渐渐没了联系。我也不清楚是不是仅仅没联系我，如果是的话，反而能让我接受，的确做了一些幼稚的事情。</p>
-<p>”每个人都会经过这个阶段，见到一座山，就想知道山后面是什么。我很想告诉他，可能翻过山后面，你会发现没什么特别。回望之下，可能会觉得这一边更好。“</p>
-<p>去年春天的山，到底有没有翻过去，在现在看来，是没有的。或许在以后会发现，我已在山的另一边。但山后面还有山。</p>
-<p>”小时候总想知道沙漠那边是什么，走过去，才知道沙漠那边还是沙漠。“</p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
   </entry>
   <entry>
     <title>小云第一局Valorant</title>
@@ -1137,45 +1137,24 @@
       </categories>
   </entry>
   <entry>
-    <title>爱情如何持久化</title>
-    <url>/2023/03/01/%E7%88%B1%E6%83%85%E5%A6%82%E4%BD%95%E6%8C%81%E4%B9%85%E5%8C%96/</url>
-    <content><![CDATA[<blockquote>
-<p>爱是一种需求，一种渴望，是探寻生命中最大奖赏的驱动力。——海伦·费希尔，生物人类学家</p>
-</blockquote>
-<p>我认为要探求情感的本质，很大程度上还是靠精神分析学和脑生理学。前者探寻为什么一个人要拥有这样那样的情感，后者揭示情感如何工作。</p>
-<p>生理学家认为，爱情初期的激情和所谓坠入爱河的感觉，来源于奖赏预测误差带来的丰富的多巴胺。而多巴胺又驱使着人们去追求新鲜，追求更多。</p>
-<p>多巴胺是面向未来的，但大脑中也有另外一种被称为“当下分子”的物质，它让人们产生满足感，即那种“活在当下”的感觉。爱情持久化的关键在于如何让感情从“多巴胺驱动”转变为“当下分子驱动”。</p>
-<p>似乎这与基因有关，一个“”多巴胺能“丰富的人，生活中一般更有激情，更不容易满足，在爱情上，往往关系都不会长久，在12-18个月的激情期消退之后，当下的感情已没有新鲜感了。大脑告诉他，你已经对Ta没有感觉了，是时候寻找一个有感觉的人。于是一个新的 loop 开始。</p>
-<blockquote>
-<p>从多巴胺的角度来说，拥有是无趣的，只有获得才有趣。如果你生活在桥下，多巴胺会让你想获得一顶帐篷。如果你生活在帐篷里，多巴胺就会让你想获得一栋房子。如果你住在世界上最贵的豪宅中，多巴胺会让你想获得月球上的城堡。多巴胺不会满足于某一个标准，追求也永无止境。大脑中的多巴胺回路只能被光鲜之物的可能性所刺激，而不管现在的事物已有多完美。多巴胺的座右铭是“想要更多”。</p>
-</blockquote>
-<p>多巴胺是爱的煽动者之一，是引发一切火花的来源。但要让爱超越那个阶段，恋爱关系的本质就必须改变，因为它背后的“化学交响曲”会改变。毕竟多巴胺不是快乐分子，它是预期分子。为了享受我们拥有的东西，而不是仅仅可能得到的东西，我们的大脑必须从面向未来的多巴胺过渡到面向现在的当下分子。</p>
-<p>下面摘抄一段《贪婪的多巴胺的原文》</p>
-<blockquote>
-<p>我们称之为“当下分子”。大多数人都对它们的名字略有耳闻，包括血清素、催产素、内啡肽（相当于大脑自产的吗啡）和内源大麻素（相当于大脑自产的大麻）。与通过多巴胺得到的来自预期的愉悦相反，这些化学物质会给我们带来由感觉和情感引发的愉悦。花生四烯酸乙醇胺是内源性大麻素的一种，它的英文名称anandamide就源于表示欢乐、狂喜和高兴的梵语单词。</p>
-<p>根据人类学家海伦·费希尔的说法，早期爱情或者说“激情之爱”只会持续12~18个月。在那之后，一对情侣要保持对彼此的依恋就需要发展出一种不同的爱，这被称为“陪伴之爱”。陪伴之爱是由当下分子调节的，因为它涉及发生在此时此地的经历——既然你和你爱的人在一起，就好好享受吧。陪伴之爱不是人类独有的现象，在为了繁衍而结成配偶的动物中也可以观察到。</p>
-<p>结为配偶的动物会守卫自己的领地并一起筑巢，还会互相喂食、梳毛，一起分担养育下一代的事务。最重要的是，它们会待在对方附近，分开的时候会表现出焦虑。这些行为和人类是一样的。人类会从事类似的活动并有类似的感觉，与另一个人的生活紧密地交织在一起也会带来满足感。</p>
-<p>在爱情的第二阶段，当下分子掌握了主导权，多巴胺会被抑制。大脑必须这么做，因为多巴胺在我们脑海中描绘了一幅色彩斑斓的未来图景，鞭策我们不断努力使之成为现实。对当前形势的不满是导致变化的一个重要因素，这就是一段<strong>新感情的全部意义</strong>所在。另外，当下的陪伴之爱表示你对当前现实十分满足，厌恶改变，至少在伴侣关系方面如此。事实上，尽管多巴胺和当下分子的回路能一起工作，但在大多数情况下它们是相互<strong>对抗</strong>的。在当下分子回路被激活时，我们更喜欢体验周围的真实世界，多巴胺就会被抑制；而当多巴胺回路被激活时，我们则进入一个充满可能性的未来，当下分子会被抑制。实验室的测试证明了这个结论。科学家们观察了从处于热恋中的人身上提取的血细胞，发现血清素受体的水平比“健康人”要低，这表明当下分子受到了抑制。</p>
-<p>告别让人另寻新欢和渴求激情的多巴胺并不容易，但拥有这方面的能力是成熟的标志，也是迈向持久幸福的一步。假设一个人计划去罗马度假，他花了几个星期安排每日行程，以确保走遍他所熟知的每一个博物馆和地标。但在他置身于这些最绚丽的艺术品中时，他却在想着如何去已经预订了晚餐的餐厅。他并不是对米开朗琪罗的杰作不感兴趣，只是他的性格是由多巴胺主导的：他热衷于期待和计划，而不是实施。</p>
-<p>情侣们也在期待和体验之间经历着同样的脱节。早期的爱情，也就是激情之爱是多巴胺主导的——使人兴奋、理想化、好奇，并关注未来。后一阶段的陪伴之爱则是由当下分子主导的——使人满足、心平气和，并通过身体的感官和情感去体验。</p>
-<p>建立在多巴胺基础上的浪漫关系是一段令人兴奋但短暂的过山车之旅，然而我们大脑中的化学过程也为我们铺平了通往陪伴之爱的道路。多巴胺代表着痴迷与渴望，而与长期关系最相关的化学物质则是催产素和血管升压素。催产素在女性中更活跃，而血管升压素在男性中更活跃。</p>
-<p>科学家们在实验室里对各种动物的神经递质进行了研究。例如，科学家将催产素注射到雌性草原田鼠的大脑中以后，它们会立刻与周围的某只雄性田鼠形成<strong>长期关系</strong>。类似地，研究人员通过基因编辑制造出了具有滥交倾向的雄性田鼠，又给它们增加了一个增强血管升压素的基因时，发现它们在有多个雌性田鼠可供交配时，也只与某一只雌性田鼠交配。血管升压素就像一种“好丈夫激素”，而多巴胺则相反。具有能产生高水平多巴胺的基因的人拥有的性伴侣数更多，首次性交年龄也更低。</p>
-<p>随着多巴胺驱动的热烈爱情演变成当下分子主导的陪伴之爱，大多数情侣或夫妇的性生活频率会降低。这是合理的，因为催产素和血管升压素会抑制睾酮的释放。反过来，睾酮也抑制催产素和血管升压素的释放，这也解释了为什么血液中睾酮含量高的男性结婚的可能性较小。同样，单身男性比已婚男性睾酮含量更高。如果一个男人的婚姻变得不稳定，他的血管升压素会下降，睾酮会上升。</p>
-<p>人类需要长期的伴侣吗？有很多证据表明答案是肯定的。尽管拥有多个伴侣表面上很有吸引力，大多数人最终还是选择安定下来。联合国的一项调查发现，90%以上的人会在49岁之前结婚。我们可以在没有陪伴之爱的情况下生活，但大多数人都会付出人生中相当一部分的时间精力来寻找并维护它。当下分子为我们赋予了这样做的能力。它们让我们从感官传达给我们的感受中得到满足感——包括我们面前的事物，以及我们可以即刻体验，而不会一直欲求不满的事物</p>
-</blockquote>
-<p>显然，爱情能否在蜜月期之后依然可以存活下去，在于能否让感情从“多巴胺驱动”转变为“当下分子驱动”。但似乎一个人的”多巴胺能“是否活跃，是被基因所决定的了，很难改变。</p>
-<p>《春光乍泄》中的何宝荣，就是一个典型的”多巴胺能“大脑。他虽然喜欢黎耀辉，但他更被纸醉金迷和新鲜感所吸引，一次次离开，又一次次回来，但回来之后又是新的离开。</p>
-<p>黎耀辉则是”当下分子“主导的人，他说，在何宝荣生病时，照顾他的那段时光是和他在一起最快乐的时光。黎对于当下的感受和从中得到的幸福感远比何宝荣强烈。</p>
-<p>在现实中，浪荡的人的一般都不会是沉闷的人，往往比有固定关系的人更活跃。毕竟多巴胺不仅仅影响爱情。</p>
-<p>那方法论是什么，即如何从躁动沉淀到满足？科学家可没有给出答案。但就像大脑额叶丰富带来更强的逻辑思维，更多的运用逻辑思维也可以锻炼大脑额叶。让自己的大脑中的”当下分子“占据主导并不是不可能。</p>
-<p>我想可以从加强对当下关系的感受开始，加强自己对”当下分子“作用的敏感度，减少大脑多巴胺的水平。</p>
-<p>但过于无聊的难以忍受也是往往难以坚持，毕竟多巴胺就想要”新鲜“，不一样的事物。所以爱情当中的新鲜感就像喂给多巴胺这只野兽的甜食一般——要学会从恋人身上挖掘新鲜感或创造新鲜感。</p>
-<blockquote>
-<p>虽然封面照用了泰坦尼克号，但you jump I jump可不是真正的爱情，我认为它只能是一部”激情电影“，算不上”爱情电影“，它们只是被多巴胺驱动着，在进行”激素蹦迪“而已。蹦迪结束，大多数人都分道扬镳，也是大多数情侣的写照。</p>
-</blockquote>
+    <title>最美好的年华与最糟糕的爱情</title>
+    <url>/2023/03/05/%E6%9C%80%E7%BE%8E%E5%A5%BD%E7%9A%84%E5%B9%B4%E5%8D%8E%E4%B8%8E%E6%9C%80%E7%B3%9F%E7%B3%95%E7%9A%84%E7%88%B1%E6%83%85/</url>
+    <content><![CDATA[<p>同许多人一样，最初对这部电影产生兴趣，是想欣赏张曼玉在影片里穿着各款旗袍袅袅婷婷走过去的身姿。然而影片看到一半，便不得不重新定位王家卫频频拍摄的这一组镜头的作用，它是一道鲜明有力的色彩，却也只是色彩，它的存在与电影中压抑的大提琴音乐一样，都是为突显这样一个主题：最美好的年华与最糟糕的爱情。</p>
+<p>  上个世纪六十年代的环境，中产阶级的背景，小资格调的情境。<br>  苏丽珍的职业是秘书，她懂得享受生活，有精致的妆容，一丝不苟的云鬓，26身旗袍在剧中未曾重复出现过。即便是去买面，她也会打扮得精致从容，对生活的态度始终认真，甚至有近乎苛刻的完美主义倾向。<br>  周慕云是报社的编辑，喜欢自己的工作，待人彬彬有礼。与苏丽珍一样喜欢武侠小说，但在苏丽珍的鼓励之前，从未尝试过自己书写。<br>  他们各自有各自的家庭，只是偶然的原因，成了隔壁的邻居。</p>
+<p>  在这里要谈到王家卫对于“不在场的在场”演绎。影片中塑造了始终未曾露面的两个人，苏丽珍的丈夫，周慕云的太太。苏的丈夫经常出国去日本，年轻有为；周的太太的酒店上班，经常上夜班，年轻貌美。影片多次借助他人转达话语的场景，暗示观众，在苏与周频频碰面的同时，另外的两个人也定是如此，于是情愫暗生自然是理所当然的事。<br>  当另外的两个人开始约会的时候，剩下的两个人便开始等待。苏日日穿着精致的旗袍去买面，神情疲倦，身姿落寞。周日日在小面摊上吃云吞，细嚼慢咽，眼神沉郁而寂寥。他们会在狭长的走廊或楼道里错身而过，沉闷压抑的大提琴声无一例外地响起，暗示的是心情。我们能意料到的是，必然会有故事发生，无法预料的，只是结局。</p>
+<p>  苏丽珍开始意识到什么，她听到隔壁有熟悉的声响，在极力的伪装里才没有掉下泪来，却将自己关在浴室里放声哭泣。四个人之间，有人先背叛，她却只能一个人承受这真相。<br>  偶然的正面相逢，他看到她的提包，她看到他的领带。他终是约了他，一起吃饭。烟雾缭绕，绕了很长的弯，两个人才逐渐挑明意图：只是巧合么？不是。原本以为只能一个人扛的事，忽然有了人一起分担，只是这感觉，多少有些悲凉。</p>
+<p>  仿佛是出于报复，苏与周开始模拟背叛者出轨的最初场景。是谁先踏出了第一步？他们都忘了，其实这根本就不重要。事情已经发生了，追究谁是始作俑者，又有什么意义？<br>  他们也逐渐开始有意无意的约会，一起看报纸，一起写小说，一起修改讨论。偶尔也会研究另外两个人在做什么，内心愤恨却时刻提醒自己：我们不会像他们那样的。像是警钟，只不过，这警钟只鸣予自己听。</p>
+<p>  周的妻子的来信，是最后的声明。他们是被遗弃的一对，她却依旧不肯承认现实。<br>  拷问模拟。她把他假想成自己的丈夫，开始追问这场背叛的真实性。他简短的辩解后干脆利落的承认，令她有措手不及的愤怒，继而是茫然和委屈，眼神一片空落落的悲伤，片刻的沉默过后，她终于趴在他的肩头大声哭出来。不是假想，一切都是真的，只是自己竟然还会如此伤心，如此铭心刻骨地难过。</p>
+<p>  他们开始尝试忘记那些愤怒的事情，并逐渐习惯有对方存在的生活。然而那是一个闲言碎语能扼杀一个女人的时代。苏丽珍是胆怯的，她对生活认真，对自己有着近乎苛刻的完美要求，她也曾以为自己的婚姻是完美的，因此即便发现了真相，她还是在人前强作笑颜。<br>  约会后回家，要分段下车；暴雨，周从家里拿来一把伞，苏却拒绝与之一起走回去。她害怕那些目光，夹杂着疑问和嘲弄的目光，因此她对周慕云的电话有着极度的敏感。他的房东忽然回家，她便藏在他的房间里再不敢有大的声息和动静，即便她与他只是在讨论小说而已。孙太太几句告诫的话语，她便能违背内心最真实的情感，弃了与周见面的理由。<br>  然而她又是勇敢的。她待见他，虽然言辞里一再疏离，情感上却一再靠近。2046房间，她满心紧张地奔赴，却又挣扎犹豫，转身离开，却又留下来。她很多时候都在等他再多言一句，而他却只是沉默。<br>  于他，他觉得她应当懂得他的沉默，他的心意。事实上，她的确懂得，只是女人的天生不安全感，她需要他更坚定的言语。而这些，他却未必懂。</p>
+<p>  这样沉默的日子里，他们忽然理解了另外两个人的情感，甚至觉得这样的发生很是自然。有些事情，不是你一再强调不可能，它就会真的不可能，比如爱情，它往往来得不知不觉、悄无声息。<br>  她爱他，却不愿承认。他请她配合，模拟一场最后的分别，他要为自己做心理准备。长镜头，只是手的特写，痉挛，挣扎，她的内心斗争激烈，情感已经敞露无遗。她任凭眼泪纵横，却还是不能跨出那一步。压抑的大提琴音乐再次响起。</p>
+<p>  如果有多一张船票，你会不会跟我一起走。周慕云对苏丽珍说了这一句。也仅仅是一句。她还来不及答复，他便习惯地将她的沉默当成了拒绝。<br>  如果有多一张船票，你会不会带我一起走。她在2046的房间里，点燃一根香烟，她要那种烟雾轻绕的氛围，仿佛他还在身边。<br>  然后，泪流满面。<br>  他已经走远。</p>
+<p>  一年。最好的年华，又折过去一年。她打电话给他，她还记得他，那或许是她的勇气，然而他不在。有些话语，外人永远不可转达。<br>  再后来的电话，他接到了，她却沉默。如果他还记得，他应该知道是谁在另一端呼吸和想念。只是默然，他什么也没做。于是她离开，拿走了当年在慌乱中留下的绣花拖鞋。从这里开始，也从这里结束。</p>
+<p>  时光一晃，又是四年。于一个女人而言，最好的年华不过四五年的时间。苏丽珍回到这个小弄堂，孙太太要出国了，于是她租下当年曾住过的这个房子。问起隔壁，孙太太自顾自回忆当年与顾先生一家和睦相处的场景，苏丽珍却忍不住看着窗外掉下泪来。时过境迁，她还想念周慕云。<br>  周慕云回国，去看望顾先生，却是旧时场景，人已非。路过隔壁的时候，他在门前静默了半晌，还是离去。他终是不肯相信，这扇门里会住有旧相识的人。<br>  他与她之间依旧不能逢面。许多人一旦错过，接下来只能是马不停蹄地错过。他们也未能逃离这个定律。都是红尘中人，免不了俗。</p>
+<p>  大提琴音乐响起，激烈而压抑。<br>  这场感情在周慕云心底发酵了四年，他再也承受不起。没有人可以分担，他只能在吴哥窟的石壁上，对着洞口倾诉，然后一把泥土，封住了全部的秘密。<br>  她的生活流于滚滚红尘之中，与他再无交集。这场曾经刻骨铭心的爱恋，就这样消失在茫茫人海里，只剩下花样年华的小曲，依旧在凄美忧伤地唱着。 　　<br>  他不够勇敢，她矜持顾虑，于是，只剩下分道扬镳。最美好的年华里，明明很相爱，却不能在一起，再凄美的故事，也只能称得上是最糟糕的爱情。<br>  于是，王家卫说。那是一种难堪的相对，她一直羞低着头，给他一个接近的机会。他没有勇气接近。她掉转身，走了。故事就这样收了尾。<br>  那些消逝了的岁月，仿佛隔着一块积着灰尘的玻璃，看得到，抓不着。他一直在怀念着过去的一切。如果他能冲破那块积着灰尘的玻璃，他会走回早已消逝的岁月。<br>  然而，连这也只是自我安慰，没有人能逆转时间。那个时代已过去，属于那个时代的一切，也就都不存在了。</p>
+<p>转载自 <a href="https://movie.douban.com/review/1570258/">豆瓣</a></p>
 ]]></content>
       <categories>
-        <category>life</category>
+        <category>电影</category>
       </categories>
   </entry>
   <entry>
@@ -1295,6 +1274,48 @@
       <tags>
         <tag>协程</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>爱情如何持久化</title>
+    <url>/2023/03/01/%E7%88%B1%E6%83%85%E5%A6%82%E4%BD%95%E6%8C%81%E4%B9%85%E5%8C%96/</url>
+    <content><![CDATA[<blockquote>
+<p>爱是一种需求，一种渴望，是探寻生命中最大奖赏的驱动力。——海伦·费希尔，生物人类学家</p>
+</blockquote>
+<p>我认为要探求情感的本质，很大程度上还是靠精神分析学和脑生理学。前者探寻为什么一个人要拥有这样那样的情感，后者揭示情感如何工作。</p>
+<p>生理学家认为，爱情初期的激情和所谓坠入爱河的感觉，来源于奖赏预测误差带来的丰富的多巴胺。而多巴胺又驱使着人们去追求新鲜，追求更多。</p>
+<p>多巴胺是面向未来的，但大脑中也有另外一种被称为“当下分子”的物质，它让人们产生满足感，即那种“活在当下”的感觉。爱情持久化的关键在于如何让感情从“多巴胺驱动”转变为“当下分子驱动”。</p>
+<p>似乎这与基因有关，一个“”多巴胺能“丰富的人，生活中一般更有激情，更不容易满足，在爱情上，往往关系都不会长久，在12-18个月的激情期消退之后，当下的感情已没有新鲜感了。大脑告诉他，你已经对Ta没有感觉了，是时候寻找一个有感觉的人。于是一个新的 loop 开始。</p>
+<blockquote>
+<p>从多巴胺的角度来说，拥有是无趣的，只有获得才有趣。如果你生活在桥下，多巴胺会让你想获得一顶帐篷。如果你生活在帐篷里，多巴胺就会让你想获得一栋房子。如果你住在世界上最贵的豪宅中，多巴胺会让你想获得月球上的城堡。多巴胺不会满足于某一个标准，追求也永无止境。大脑中的多巴胺回路只能被光鲜之物的可能性所刺激，而不管现在的事物已有多完美。多巴胺的座右铭是“想要更多”。</p>
+</blockquote>
+<p>多巴胺是爱的煽动者之一，是引发一切火花的来源。但要让爱超越那个阶段，恋爱关系的本质就必须改变，因为它背后的“化学交响曲”会改变。毕竟多巴胺不是快乐分子，它是预期分子。为了享受我们拥有的东西，而不是仅仅可能得到的东西，我们的大脑必须从面向未来的多巴胺过渡到面向现在的当下分子。</p>
+<p>下面摘抄一段《贪婪的多巴胺的原文》</p>
+<blockquote>
+<p>我们称之为“当下分子”。大多数人都对它们的名字略有耳闻，包括血清素、催产素、内啡肽（相当于大脑自产的吗啡）和内源大麻素（相当于大脑自产的大麻）。与通过多巴胺得到的来自预期的愉悦相反，这些化学物质会给我们带来由感觉和情感引发的愉悦。花生四烯酸乙醇胺是内源性大麻素的一种，它的英文名称anandamide就源于表示欢乐、狂喜和高兴的梵语单词。</p>
+<p>根据人类学家海伦·费希尔的说法，早期爱情或者说“激情之爱”只会持续12~18个月。在那之后，一对情侣要保持对彼此的依恋就需要发展出一种不同的爱，这被称为“陪伴之爱”。陪伴之爱是由当下分子调节的，因为它涉及发生在此时此地的经历——既然你和你爱的人在一起，就好好享受吧。陪伴之爱不是人类独有的现象，在为了繁衍而结成配偶的动物中也可以观察到。</p>
+<p>结为配偶的动物会守卫自己的领地并一起筑巢，还会互相喂食、梳毛，一起分担养育下一代的事务。最重要的是，它们会待在对方附近，分开的时候会表现出焦虑。这些行为和人类是一样的。人类会从事类似的活动并有类似的感觉，与另一个人的生活紧密地交织在一起也会带来满足感。</p>
+<p>在爱情的第二阶段，当下分子掌握了主导权，多巴胺会被抑制。大脑必须这么做，因为多巴胺在我们脑海中描绘了一幅色彩斑斓的未来图景，鞭策我们不断努力使之成为现实。对当前形势的不满是导致变化的一个重要因素，这就是一段<strong>新感情的全部意义</strong>所在。另外，当下的陪伴之爱表示你对当前现实十分满足，厌恶改变，至少在伴侣关系方面如此。事实上，尽管多巴胺和当下分子的回路能一起工作，但在大多数情况下它们是相互<strong>对抗</strong>的。在当下分子回路被激活时，我们更喜欢体验周围的真实世界，多巴胺就会被抑制；而当多巴胺回路被激活时，我们则进入一个充满可能性的未来，当下分子会被抑制。实验室的测试证明了这个结论。科学家们观察了从处于热恋中的人身上提取的血细胞，发现血清素受体的水平比“健康人”要低，这表明当下分子受到了抑制。</p>
+<p>告别让人另寻新欢和渴求激情的多巴胺并不容易，但拥有这方面的能力是成熟的标志，也是迈向持久幸福的一步。假设一个人计划去罗马度假，他花了几个星期安排每日行程，以确保走遍他所熟知的每一个博物馆和地标。但在他置身于这些最绚丽的艺术品中时，他却在想着如何去已经预订了晚餐的餐厅。他并不是对米开朗琪罗的杰作不感兴趣，只是他的性格是由多巴胺主导的：他热衷于期待和计划，而不是实施。</p>
+<p>情侣们也在期待和体验之间经历着同样的脱节。早期的爱情，也就是激情之爱是多巴胺主导的——使人兴奋、理想化、好奇，并关注未来。后一阶段的陪伴之爱则是由当下分子主导的——使人满足、心平气和，并通过身体的感官和情感去体验。</p>
+<p>建立在多巴胺基础上的浪漫关系是一段令人兴奋但短暂的过山车之旅，然而我们大脑中的化学过程也为我们铺平了通往陪伴之爱的道路。多巴胺代表着痴迷与渴望，而与长期关系最相关的化学物质则是催产素和血管升压素。催产素在女性中更活跃，而血管升压素在男性中更活跃。</p>
+<p>科学家们在实验室里对各种动物的神经递质进行了研究。例如，科学家将催产素注射到雌性草原田鼠的大脑中以后，它们会立刻与周围的某只雄性田鼠形成<strong>长期关系</strong>。类似地，研究人员通过基因编辑制造出了具有滥交倾向的雄性田鼠，又给它们增加了一个增强血管升压素的基因时，发现它们在有多个雌性田鼠可供交配时，也只与某一只雌性田鼠交配。血管升压素就像一种“好丈夫激素”，而多巴胺则相反。具有能产生高水平多巴胺的基因的人拥有的性伴侣数更多，首次性交年龄也更低。</p>
+<p>随着多巴胺驱动的热烈爱情演变成当下分子主导的陪伴之爱，大多数情侣或夫妇的性生活频率会降低。这是合理的，因为催产素和血管升压素会抑制睾酮的释放。反过来，睾酮也抑制催产素和血管升压素的释放，这也解释了为什么血液中睾酮含量高的男性结婚的可能性较小。同样，单身男性比已婚男性睾酮含量更高。如果一个男人的婚姻变得不稳定，他的血管升压素会下降，睾酮会上升。</p>
+<p>人类需要长期的伴侣吗？有很多证据表明答案是肯定的。尽管拥有多个伴侣表面上很有吸引力，大多数人最终还是选择安定下来。联合国的一项调查发现，90%以上的人会在49岁之前结婚。我们可以在没有陪伴之爱的情况下生活，但大多数人都会付出人生中相当一部分的时间精力来寻找并维护它。当下分子为我们赋予了这样做的能力。它们让我们从感官传达给我们的感受中得到满足感——包括我们面前的事物，以及我们可以即刻体验，而不会一直欲求不满的事物</p>
+</blockquote>
+<p>显然，爱情能否在蜜月期之后依然可以存活下去，在于能否让感情从“多巴胺驱动”转变为“当下分子驱动”。但似乎一个人的”多巴胺能“是否活跃，是被基因所决定的了，很难改变。</p>
+<p>《春光乍泄》中的何宝荣，就是一个典型的”多巴胺能“大脑。他虽然喜欢黎耀辉，但他更被纸醉金迷和新鲜感所吸引，一次次离开，又一次次回来，但回来之后又是新的离开。</p>
+<p>黎耀辉则是”当下分子“主导的人，他说，在何宝荣生病时，照顾他的那段时光是和他在一起最快乐的时光。黎对于当下的感受和从中得到的幸福感远比何宝荣强烈。</p>
+<p>在现实中，浪荡的人的一般都不会是沉闷的人，往往比有固定关系的人更活跃。毕竟多巴胺不仅仅影响爱情。</p>
+<p>那方法论是什么，即如何从躁动沉淀到满足？科学家可没有给出答案。但就像大脑额叶丰富带来更强的逻辑思维，更多的运用逻辑思维也可以锻炼大脑额叶。让自己的大脑中的”当下分子“占据主导并不是不可能。</p>
+<p>我想可以从加强对当下关系的感受开始，加强自己对”当下分子“作用的敏感度，减少大脑多巴胺的水平。</p>
+<p>但过于无聊的难以忍受也是往往难以坚持，毕竟多巴胺就想要”新鲜“，不一样的事物。所以爱情当中的新鲜感就像喂给多巴胺这只野兽的甜食一般——要学会从恋人身上挖掘新鲜感或创造新鲜感。</p>
+<blockquote>
+<p>虽然封面照用了泰坦尼克号，但you jump I jump可不是真正的爱情，我认为它只能是一部”激情电影“，算不上”爱情电影“，它们只是被多巴胺驱动着，在进行”激素蹦迪“而已。蹦迪结束，大多数人都分道扬镳，也是大多数情侣的写照。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
   </entry>
   <entry>
     <title>远离使杀戮更容易</title>
