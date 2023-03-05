@@ -65,8 +65,8 @@ https://jeckonly.github.io/categories/Kotlin/%E5%8D%8F%E7%A8%8B/
 https://jeckonly.github.io/categories/leetcode/
 https://jeckonly.github.io/categories/Java/%E5%B9%B6%E5%8F%91/
 https://jeckonly.github.io/categories/life/
-https://jeckonly.github.io/categories/Kotlin/%E8%AF%AD%E6%B3%95/
 https://jeckonly.github.io/categories/Android/%E6%9E%B6%E6%9E%84/%E6%9E%B6%E6%9E%84%E7%BB%84%E4%BB%B6/
+https://jeckonly.github.io/categories/Kotlin/%E8%AF%AD%E6%B3%95/
 https://jeckonly.github.io/categories/Kotlin/%E5%8D%8F%E7%A8%8B/Flow/
 https://jeckonly.github.io/categories/%E5%BA%93/
 https://jeckonly.github.io/categories/%E6%B8%B8%E6%88%8F/
