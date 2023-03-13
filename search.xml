@@ -116,6 +116,50 @@
       </categories>
   </entry>
   <entry>
+    <title>Consuming flows safely in Jetpack Compose 笔记</title>
+    <url>/2023/03/13/Consuming-flows-safely-in-Jetpack-Compose-%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><a href="https://gist.github.com/JeckOnly/5ebf8271c570feb10c8ba483383c9603">本文代码</a></p>
+<p>对比 <code>collectAsState</code> 和 <code>collectAsStateWithLifecycle</code></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>collectAsState</th>
+<th>collectAsStateWithLifecycle</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>不同点</td>
+<td>没有生命周期感知，在App退到后台依然保持对流的 <strong>订阅</strong> 状态</td>
+<td>在App退到后台退出对流的 <strong>订阅</strong> 状态</td>
+</tr>
+<tr>
+<td>应用场景</td>
+<td>在Android开发上不建议使用，以后Compose面向多平台可能会使用。</td>
+<td>替代 collectAdState 用于转换 Flow 和 State</td>
+</tr>
+</tbody></table>
+<p>测试一下，令 <code>StateFlow</code> 在 <strong>最后一个订阅者</strong> 消失之后 stop the sharing coroutine</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> numberFlow: StateFlow&lt;<span class="built_in">Int</span>&gt; = mutableNumberFlow.onEach &#123;</span><br><span class="line">        LogUtil.d(<span class="string">&quot;ViewModel的StateFlow： <span class="variable">$it</span>&quot;</span>)<span class="comment">// 1</span></span><br><span class="line">    &#125;.stateIn(</span><br><span class="line">        scope = viewModelScope.plus(Dispatchers.Default),</span><br><span class="line">        started = SharingStarted.WhileSubscribed(<span class="number">5_000</span>),<span class="comment">// 5s 后停止协程</span></span><br><span class="line">        initialValue = <span class="number">0</span></span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+
+<p>测试结果</p>
+<ul>
+<li>collectAsState  持续打印 注释1</li>
+<li>collectAsStateWithLifecycle 在退到后台5s后停止打印 注释1</li>
+</ul>
+<p>结论，为了节省电量对用户友好，建议使用<code>collectAsStateWithLifecycle</code>。</p>
+<blockquote>
+<p>之前使用<code>collectAsState</code> 也没什么啦，反正Compose在后台也不会组合啊。就省点内存也没省多少，不过有就用吧。</p>
+</blockquote>
+<p><a href="https://medium.com/androiddevelopers/consuming-flows-safely-in-jetpack-compose-cde014d0d5a3">参考资料 Manuel Vivo</a></p>
+]]></content>
+      <categories>
+        <category>Jetpack</category>
+        <category>Compose</category>
+        <category>Flow相关</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Android权限有感</title>
     <url>/2023/02/22/Android%E6%9D%83%E9%99%90%E6%9C%89%E6%84%9F/</url>
     <content><![CDATA[<p>看了一晚的PermissionX系列文章，guolin写的挺好的。再次感慨Android系统的权限分类的请求的复杂。</p>
@@ -220,6 +264,32 @@
       <tags>
         <tag>Flow</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Gradle依赖的结构 by chatgpt</title>
+    <url>/2023/03/12/Gradle%E4%BE%9D%E8%B5%96%E7%9A%84%E7%BB%93%E6%9E%84-by-chatgpt/</url>
+    <content><![CDATA[<p><strong>问</strong>：请分析implementation(“androidx.core:core-ktx:1.0.0”)的各个部分的结构和含义</p>
+<p><strong>答</strong>：</p>
+<p><code>implementation(&quot;androidx.core:core-ktx:1.0.0&quot;)</code> 是 Gradle 依赖声明的语法，由以下几个部分组成：</p>
+<ul>
+<li><code>implementation</code>：表示依赖的配置类型，表示依赖将被添加到实现中而不是编译或测试。</li>
+<li><code>&quot;androidx.core:core-ktx:1.0.0&quot;</code>：表示依赖的坐标（coordinates），由三部分组成，以冒号 <code>:</code> 分隔：<ul>
+<li><code>androidx.core</code>：表示依赖的组名（group），即库所属的组织或项目。</li>
+<li><code>core-ktx</code>：表示依赖的模块名（module），即库的具体功能。</li>
+<li><code>1.0.0</code>：表示依赖的版本号（version），指定库的版本。</li>
+</ul>
+</li>
+</ul>
+<p>因此，<code>implementation(&quot;androidx.core:core-ktx:1.0.0&quot;)</code> 的含义是将 <code>androidx.core:core-ktx:1.0.0</code> 这个库添加到项目的实现配置中。该库提供了许多 Kotlin 扩展函数，可以方便地访问 Android 平台上的核心 API。</p>
+<p><strong>问</strong>：一个group是不是可以包含多个module</p>
+<p><strong>答</strong>：</p>
+<p>是的，一个 <code>group</code> 可以包含多个 <code>module</code>。在 Maven 和 Gradle 中，<code>group</code> 是指 Maven 仓库中的一个组织或者项目，而 <code>module</code> 则是该组织或者项目中的一个模块。一般来说，一个 <code>group</code> 包含多个 <code>module</code>，每个 <code>module</code> 提供不同的功能或者服务。</p>
+<p>例如，<code>com.google.android</code> 是 Google 的 Android 项目的一个 <code>group</code>，包含了多个 <code>module</code>，如 <code>play-services</code>, <code>material</code>, <code>gson</code> 等等。而 <code>com.android.tools.build</code> 是 Android Studio Gradle 插件的 <code>group</code>，包含了多个 <code>module</code>，如 <code>gradle</code>，<code>gradle-core</code>，<code>gradle-api</code> 等等。</p>
+<p>在依赖声明中，<code>group:module:version</code> 的语法用于唯一标识一个库。其中，<code>group</code> 和 <code>module</code> 通常用冒号 <code>:</code> 分隔，表示该库的坐标。可以通过修改 <code>group</code> 或者 <code>module</code> 的值来引用不同的库。</p>
+]]></content>
+      <categories>
+        <category>Gradle</category>
+      </categories>
   </entry>
   <entry>
     <title>Kotlin类型系统笔记</title>
@@ -581,6 +651,21 @@
       </tags>
   </entry>
   <entry>
+    <title>“穿山甲：被捕杀最多的动物”观看有感</title>
+    <url>/2023/02/14/%E2%80%9C%E7%A9%BF%E5%B1%B1%E7%94%B2%EF%BC%9A%E8%A2%AB%E6%8D%95%E6%9D%80%E6%9C%80%E5%A4%9A%E7%9A%84%E5%8A%A8%E7%89%A9%E2%80%9D%E8%A7%82%E7%9C%8B%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<p>这部记录片挺无聊的，一个女人，变卖家产，投身到非洲穿山甲的保护之中。成果在片中一点没说，就说时势很艰难，资金人力啥的都不够，中间记录的一大段都是女主在非洲的一个房子里和她养的一只穿山甲的日常，后面就说了她去亚洲越难和中国拜访，理由是因为亚洲对穿山甲鳞片的药用间接导致非洲穿山甲被大量捕杀所以要去看看。但逛了一圈似乎也只是了解了一些显而易见的事实fact。比如时势不容乐观，要抓紧时间行动。然后片尾就说为了让更多人了解穿山甲所以有一个摄影师来拍女主养的那只宠物的日常来发到网上。</p>
+<p>女主似乎说的很伟大，变卖家产无私地投入到保护这种动物之中，然后片中关于她的成果是微不足道的——养了一只可爱的穿山甲在家里。</p>
+<p>从数据上来说每年都有很多动物灭绝，为啥那么多人投入那么多人力物力去保护那几个物种。可能因为穿山甲比较可爱？老虎很威猛？比其他那些丑不拉几的频危动物更值得保护？</p>
+<p>既然选择保护这种而不保护那种，这就不是一种无私，这绝对带有私心。而目的是什么，对动保工作者本身能带来什么，只有他们知道。</p>
+<blockquote>
+<p>一个知乎回答很可爱：听说印第安人因为美洲没有马，所以没有发展出轮子，导致科技树受到影响，谁知道要灭绝的生物是不是下一匹马呢</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>电影</category>
+      </categories>
+  </entry>
+  <entry>
     <title>select优先选择第一个可用的clause</title>
     <url>/2023/03/03/select%E4%BC%98%E5%85%88%E9%80%89%E6%8B%A9%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%94%A8%E7%9A%84clause/</url>
     <content><![CDATA[<p>when more than one clause are ready, select will choose the first one. Pls take a look at the code below:</p>
@@ -603,21 +688,6 @@
       <categories>
         <category>Kotlin</category>
         <category>协程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>“穿山甲：被捕杀最多的动物”观看有感</title>
-    <url>/2023/02/14/%E2%80%9C%E7%A9%BF%E5%B1%B1%E7%94%B2%EF%BC%9A%E8%A2%AB%E6%8D%95%E6%9D%80%E6%9C%80%E5%A4%9A%E7%9A%84%E5%8A%A8%E7%89%A9%E2%80%9D%E8%A7%82%E7%9C%8B%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<p>这部记录片挺无聊的，一个女人，变卖家产，投身到非洲穿山甲的保护之中。成果在片中一点没说，就说时势很艰难，资金人力啥的都不够，中间记录的一大段都是女主在非洲的一个房子里和她养的一只穿山甲的日常，后面就说了她去亚洲越难和中国拜访，理由是因为亚洲对穿山甲鳞片的药用间接导致非洲穿山甲被大量捕杀所以要去看看。但逛了一圈似乎也只是了解了一些显而易见的事实fact。比如时势不容乐观，要抓紧时间行动。然后片尾就说为了让更多人了解穿山甲所以有一个摄影师来拍女主养的那只宠物的日常来发到网上。</p>
-<p>女主似乎说的很伟大，变卖家产无私地投入到保护这种动物之中，然后片中关于她的成果是微不足道的——养了一只可爱的穿山甲在家里。</p>
-<p>从数据上来说每年都有很多动物灭绝，为啥那么多人投入那么多人力物力去保护那几个物种。可能因为穿山甲比较可爱？老虎很威猛？比其他那些丑不拉几的频危动物更值得保护？</p>
-<p>既然选择保护这种而不保护那种，这就不是一种无私，这绝对带有私心。而目的是什么，对动保工作者本身能带来什么，只有他们知道。</p>
-<blockquote>
-<p>一个知乎回答很可爱：听说印第安人因为美洲没有马，所以没有发展出轮子，导致科技树受到影响，谁知道要灭绝的生物是不是下一匹马呢</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>电影</category>
       </categories>
   </entry>
   <entry>
@@ -676,6 +746,16 @@
       </categories>
   </entry>
   <entry>
+    <title>《重庆森林》感</title>
+    <url>/2023/02/22/%E3%80%8A%E9%87%8D%E5%BA%86%E6%A3%AE%E6%9E%97%E3%80%8B%E6%84%9F/</url>
+    <content><![CDATA[<p>很深刻的，诠释了都市里人与人之间的冷漠，但也让两个人的相遇变得如此缘分与美妙。在看的时候，会感受到一种类似于自己就是海洋中的一座孤岛的孤独感。有一个作家写的小说也可以让我有一种感觉，那就是村上春树。</p>
+<p>村上的小说带有太多奇幻的成分，重庆森林也带有一点奇幻感，它们都让不可思议的情节无缝衔接地发生在日常之中。第一个故事的杀手，第二个故事的”海螺姑娘“，都让这个很世俗的城市带着点荒诞。</p>
+]]></content>
+      <categories>
+        <category>电影</category>
+      </categories>
+  </entry>
+  <entry>
     <title>《贪婪的多巴胺》有感</title>
     <url>/2023/02/19/%E3%80%8A%E8%B4%AA%E5%A9%AA%E7%9A%84%E5%A4%9A%E5%B7%B4%E8%83%BA%E3%80%8B%E6%9C%89%E6%84%9F/</url>
     <content><![CDATA[<p>看过一个故事说一个年轻人为寻求幸福人生的秘诀去寻求一位智者，智者让他端着杯水在不洒出来的前提下游览一栋豪华的房子，里面摆着很多美丽的名画等吸引人心的事物。最终年轻人在热切地观赏房子中各种美丽的东西的时候杯子里的水所剩无几，在小心翼翼地保证杯子里的水不洒出来的时候几乎没看到房子里摆了什么。智者说幸福的秘诀就是平衡。</p>
@@ -685,16 +765,6 @@
 ]]></content>
       <categories>
         <category>读书</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>《重庆森林》感</title>
-    <url>/2023/02/22/%E3%80%8A%E9%87%8D%E5%BA%86%E6%A3%AE%E6%9E%97%E3%80%8B%E6%84%9F/</url>
-    <content><![CDATA[<p>很深刻的，诠释了都市里人与人之间的冷漠，但也让两个人的相遇变得如此缘分与美妙。在看的时候，会感受到一种类似于自己就是海洋中的一座孤岛的孤独感。有一个作家写的小说也可以让我有一种感觉，那就是村上春树。</p>
-<p>村上的小说带有太多奇幻的成分，重庆森林也带有一点奇幻感，它们都让不可思议的情节无缝衔接地发生在日常之中。第一个故事的杀手，第二个故事的”海螺姑娘“，都让这个很世俗的城市带着点荒诞。</p>
-]]></content>
-      <categories>
-        <category>电影</category>
       </categories>
   </entry>
   <entry>
@@ -864,31 +934,6 @@
       </categories>
   </entry>
   <entry>
-    <title>协程互斥-Mutex</title>
-    <url>/2023/02/13/%E5%8D%8F%E7%A8%8B%E4%BA%92%E6%96%A5-Mutex/</url>
-    <content><![CDATA[<h2 id="以细粒度限制线程"><a href="#以细粒度限制线程" class="headerlink" title="以细粒度限制线程"></a>以细粒度限制线程</h2><p><em>限制线程</em> 是解决共享可变状态问题的一种方案：对特定共享状态的所有访问权都限制在单个线程中。它通常应用于 UI 程序中：所有 UI 状态都局限于单个事件分发线程或应用主线程中。这在协程中很容易实现，通过使用一个单线程上下文：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> counterContext = newSingleThreadContext(<span class="string">&quot;CounterContext&quot;</span>)</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    withContext(Dispatchers.Default) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            <span class="comment">// 将每次自增限制在单线程上下文中</span></span><br><span class="line">            withContext(counterContext) &#123;</span><br><span class="line">                counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
-
-<p>这段代码运行非常缓慢，因为它进行了 <em>细粒度</em> 的线程限制。每个增量操作都得使用 <code>withContext(counterContext)</code> 块从多线程 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-default.html">Dispatchers.Default</a> 上下文切换到单线程上下文。</p>
-<h2 id="以粗粒度限制线程"><a href="#以粗粒度限制线程" class="headerlink" title="以粗粒度限制线程"></a>以粗粒度限制线程</h2><p>在实践中，线程限制是在大段代码中执行的，例如：状态更新类业务逻辑中大部分都是限于单线程中。下面的示例演示了这种情况， 在单线程上下文中运行每个协程。</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> counterContext = newSingleThreadContext(<span class="string">&quot;CounterContext&quot;</span>)</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    <span class="comment">// 将一切都限制在单线程上下文中</span></span><br><span class="line">    withContext(counterContext) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            counter++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
-
-<p>这段代码运行更快而且打印出了正确的结果。</p>
-<h2 id="互斥"><a href="#互斥" class="headerlink" title="互斥"></a>互斥</h2><p>该问题的互斥解决方案：使用<strong>永远不会同时执行</strong>的 <em>关键代码块</em> 来保护共享状态的所有修改。在阻塞的世界中，你通常会为此目的使用 <code>synchronized</code> 或者 <code>ReentrantLock</code>。 在协程中的替代品叫做 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/index.html">Mutex</a> 。它具有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/lock.html">lock</a> 和 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/unlock.html">unlock</a> 方法， 可以隔离关键的部分。关键的区别在于 <code>Mutex.lock()</code> 是一个挂起函数，它不会阻塞线程。（但会挂起协程）</p>
-<p>还有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/with-lock.html">withLock</a> 扩展函数，可以方便的替代常用的 <code>mutex.lock(); try &#123; …… &#125; finally &#123; mutex.unlock() &#125;</code> 模式：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlinx.coroutines.sync.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> mutex = Mutex()</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    withContext(Dispatchers.Default) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            <span class="comment">// 用锁保护每次自增</span></span><br><span class="line">            mutex.withLock &#123;</span><br><span class="line">                counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
-
-<p>此示例中锁是细粒度的，因此会付出一些代价。但是对于某些必须定期修改共享状态的场景，它是一个不错的选择，但是没有自然线程可以限制此状态。</p>
-]]></content>
-      <categories>
-        <category>Kotlin</category>
-        <category>协程</category>
-      </categories>
-      <tags>
-        <tag>协程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>协程中的NonCancellable</title>
     <url>/2023/02/12/%E5%8D%8F%E7%A8%8B%E4%B8%AD%E7%9A%84NonCancellable/</url>
     <content><![CDATA[<p>NonCancellable其实是一个特殊的Job，看它的注释：</p>
@@ -915,6 +960,31 @@
 <p>其实不用<code>NonCancellable</code>，自己显示定义一个<code>Job()</code>也可以做到。</p>
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line">    <span class="keyword">val</span> job = launch(Dispatchers.IO) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            repeat(<span class="number">2</span>) &#123; i -&gt;</span><br><span class="line">                println(<span class="string">&quot;job: I&#x27;m sleeping <span class="variable">$i</span> ...&quot;</span>)</span><br><span class="line">                delay(<span class="number">500L</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            cancel()</span><br><span class="line">            withContext(NonCancellable) &#123; <span class="comment">// NonCancellable / Job()</span></span><br><span class="line">                println(<span class="string">&quot;job: I&#x27;m running finally&quot;</span>)</span><br><span class="line">                delay(<span class="number">1000L</span>)</span><br><span class="line">                println(<span class="string">&quot;job: And I&#x27;ve just delayed for 1 sec because I&#x27;m non-cancellable&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    delay(<span class="number">1500</span>) <span class="comment">// 延迟一段时间</span></span><br><span class="line">    println(<span class="string">&quot;main: I&#x27;m tired of waiting!&quot;</span>)</span><br><span class="line">    job.cancelAndJoin() <span class="comment">// 取消该作业并等待它结束</span></span><br><span class="line">    println(<span class="string">&quot;main: Now I can quit.&quot;</span>)</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">job: I<span class="string">&#x27;m sleeping 0 ...</span></span><br><span class="line"><span class="string">job: I&#x27;</span>m sleeping <span class="number">1</span> ...</span><br><span class="line">job: I<span class="string">&#x27;m running finally</span></span><br><span class="line"><span class="string">main: I&#x27;</span>m tired of waiting!</span><br><span class="line">job: And I<span class="string">&#x27;ve just delayed for 1 sec because I&#x27;</span>m non-cancellable</span><br><span class="line">main: Now I can quit.</span><br></pre></td></tr></table></figure>
 
+]]></content>
+      <categories>
+        <category>Kotlin</category>
+        <category>协程</category>
+      </categories>
+      <tags>
+        <tag>协程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>协程互斥-Mutex</title>
+    <url>/2023/02/13/%E5%8D%8F%E7%A8%8B%E4%BA%92%E6%96%A5-Mutex/</url>
+    <content><![CDATA[<h2 id="以细粒度限制线程"><a href="#以细粒度限制线程" class="headerlink" title="以细粒度限制线程"></a>以细粒度限制线程</h2><p><em>限制线程</em> 是解决共享可变状态问题的一种方案：对特定共享状态的所有访问权都限制在单个线程中。它通常应用于 UI 程序中：所有 UI 状态都局限于单个事件分发线程或应用主线程中。这在协程中很容易实现，通过使用一个单线程上下文：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> counterContext = newSingleThreadContext(<span class="string">&quot;CounterContext&quot;</span>)</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    withContext(Dispatchers.Default) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            <span class="comment">// 将每次自增限制在单线程上下文中</span></span><br><span class="line">            withContext(counterContext) &#123;</span><br><span class="line">                counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
+
+<p>这段代码运行非常缓慢，因为它进行了 <em>细粒度</em> 的线程限制。每个增量操作都得使用 <code>withContext(counterContext)</code> 块从多线程 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-default.html">Dispatchers.Default</a> 上下文切换到单线程上下文。</p>
+<h2 id="以粗粒度限制线程"><a href="#以粗粒度限制线程" class="headerlink" title="以粗粒度限制线程"></a>以粗粒度限制线程</h2><p>在实践中，线程限制是在大段代码中执行的，例如：状态更新类业务逻辑中大部分都是限于单线程中。下面的示例演示了这种情况， 在单线程上下文中运行每个协程。</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> counterContext = newSingleThreadContext(<span class="string">&quot;CounterContext&quot;</span>)</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    <span class="comment">// 将一切都限制在单线程上下文中</span></span><br><span class="line">    withContext(counterContext) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            counter++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
+
+<p>这段代码运行更快而且打印出了正确的结果。</p>
+<h2 id="互斥"><a href="#互斥" class="headerlink" title="互斥"></a>互斥</h2><p>该问题的互斥解决方案：使用<strong>永远不会同时执行</strong>的 <em>关键代码块</em> 来保护共享状态的所有修改。在阻塞的世界中，你通常会为此目的使用 <code>synchronized</code> 或者 <code>ReentrantLock</code>。 在协程中的替代品叫做 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/index.html">Mutex</a> 。它具有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/lock.html">lock</a> 和 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/unlock.html">unlock</a> 方法， 可以隔离关键的部分。关键的区别在于 <code>Mutex.lock()</code> 是一个挂起函数，它不会阻塞线程。（但会挂起协程）</p>
+<p>还有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/with-lock.html">withLock</a> 扩展函数，可以方便的替代常用的 <code>mutex.lock(); try &#123; …… &#125; finally &#123; mutex.unlock() &#125;</code> 模式：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlinx.coroutines.sync.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> mutex = Mutex()</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    withContext(Dispatchers.Default) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            <span class="comment">// 用锁保护每次自增</span></span><br><span class="line">            mutex.withLock &#123;</span><br><span class="line">                counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
+
+<p>此示例中锁是细粒度的，因此会付出一些代价。但是对于某些必须定期修改共享状态的场景，它是一个不错的选择，但是没有自然线程可以限制此状态。</p>
 ]]></content>
       <categories>
         <category>Kotlin</category>
@@ -1359,96 +1429,6 @@
       </categories>
   </entry>
   <entry>
-    <title>王家卫《手》</title>
-    <url>/2023/02/24/%E7%8E%8B%E5%AE%B6%E5%8D%AB%E3%80%8A%E6%89%8B%E3%80%8B/</url>
-    <content><![CDATA[<p>大半生的痴恋起源于第一次被她手。</p>
-<p>第一次总是难以忘怀。</p>
-]]></content>
-      <categories>
-        <category>电影</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>转载：IntelliJ调试协程</title>
-    <url>/2023/02/08/%E8%BD%AC%E8%BD%BD%EF%BC%9AIntelliJ%E8%B0%83%E8%AF%95%E5%8D%8F%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="Debug-coroutines-using-IntelliJ-IDEA-–-tutorial"><a href="#Debug-coroutines-using-IntelliJ-IDEA-–-tutorial" class="headerlink" title="Debug coroutines using IntelliJ IDEA – tutorial"></a>Debug coroutines using IntelliJ IDEA – tutorial</h1><p>Last modified: 07 February 2023</p>
-<p>This tutorial demonstrates how to create Kotlin coroutines and debug them using IntelliJ IDEA.</p>
-<p>The tutorial assumes you have prior knowledge of the <a href="https://kotlinlang.org/docs/coroutines-guide.html">coroutines</a> concept.</p>
-<h2 id="Create-coroutines"><a href="#Create-coroutines" class="headerlink" title="Create coroutines"></a>Create coroutines</h2><ol>
-<li><p>Open a Kotlin project in IntelliJ IDEA. If you don’t have a project, <a href="https://kotlinlang.org/docs/jvm-get-started.html#create-a-project">create one</a>.</p>
-</li>
-<li><p>To use the <code>kotlinx.coroutines</code> library in a Gradle project, add the following dependency to <code>build.gradle(.kts)</code>:</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    implementation(<span class="string">&quot;org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>For other build systems, see instructions in the <a href="https://github.com/Kotlin/kotlinx.coroutines#using-in-your-projects"><code>kotlinx.coroutines</code> README</a>.</p>
-<blockquote>
-<p>我的Coroutine版本是最新，但是Kotlin版本不是最新，而是1.6.24，结果调试器有问题，我更改到1.8.10最新版就可以了。</p>
-</blockquote>
-</li>
-<li><p>Open the <code>Main.kt</code> file in <code>src/main/kotlin</code>.</p>
-<p>The <code>src</code> directory contains Kotlin source files and resources. The <code>Main.kt</code> file contains sample code that will print <code>Hello World!</code>.</p>
-</li>
-<li><p>Change code in the <code>main()</code> function:</p>
-<ul>
-<li>Use the <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/run-blocking.html"><code>runBlocking()</code></a> block to wrap a coroutine.</li>
-<li>Use the <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html"><code>async()</code></a> function to create coroutines that compute deferred values <code>a</code> and <code>b</code>.</li>
-<li>Use the <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/await.html"><code>await()</code></a> function to await the computation result.</li>
-<li>Use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/println.html"><code>println()</code></a> function to print computing status and the result of multiplication to the output.</li>
-</ul>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">val</span> a = async &#123;</span><br><span class="line">        println(<span class="string">&quot;I&#x27;m computing part of the answer&quot;</span>)</span><br><span class="line">        <span class="number">6</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> b = async &#123;</span><br><span class="line">        println(<span class="string">&quot;I&#x27;m computing another part of the answer&quot;</span>)</span><br><span class="line">        <span class="number">7</span></span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;The answer is <span class="subst">$&#123;a.await() * b.await()&#125;</span>&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-</li>
-<li><p>Build the code by clicking <strong>Build Project</strong>.</p>
-<p><img src="https://kotlinlang.org/docs/images/flow-build-project.png" alt="Build an application"></p>
-</li>
-</ol>
-<h2 id="Debug-coroutines"><a href="#Debug-coroutines" class="headerlink" title="Debug coroutines"></a>Debug coroutines</h2><ol>
-<li><p>Set breakpoints at the lines with the <code>println()</code> function call:</p>
-<p><img src="https://kotlinlang.org/docs/images/coroutine-breakpoint.png" alt="Build a console application"></p>
-</li>
-<li><p>Run the code in debug mode by clicking <strong>Debug</strong> next to the run configuration at the top of the screen.</p>
-<p><img src="https://kotlinlang.org/docs/images/flow-debug-project.png" alt="Build a console application"></p>
-<p>The <strong>Debug</strong> tool window appears:</p>
-<ul>
-<li>The <strong>Frames</strong> tab contains the call stack.</li>
-<li>The <strong>Variables</strong> tab contains variables in the current context.</li>
-<li>The <strong>Coroutines</strong> tab contains information on running or suspended coroutines. It shows that there are three coroutines. The first one has the <strong>RUNNING</strong> status, and the other two have the <strong>CREATED</strong> status.</li>
-</ul>
-<p><img src="https://kotlinlang.org/docs/images/coroutine-debug-1.png" alt="Debug the coroutine"></p>
-</li>
-<li><p>Resume the debugger session by clicking <strong>Resume Program</strong> in the <strong>Debug</strong> tool window:</p>
-<p><img src="https://kotlinlang.org/docs/images/coroutine-debug-2.png" alt="Debug the coroutine"></p>
-<p>Now the <strong>Coroutines</strong> tab shows the following:</p>
-<ul>
-<li>The first coroutine has the <strong>SUSPENDED</strong> status – it is waiting for the values so it can multiply them.</li>
-<li>The second coroutine is calculating the <code>a</code> value – it has the <strong>RUNNING</strong> status.</li>
-<li>The third coroutine has the <strong>CREATED</strong> status and isn’t calculating the value of <code>b</code>.</li>
-</ul>
-</li>
-<li><p>Resume the debugger session by clicking <strong>Resume Program</strong> in the <strong>Debug</strong> tool window:</p>
-<p><img src="https://kotlinlang.org/docs/images/coroutine-debug-3.png" alt="Build a console application"></p>
-<p>Now the <strong>Coroutines</strong> tab shows the following:</p>
-<ul>
-<li>The first coroutine has the <strong>SUSPENDED</strong> status – it is waiting for the values so it can multiply them.</li>
-<li>The second coroutine has computed its value and disappeared.</li>
-<li>The third coroutine is calculating the value of <code>b</code> – it has the <strong>RUNNING</strong> status.</li>
-</ul>
-</li>
-</ol>
-<p>Using IntelliJ IDEA debugger, you can dig deeper into each coroutine to debug your code.</p>
-]]></content>
-      <categories>
-        <category>Kotlin</category>
-        <category>协程</category>
-      </categories>
-      <tags>
-        <tag>协程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>顶部凹陷Shape</title>
     <url>/2023/02/20/%E9%A1%B6%E9%83%A8%E5%87%B9%E9%99%B7Shape/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>看到StackOverFlow上一个提问</p>
@@ -1539,6 +1519,16 @@
       </categories>
   </entry>
   <entry>
+    <title>王家卫《手》</title>
+    <url>/2023/02/24/%E7%8E%8B%E5%AE%B6%E5%8D%AB%E3%80%8A%E6%89%8B%E3%80%8B/</url>
+    <content><![CDATA[<p>大半生的痴恋起源于第一次被她手。</p>
+<p>第一次总是难以忘怀。</p>
+]]></content>
+      <categories>
+        <category>电影</category>
+      </categories>
+  </entry>
+  <entry>
     <title>远离使杀戮更容易</title>
     <url>/2023/02/10/%E8%BF%9C%E7%A6%BB%E4%BD%BF%E6%9D%80%E6%88%AE%E6%9B%B4%E5%AE%B9%E6%98%93/</url>
     <content><![CDATA[<p>原文</p>
@@ -1564,6 +1554,86 @@
       </categories>
       <tags>
         <tag>情绪控制</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>转载：IntelliJ调试协程</title>
+    <url>/2023/02/08/%E8%BD%AC%E8%BD%BD%EF%BC%9AIntelliJ%E8%B0%83%E8%AF%95%E5%8D%8F%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="Debug-coroutines-using-IntelliJ-IDEA-–-tutorial"><a href="#Debug-coroutines-using-IntelliJ-IDEA-–-tutorial" class="headerlink" title="Debug coroutines using IntelliJ IDEA – tutorial"></a>Debug coroutines using IntelliJ IDEA – tutorial</h1><p>Last modified: 07 February 2023</p>
+<p>This tutorial demonstrates how to create Kotlin coroutines and debug them using IntelliJ IDEA.</p>
+<p>The tutorial assumes you have prior knowledge of the <a href="https://kotlinlang.org/docs/coroutines-guide.html">coroutines</a> concept.</p>
+<h2 id="Create-coroutines"><a href="#Create-coroutines" class="headerlink" title="Create coroutines"></a>Create coroutines</h2><ol>
+<li><p>Open a Kotlin project in IntelliJ IDEA. If you don’t have a project, <a href="https://kotlinlang.org/docs/jvm-get-started.html#create-a-project">create one</a>.</p>
+</li>
+<li><p>To use the <code>kotlinx.coroutines</code> library in a Gradle project, add the following dependency to <code>build.gradle(.kts)</code>:</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    implementation(<span class="string">&quot;org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>For other build systems, see instructions in the <a href="https://github.com/Kotlin/kotlinx.coroutines#using-in-your-projects"><code>kotlinx.coroutines</code> README</a>.</p>
+<blockquote>
+<p>我的Coroutine版本是最新，但是Kotlin版本不是最新，而是1.6.24，结果调试器有问题，我更改到1.8.10最新版就可以了。</p>
+</blockquote>
+</li>
+<li><p>Open the <code>Main.kt</code> file in <code>src/main/kotlin</code>.</p>
+<p>The <code>src</code> directory contains Kotlin source files and resources. The <code>Main.kt</code> file contains sample code that will print <code>Hello World!</code>.</p>
+</li>
+<li><p>Change code in the <code>main()</code> function:</p>
+<ul>
+<li>Use the <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/run-blocking.html"><code>runBlocking()</code></a> block to wrap a coroutine.</li>
+<li>Use the <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html"><code>async()</code></a> function to create coroutines that compute deferred values <code>a</code> and <code>b</code>.</li>
+<li>Use the <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/await.html"><code>await()</code></a> function to await the computation result.</li>
+<li>Use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/println.html"><code>println()</code></a> function to print computing status and the result of multiplication to the output.</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">val</span> a = async &#123;</span><br><span class="line">        println(<span class="string">&quot;I&#x27;m computing part of the answer&quot;</span>)</span><br><span class="line">        <span class="number">6</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> b = async &#123;</span><br><span class="line">        println(<span class="string">&quot;I&#x27;m computing another part of the answer&quot;</span>)</span><br><span class="line">        <span class="number">7</span></span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;The answer is <span class="subst">$&#123;a.await() * b.await()&#125;</span>&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>Build the code by clicking <strong>Build Project</strong>.</p>
+<p><img src="https://kotlinlang.org/docs/images/flow-build-project.png" alt="Build an application"></p>
+</li>
+</ol>
+<h2 id="Debug-coroutines"><a href="#Debug-coroutines" class="headerlink" title="Debug coroutines"></a>Debug coroutines</h2><ol>
+<li><p>Set breakpoints at the lines with the <code>println()</code> function call:</p>
+<p><img src="https://kotlinlang.org/docs/images/coroutine-breakpoint.png" alt="Build a console application"></p>
+</li>
+<li><p>Run the code in debug mode by clicking <strong>Debug</strong> next to the run configuration at the top of the screen.</p>
+<p><img src="https://kotlinlang.org/docs/images/flow-debug-project.png" alt="Build a console application"></p>
+<p>The <strong>Debug</strong> tool window appears:</p>
+<ul>
+<li>The <strong>Frames</strong> tab contains the call stack.</li>
+<li>The <strong>Variables</strong> tab contains variables in the current context.</li>
+<li>The <strong>Coroutines</strong> tab contains information on running or suspended coroutines. It shows that there are three coroutines. The first one has the <strong>RUNNING</strong> status, and the other two have the <strong>CREATED</strong> status.</li>
+</ul>
+<p><img src="https://kotlinlang.org/docs/images/coroutine-debug-1.png" alt="Debug the coroutine"></p>
+</li>
+<li><p>Resume the debugger session by clicking <strong>Resume Program</strong> in the <strong>Debug</strong> tool window:</p>
+<p><img src="https://kotlinlang.org/docs/images/coroutine-debug-2.png" alt="Debug the coroutine"></p>
+<p>Now the <strong>Coroutines</strong> tab shows the following:</p>
+<ul>
+<li>The first coroutine has the <strong>SUSPENDED</strong> status – it is waiting for the values so it can multiply them.</li>
+<li>The second coroutine is calculating the <code>a</code> value – it has the <strong>RUNNING</strong> status.</li>
+<li>The third coroutine has the <strong>CREATED</strong> status and isn’t calculating the value of <code>b</code>.</li>
+</ul>
+</li>
+<li><p>Resume the debugger session by clicking <strong>Resume Program</strong> in the <strong>Debug</strong> tool window:</p>
+<p><img src="https://kotlinlang.org/docs/images/coroutine-debug-3.png" alt="Build a console application"></p>
+<p>Now the <strong>Coroutines</strong> tab shows the following:</p>
+<ul>
+<li>The first coroutine has the <strong>SUSPENDED</strong> status – it is waiting for the values so it can multiply them.</li>
+<li>The second coroutine has computed its value and disappeared.</li>
+<li>The third coroutine is calculating the value of <code>b</code> – it has the <strong>RUNNING</strong> status.</li>
+</ul>
+</li>
+</ol>
+<p>Using IntelliJ IDEA debugger, you can dig deeper into each coroutine to debug your code.</p>
+]]></content>
+      <categories>
+        <category>Kotlin</category>
+        <category>协程</category>
+      </categories>
+      <tags>
+        <tag>协程</tag>
       </tags>
   </entry>
 </search>
