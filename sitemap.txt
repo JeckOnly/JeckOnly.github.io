@@ -1,3 +1,4 @@
+https://jeckonly.github.io/2023/11/09/%E5%85%B3%E4%BA%8E%E3%80%8A%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C%E3%80%8B/
 https://jeckonly.github.io/2023/10/22/%E4%B8%8D%E9%9C%80%E8%A6%81%E9%A3%8E%E6%89%87%E7%9A%84%E6%97%A5%E5%AD%90/
 https://jeckonly.github.io/2023/10/08/10%E6%9C%88%E4%BB%BD%E4%BB%8A%E5%A4%A9%E8%BD%AC%E5%87%89/
 https://jeckonly.github.io/2023/06/19/%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/
@@ -70,14 +71,14 @@ https://jeckonly.github.io/tags/%E5%B0%8F%E4%BA%91/
 https://jeckonly.github.io/tags/%E6%B8%B8%E6%88%8F/
 https://jeckonly.github.io/tags/%E6%83%85%E7%BB%AA%E6%8E%A7%E5%88%B6/
 https://jeckonly.github.io/categories/life/
+https://jeckonly.github.io/categories/Android/
 https://jeckonly.github.io/categories/%E8%AF%BB%E4%B9%A6/
 https://jeckonly.github.io/categories/%E7%94%B5%E5%BD%B1/
-https://jeckonly.github.io/categories/Android/
 https://jeckonly.github.io/categories/%E7%BC%96%E7%A8%8B%E6%84%9F%E6%83%B3/
 https://jeckonly.github.io/categories/Jetpack/
+https://jeckonly.github.io/categories/Android/%E5%BA%94%E7%94%A8%E6%95%B0%E6%8D%AE%E5%92%8C%E6%96%87%E4%BB%B6/
 https://jeckonly.github.io/categories/Kotlin/
 https://jeckonly.github.io/categories/Gradle/
-https://jeckonly.github.io/categories/Android/%E5%BA%94%E7%94%A8%E6%95%B0%E6%8D%AE%E5%92%8C%E6%96%87%E4%BB%B6/
 https://jeckonly.github.io/categories/Jetpack/Compose/
 https://jeckonly.github.io/categories/Java/
 https://jeckonly.github.io/categories/Android/%E6%9E%B6%E6%9E%84/
