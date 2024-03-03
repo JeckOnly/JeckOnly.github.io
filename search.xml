@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>10月份今天转凉</title>
+    <url>/2023/10/08/10%E6%9C%88%E4%BB%BD%E4%BB%8A%E5%A4%A9%E8%BD%AC%E5%87%89/</url>
+    <content><![CDATA[<p>转眼来到10月份，时间总是悄悄地来又悄悄地走，今天看到杂志上写 “时间像喝我血的马，喝完之后留我孤单一人，下次它再来我要好好拥抱它”，不免对时间流逝本身不那么难过起来，在变凉的日子里心生一股暖意。</p>
+<p>假期结束的很快，自己没有方向很长时间了，短短几天内也想不明白。思来想去，血液里终究没有冒险者的气质。我喜欢规律的生活，喜欢节奏慢，喜欢看山看海。但偏偏在最不符合这一切的城市生活，不仅像孙少安一样发出“命运如此”之感慨。</p>
+<p>大概是信仰“心远地自偏”以及深受“相由心生”等佛学思想熏陶之缘故，我对于营造自己生活的节奏还是挺刻意或者说乐观的。今天晚上回到家冷冷的，从冰箱里拿出昨天买好的排骨。在费劲的用手想扳成两份之后，发现急冻之后的骨头和骨头之间已经紧密相连了，干脆整块丢高压锅里。冷藏室里还有两个番茄，为了省事直接丢高压锅里了。然后盛差不多一大碗水大概自己要喝的汤的量倒进锅里。按下煲汤键就好了，只需要等40多分钟。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>4/2 RECORD</title>
     <url>/2023/04/02/4-2-RECORD/</url>
     <content><![CDATA[<p>以前以为如村上小说里男主角的生活方式是很容易做到的，那此不就是最容易的一种生活姿态嘛？但如今自己一个人生活了一段时间之后却发现也并不容易。</p>
@@ -13,14 +21,6 @@
       <categories>
         <category>life</category>
       </categories>
-  </entry>
-  <entry>
-    <title>10月份今天转凉</title>
-    <url>/2023/10/08/10%E6%9C%88%E4%BB%BD%E4%BB%8A%E5%A4%A9%E8%BD%AC%E5%87%89/</url>
-    <content><![CDATA[<p>转眼来到10月份，时间总是悄悄地来又悄悄地走，今天看到杂志上写 “时间像喝我血的马，喝完之后留我孤单一人，下次它再来我要好好拥抱它”，不免对时间流逝本身不那么难过起来，在变凉的日子里心生一股暖意。</p>
-<p>假期结束的很快，自己没有方向很长时间了，短短几天内也想不明白。思来想去，血液里终究没有冒险者的气质。我喜欢规律的生活，喜欢节奏慢，喜欢看山看海。但偏偏在最不符合这一切的城市生活，不仅像孙少安一样发出“命运如此”之感慨。</p>
-<p>大概是信仰“心远地自偏”以及深受“相由心生”等佛学思想熏陶之缘故，我对于营造自己生活的节奏还是挺刻意或者说乐观的。今天晚上回到家冷冷的，从冰箱里拿出昨天买好的排骨。在费劲的用手想扳成两份之后，发现急冻之后的骨头和骨头之间已经紧密相连了，干脆整块丢高压锅里。冷藏室里还有两个番茄，为了省事直接丢高压锅里了。然后盛差不多一大碗水大概自己要喝的汤的量倒进锅里。按下煲汤键就好了，只需要等40多分钟。</p>
-]]></content>
   </entry>
   <entry>
     <title>After reading The Little Prince</title>
@@ -138,18 +138,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Android权限有感</title>
-    <url>/2023/02/22/Android%E6%9D%83%E9%99%90%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<p>看了一晚的PermissionX系列文章，guolin写的挺好的。再次感慨Android系统的权限分类的请求的复杂。</p>
-<p>在横向上，权限分为普通，危险，特殊三个级别。普通的只需要manifest中声明，危险则是运行时请求，特殊则是利用Intent导向一个特定界面来开启。</p>
-<p>纵向上，随着Android版本的变化，要 <strong>做某一个功能</strong>，需要的权限 <strong>可能不一样</strong>；在高版本中，要用高版本的方法；在判断手机版本低时，要用旧方法。等等不言而喻。</p>
-<p>干。</p>
-]]></content>
-      <categories>
-        <category>编程感想</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Consuming flows safely in Jetpack Compose 笔记</title>
     <url>/2023/03/13/Consuming-flows-safely-in-Jetpack-Compose-%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p><a href="https://gist.github.com/JeckOnly/5ebf8271c570feb10c8ba483383c9603">本文代码</a></p>
@@ -191,6 +179,58 @@
         <category>Jetpack</category>
         <category>Compose</category>
         <category>Flow相关</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Flow操作符——缓冲</title>
+    <url>/2023/02/08/Flow%E6%93%8D%E4%BD%9C%E7%AC%A6%E2%80%94%E2%80%94%E7%BC%93%E5%86%B2/</url>
+    <content><![CDATA[<h2 id="Buffer操作符"><a href="#Buffer操作符" class="headerlink" title="Buffer操作符"></a>Buffer操作符</h2><p>之前在旧博客用模拟餐厅上菜的例子讲过这个操作符：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    flow&lt;String&gt; &#123;</span><br><span class="line">        println(<span class="string">&quot;上菜——鸡肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鸡肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——鱼肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鱼肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——西瓜&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;西瓜&quot;</span>)</span><br><span class="line">    &#125;.onEach &#123;</span><br><span class="line">        println(<span class="string">&quot;运送<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;.collect &#123;</span><br><span class="line">        println(<span class="string">&quot;客人开始吃<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">        delay(<span class="number">5000</span>)</span><br><span class="line">        println(<span class="string">&quot;客人吃完<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出结果如下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">上菜——鸡肉</span><br><span class="line">运送鸡肉</span><br><span class="line">客人开始吃鸡肉</span><br><span class="line">客人吃完鸡肉</span><br><span class="line">上菜——鱼肉</span><br><span class="line">运送鱼肉</span><br><span class="line">客人开始吃鱼肉</span><br><span class="line">客人吃完鱼肉</span><br><span class="line">上菜——西瓜</span><br><span class="line">运送西瓜</span><br><span class="line">客人开始吃西瓜</span><br><span class="line">客人吃完西瓜</span><br><span class="line"></span><br><span class="line">Process finished with exit code 0</span><br></pre></td></tr></table></figure>
+
+<p><strong>因为emit会挂起等collect执行完再resume，所以下一个菜要等客人吃完才上</strong>，那可不可以等客人一边吃就一边上菜呢？即要实现：collect不会令emit挂起，并保证emit的值按顺序到达，collect也对应的<strong>不取消（collectLatest就会取消）</strong>，也按顺序对应执行。</p>
+<p><strong>用buffer可以解决</strong></p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    flow&lt;String&gt; &#123;</span><br><span class="line">        println(<span class="string">&quot;上菜——鸡肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鸡肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——鱼肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鱼肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——西瓜&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;西瓜&quot;</span>)</span><br><span class="line">    &#125;.onEach &#123;</span><br><span class="line">        println(<span class="string">&quot;运送<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;.buffer().collect &#123;</span><br><span class="line">        println(<span class="string">&quot;客人开始吃<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">        delay(<span class="number">5000</span>)</span><br><span class="line">        println(<span class="string">&quot;客人吃完<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出如下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">上菜——鸡肉</span><br><span class="line">运送鸡肉</span><br><span class="line">客人开始吃鸡肉</span><br><span class="line">上菜——鱼肉</span><br><span class="line">运送鱼肉</span><br><span class="line">上菜——西瓜</span><br><span class="line">运送西瓜</span><br><span class="line">客人吃完鸡肉</span><br><span class="line">客人开始吃鱼肉</span><br><span class="line">客人吃完鱼肉</span><br><span class="line">客人开始吃西瓜</span><br><span class="line">客人吃完西瓜</span><br></pre></td></tr></table></figure>
+
+<p>由于有缓冲，上游和下游可以 <strong>并发</strong> 地执行。</p>
+<h2 id="实现缓冲的另外一个方法"><a href="#实现缓冲的另外一个方法" class="headerlink" title="实现缓冲的另外一个方法"></a>实现缓冲的另外一个方法</h2><p>其实把 <code>buffer()</code> 改为 <code>flowOn(other Dispatcher)</code> （other Dispatcher指的是不同于 <code>collect</code> 所运行的上下文的调度器），也可以达到缓冲的效果。文档是这样说的：</p>
+<blockquote>
+<p>This operator retains a <em>sequential</em> nature of flow if changing the context does not call for changing the <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-dispatcher/index.html">dispatcher</a>. </p>
+<p>Otherwise, if <strong>changing dispatcher</strong> is required, it collects flow emissions <strong>in one coroutine</strong> that is run using a specified <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/flow-on.html">context</a> and emits them from <strong>another coroutines</strong> with the original collector’s context using a channel with a <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/-channel/-factory/-b-u-f-f-e-r-e-d.html">default</a> <strong>buffer</strong> size between two coroutines similarly to <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/buffer.html">buffer</a> operator, unless <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/buffer.html">buffer</a> operator is explicitly called before or after <code>flowOn</code>, which requests buffering behavior and specifies channel size.</p>
+</blockquote>
+<p>要就是说，要是 <code>flowOn()</code>中指定的调度器和收集的调度器不同，这样 <code>emit</code> 和 <code>collect</code> 就会运行在两个不同的协程中，然后有一个带有缓冲的channel把它们连接起来。</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 可以缓冲</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking(Dispatchers.Default)&#123;</span><br><span class="line">    flow&lt;String&gt; &#123;</span><br><span class="line">        println(<span class="string">&quot;上菜——鸡肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鸡肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——鱼肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鱼肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——西瓜&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;西瓜&quot;</span>)</span><br><span class="line">    &#125;.onEach &#123;</span><br><span class="line">        println(<span class="string">&quot;运送<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;.flowOn(Dispatchers.IO).collect &#123;</span><br><span class="line">        println(<span class="string">&quot;客人开始吃<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">        delay(<span class="number">5000</span>)</span><br><span class="line">        println(<span class="string">&quot;客人吃完<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不可以缓冲</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking(Dispatchers.Default)&#123;</span><br><span class="line">    flow&lt;String&gt; &#123;</span><br><span class="line">        println(<span class="string">&quot;上菜——鸡肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鸡肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——鱼肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鱼肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——西瓜&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;西瓜&quot;</span>)</span><br><span class="line">    &#125;.onEach &#123;</span><br><span class="line">        println(<span class="string">&quot;运送<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;.flowOn(Dispatchers.Default).collect &#123;</span><br><span class="line">        println(<span class="string">&quot;客人开始吃<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">        delay(<span class="number">5000</span>)</span><br><span class="line">        println(<span class="string">&quot;客人吃完<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不可以缓冲</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking(Dispatchers.Default)&#123;</span><br><span class="line">    flow&lt;String&gt; &#123;</span><br><span class="line">        println(<span class="string">&quot;上菜——鸡肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鸡肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——鱼肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鱼肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——西瓜&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;西瓜&quot;</span>)</span><br><span class="line">    &#125;.onEach &#123;</span><br><span class="line">        println(<span class="string">&quot;运送<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;.flowOn(CoroutineName(<span class="string">&quot;没有改变调度器&quot;</span>)).collect &#123;</span><br><span class="line">        println(<span class="string">&quot;客人开始吃<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">        delay(<span class="number">5000</span>)</span><br><span class="line">        println(<span class="string">&quot;客人吃完<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Buffer的参数"><a href="#Buffer的参数" class="headerlink" title="Buffer的参数"></a>Buffer的参数</h2><p>有两个参数，分别是 <strong>缓冲区大小</strong>和 <strong>溢出时的行为</strong>，都很简单，看注释即可。</p>
+<h3 id="大小"><a href="#大小" class="headerlink" title="大小"></a>大小</h3><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Requests a channel with an unlimited capacity buffer in the `Channel(...)` factory function.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">const</span> <span class="keyword">val</span> UNLIMITED: <span class="built_in">Int</span> = <span class="built_in">Int</span>.MAX_VALUE   没有限制</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Requests a rendezvous channel in the `Channel(...)` factory function &amp;mdash; a channel that does not have a buffer.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">const</span> <span class="keyword">val</span> RENDEZVOUS: <span class="built_in">Int</span> = <span class="number">0</span>     没有缓冲，缓冲区为<span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Requests a conflated channel in the `Channel(...)` factory function. This is a shortcut to creating</span></span><br><span class="line"><span class="comment"> * a channel with [`onBufferOverflow = DROP_OLDEST`][BufferOverflow.DROP_OLDEST].</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">const</span> <span class="keyword">val</span> CONFLATED: <span class="built_in">Int</span> = -<span class="number">1</span>  缓冲区为<span class="number">1</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Requests a buffered channel with the default buffer capacity in the `Channel(...)` factory function.</span></span><br><span class="line"><span class="comment"> * The default capacity for a channel that [suspends][BufferOverflow.SUSPEND] on overflow</span></span><br><span class="line"><span class="comment"> * is 64 and can be overridden by setting [DEFAULT_BUFFER_PROPERTY_NAME] on JVM.</span></span><br><span class="line"><span class="comment"> * For non-suspending channels, a buffer of capacity 1 is used.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">const</span> <span class="keyword">val</span> BUFFERED: <span class="built_in">Int</span> = -<span class="number">2</span>  默认<span class="number">64</span></span><br></pre></td></tr></table></figure>
+
+<p>也可以是自然数。</p>
+<p><strong>要注意缓冲区为0不等于没有buffer修饰符的情况</strong>。当溢出策略为 suspend 的情况下，前者判断collect已消耗元素的标志是collect块开始处理，后者是collect块结束。<a href="https://stackoverflow.com/questions/65952256/kotlin-flow-buffer-capacity">一个buffer为0的案例</a></p>
+]]></content>
+      <categories>
+        <category>Kotlin</category>
+        <category>协程</category>
+        <category>Flow</category>
+      </categories>
+      <tags>
+        <tag>Flow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android权限有感</title>
+    <url>/2023/02/22/Android%E6%9D%83%E9%99%90%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<p>看了一晚的PermissionX系列文章，guolin写的挺好的。再次感慨Android系统的权限分类的请求的复杂。</p>
+<p>在横向上，权限分为普通，危险，特殊三个级别。普通的只需要manifest中声明，危险则是运行时请求，特殊则是利用Intent导向一个特定界面来开启。</p>
+<p>纵向上，随着Android版本的变化，要 <strong>做某一个功能</strong>，需要的权限 <strong>可能不一样</strong>；在高版本中，要用高版本的方法；在判断手机版本低时，要用旧方法。等等不言而喻。</p>
+<p>干。</p>
+]]></content>
+      <categories>
+        <category>编程感想</category>
       </categories>
   </entry>
   <entry>
@@ -246,46 +286,6 @@
         <category>协程</category>
         <category>Flow</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Flow操作符——缓冲</title>
-    <url>/2023/02/08/Flow%E6%93%8D%E4%BD%9C%E7%AC%A6%E2%80%94%E2%80%94%E7%BC%93%E5%86%B2/</url>
-    <content><![CDATA[<h2 id="Buffer操作符"><a href="#Buffer操作符" class="headerlink" title="Buffer操作符"></a>Buffer操作符</h2><p>之前在旧博客用模拟餐厅上菜的例子讲过这个操作符：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    flow&lt;String&gt; &#123;</span><br><span class="line">        println(<span class="string">&quot;上菜——鸡肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鸡肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——鱼肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鱼肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——西瓜&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;西瓜&quot;</span>)</span><br><span class="line">    &#125;.onEach &#123;</span><br><span class="line">        println(<span class="string">&quot;运送<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;.collect &#123;</span><br><span class="line">        println(<span class="string">&quot;客人开始吃<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">        delay(<span class="number">5000</span>)</span><br><span class="line">        println(<span class="string">&quot;客人吃完<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>输出结果如下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">上菜——鸡肉</span><br><span class="line">运送鸡肉</span><br><span class="line">客人开始吃鸡肉</span><br><span class="line">客人吃完鸡肉</span><br><span class="line">上菜——鱼肉</span><br><span class="line">运送鱼肉</span><br><span class="line">客人开始吃鱼肉</span><br><span class="line">客人吃完鱼肉</span><br><span class="line">上菜——西瓜</span><br><span class="line">运送西瓜</span><br><span class="line">客人开始吃西瓜</span><br><span class="line">客人吃完西瓜</span><br><span class="line"></span><br><span class="line">Process finished with exit code 0</span><br></pre></td></tr></table></figure>
-
-<p><strong>因为emit会挂起等collect执行完再resume，所以下一个菜要等客人吃完才上</strong>，那可不可以等客人一边吃就一边上菜呢？即要实现：collect不会令emit挂起，并保证emit的值按顺序到达，collect也对应的<strong>不取消（collectLatest就会取消）</strong>，也按顺序对应执行。</p>
-<p><strong>用buffer可以解决</strong></p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking&lt;<span class="built_in">Unit</span>&gt; &#123;</span><br><span class="line">    flow&lt;String&gt; &#123;</span><br><span class="line">        println(<span class="string">&quot;上菜——鸡肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鸡肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——鱼肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鱼肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——西瓜&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;西瓜&quot;</span>)</span><br><span class="line">    &#125;.onEach &#123;</span><br><span class="line">        println(<span class="string">&quot;运送<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;.buffer().collect &#123;</span><br><span class="line">        println(<span class="string">&quot;客人开始吃<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">        delay(<span class="number">5000</span>)</span><br><span class="line">        println(<span class="string">&quot;客人吃完<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>输出如下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">上菜——鸡肉</span><br><span class="line">运送鸡肉</span><br><span class="line">客人开始吃鸡肉</span><br><span class="line">上菜——鱼肉</span><br><span class="line">运送鱼肉</span><br><span class="line">上菜——西瓜</span><br><span class="line">运送西瓜</span><br><span class="line">客人吃完鸡肉</span><br><span class="line">客人开始吃鱼肉</span><br><span class="line">客人吃完鱼肉</span><br><span class="line">客人开始吃西瓜</span><br><span class="line">客人吃完西瓜</span><br></pre></td></tr></table></figure>
-
-<p>由于有缓冲，上游和下游可以 <strong>并发</strong> 地执行。</p>
-<h2 id="实现缓冲的另外一个方法"><a href="#实现缓冲的另外一个方法" class="headerlink" title="实现缓冲的另外一个方法"></a>实现缓冲的另外一个方法</h2><p>其实把 <code>buffer()</code> 改为 <code>flowOn(other Dispatcher)</code> （other Dispatcher指的是不同于 <code>collect</code> 所运行的上下文的调度器），也可以达到缓冲的效果。文档是这样说的：</p>
-<blockquote>
-<p>This operator retains a <em>sequential</em> nature of flow if changing the context does not call for changing the <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-dispatcher/index.html">dispatcher</a>. </p>
-<p>Otherwise, if <strong>changing dispatcher</strong> is required, it collects flow emissions <strong>in one coroutine</strong> that is run using a specified <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/flow-on.html">context</a> and emits them from <strong>another coroutines</strong> with the original collector’s context using a channel with a <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/-channel/-factory/-b-u-f-f-e-r-e-d.html">default</a> <strong>buffer</strong> size between two coroutines similarly to <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/buffer.html">buffer</a> operator, unless <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/buffer.html">buffer</a> operator is explicitly called before or after <code>flowOn</code>, which requests buffering behavior and specifies channel size.</p>
-</blockquote>
-<p>要就是说，要是 <code>flowOn()</code>中指定的调度器和收集的调度器不同，这样 <code>emit</code> 和 <code>collect</code> 就会运行在两个不同的协程中，然后有一个带有缓冲的channel把它们连接起来。</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 可以缓冲</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking(Dispatchers.Default)&#123;</span><br><span class="line">    flow&lt;String&gt; &#123;</span><br><span class="line">        println(<span class="string">&quot;上菜——鸡肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鸡肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——鱼肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鱼肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——西瓜&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;西瓜&quot;</span>)</span><br><span class="line">    &#125;.onEach &#123;</span><br><span class="line">        println(<span class="string">&quot;运送<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;.flowOn(Dispatchers.IO).collect &#123;</span><br><span class="line">        println(<span class="string">&quot;客人开始吃<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">        delay(<span class="number">5000</span>)</span><br><span class="line">        println(<span class="string">&quot;客人吃完<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不可以缓冲</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking(Dispatchers.Default)&#123;</span><br><span class="line">    flow&lt;String&gt; &#123;</span><br><span class="line">        println(<span class="string">&quot;上菜——鸡肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鸡肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——鱼肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鱼肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——西瓜&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;西瓜&quot;</span>)</span><br><span class="line">    &#125;.onEach &#123;</span><br><span class="line">        println(<span class="string">&quot;运送<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;.flowOn(Dispatchers.Default).collect &#123;</span><br><span class="line">        println(<span class="string">&quot;客人开始吃<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">        delay(<span class="number">5000</span>)</span><br><span class="line">        println(<span class="string">&quot;客人吃完<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不可以缓冲</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking(Dispatchers.Default)&#123;</span><br><span class="line">    flow&lt;String&gt; &#123;</span><br><span class="line">        println(<span class="string">&quot;上菜——鸡肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鸡肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——鱼肉&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;鱼肉&quot;</span>)</span><br><span class="line">        delay(<span class="number">1000</span>)</span><br><span class="line">        println(<span class="string">&quot;上菜——西瓜&quot;</span>)</span><br><span class="line">        emit(<span class="string">&quot;西瓜&quot;</span>)</span><br><span class="line">    &#125;.onEach &#123;</span><br><span class="line">        println(<span class="string">&quot;运送<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;.flowOn(CoroutineName(<span class="string">&quot;没有改变调度器&quot;</span>)).collect &#123;</span><br><span class="line">        println(<span class="string">&quot;客人开始吃<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">        delay(<span class="number">5000</span>)</span><br><span class="line">        println(<span class="string">&quot;客人吃完<span class="variable">$it</span>&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Buffer的参数"><a href="#Buffer的参数" class="headerlink" title="Buffer的参数"></a>Buffer的参数</h2><p>有两个参数，分别是 <strong>缓冲区大小</strong>和 <strong>溢出时的行为</strong>，都很简单，看注释即可。</p>
-<h3 id="大小"><a href="#大小" class="headerlink" title="大小"></a>大小</h3><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Requests a channel with an unlimited capacity buffer in the `Channel(...)` factory function.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">const</span> <span class="keyword">val</span> UNLIMITED: <span class="built_in">Int</span> = <span class="built_in">Int</span>.MAX_VALUE   没有限制</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Requests a rendezvous channel in the `Channel(...)` factory function &amp;mdash; a channel that does not have a buffer.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">const</span> <span class="keyword">val</span> RENDEZVOUS: <span class="built_in">Int</span> = <span class="number">0</span>     没有缓冲，缓冲区为<span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Requests a conflated channel in the `Channel(...)` factory function. This is a shortcut to creating</span></span><br><span class="line"><span class="comment"> * a channel with [`onBufferOverflow = DROP_OLDEST`][BufferOverflow.DROP_OLDEST].</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">const</span> <span class="keyword">val</span> CONFLATED: <span class="built_in">Int</span> = -<span class="number">1</span>  缓冲区为<span class="number">1</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Requests a buffered channel with the default buffer capacity in the `Channel(...)` factory function.</span></span><br><span class="line"><span class="comment"> * The default capacity for a channel that [suspends][BufferOverflow.SUSPEND] on overflow</span></span><br><span class="line"><span class="comment"> * is 64 and can be overridden by setting [DEFAULT_BUFFER_PROPERTY_NAME] on JVM.</span></span><br><span class="line"><span class="comment"> * For non-suspending channels, a buffer of capacity 1 is used.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">const</span> <span class="keyword">val</span> BUFFERED: <span class="built_in">Int</span> = -<span class="number">2</span>  默认<span class="number">64</span></span><br></pre></td></tr></table></figure>
-
-<p>也可以是自然数。</p>
-<p><strong>要注意缓冲区为0不等于没有buffer修饰符的情况</strong>。当溢出策略为 suspend 的情况下，前者判断collect已消耗元素的标志是collect块开始处理，后者是collect块结束。<a href="https://stackoverflow.com/questions/65952256/kotlin-flow-buffer-capacity">一个buffer为0的案例</a></p>
-]]></content>
-      <categories>
-        <category>Kotlin</category>
-        <category>协程</category>
-        <category>Flow</category>
-      </categories>
-      <tags>
-        <tag>Flow</tag>
-      </tags>
   </entry>
   <entry>
     <title>Gradle依赖的结构 by chatgpt</title>
@@ -364,6 +364,26 @@
       </categories>
   </entry>
   <entry>
+    <title>Note about meditation speech by huberman</title>
+    <url>/2023/03/10/Note-about-meditation-speech-by-huberman/</url>
+    <content><![CDATA[<p>prefrontal cortex interpret things， can interpret what is going on in ACC（ACC accepts body signals）</p>
+<p>A paper called A Wandering Mind Is An Unhappy Mind<br>stimulus-indipendent thoughts — defualt mode network<br>“In conclusion, a human mind is a wandering mind, and a wandering mind is an unhappy mind. The ability to think about what is not happening (in a moment), is a cognitive achievement that comes at an emotional cost. “</p>
+<p>闭上眼睛，去进行主观判断，自己现在的attention是更偏向内在还是外在，然后进行不同冥想练习的选择。Youtuber推荐进行和当下更容易做到的相反的方向的冥想，比如说现在大脑中有很多游离的思想，关于过去或现在或未来，闭上眼睛很容易就能focus on 内在，那么做一些增强外在的冥想比较好；再比如说，假如现在在飞机场，被外在很多东西所烦恼着，这时候可以试着focus on internal。</p>
+<p>无论是专注于外在或内在，refocus是一个进步的过程，塑造大脑神经。So rather than think about your ability to focus, think about your ability to refocus</p>
+<p>Meditation app—waking up(nothing helpful)</p>
+<p>There is no sensation in the brain. Thoughts will wander around randomly and intrusively when you close your eyes and focu on your prefrontal cortex</p>
+<p>可持续性是关键，而不用在意时间长短</p>
+<p>大多数冥想练习中的呼吸都试着去减慢呼吸。在默认情况下，吸气是主动的，呼气是被动的。但在冥想中，要求呼气也是主动的。</p>
+<p>怎么呼吸，没有一刀切的规则。冷静还是警觉，与呼和吸的比例和频率有关。呼 &gt; 吸 或 在呼和吸间增加间隔—calm down，刻意吸，让吸更有力，则更警觉。</p>
+<p>呼吸既是冥想练习的一部分，但呼吸本身也是一种冥想。即纯粹的呼吸也是一种冥想形式。冥想更多地专注于呼吸，它将更偏向内在</p>
+<p>除了内在和外在这一条线，还有内在与解离（dissociation）这条线。</p>
+<p>Yoga nidra, NSDR  MBSR</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Kotlin类型系统笔记</title>
     <url>/2023/03/10/Kotlin%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>存在String，其实不存在String？这个类，这是编译器做的功课。所以？可空类型的类型系统是隐含的。<br>Unit也是被编译器特殊对待的，Unit作为函数返回值的话，可以不用显式返回。</p>
@@ -407,26 +427,6 @@
       <categories>
         <category>Kotlin</category>
         <category>类型系统</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Note about meditation speech by huberman</title>
-    <url>/2023/03/10/Note-about-meditation-speech-by-huberman/</url>
-    <content><![CDATA[<p>prefrontal cortex interpret things， can interpret what is going on in ACC（ACC accepts body signals）</p>
-<p>A paper called A Wandering Mind Is An Unhappy Mind<br>stimulus-indipendent thoughts — defualt mode network<br>“In conclusion, a human mind is a wandering mind, and a wandering mind is an unhappy mind. The ability to think about what is not happening (in a moment), is a cognitive achievement that comes at an emotional cost. “</p>
-<p>闭上眼睛，去进行主观判断，自己现在的attention是更偏向内在还是外在，然后进行不同冥想练习的选择。Youtuber推荐进行和当下更容易做到的相反的方向的冥想，比如说现在大脑中有很多游离的思想，关于过去或现在或未来，闭上眼睛很容易就能focus on 内在，那么做一些增强外在的冥想比较好；再比如说，假如现在在飞机场，被外在很多东西所烦恼着，这时候可以试着focus on internal。</p>
-<p>无论是专注于外在或内在，refocus是一个进步的过程，塑造大脑神经。So rather than think about your ability to focus, think about your ability to refocus</p>
-<p>Meditation app—waking up(nothing helpful)</p>
-<p>There is no sensation in the brain. Thoughts will wander around randomly and intrusively when you close your eyes and focu on your prefrontal cortex</p>
-<p>可持续性是关键，而不用在意时间长短</p>
-<p>大多数冥想练习中的呼吸都试着去减慢呼吸。在默认情况下，吸气是主动的，呼气是被动的。但在冥想中，要求呼气也是主动的。</p>
-<p>怎么呼吸，没有一刀切的规则。冷静还是警觉，与呼和吸的比例和频率有关。呼 &gt; 吸 或 在呼和吸间增加间隔—calm down，刻意吸，让吸更有力，则更警觉。</p>
-<p>呼吸既是冥想练习的一部分，但呼吸本身也是一种冥想。即纯粹的呼吸也是一种冥想形式。冥想更多地专注于呼吸，它将更偏向内在</p>
-<p>除了内在和外在这一条线，还有内在与解离（dissociation）这条线。</p>
-<p>Yoga nidra, NSDR  MBSR</p>
-]]></content>
-      <categories>
-        <category>life</category>
       </categories>
   </entry>
   <entry>
@@ -670,44 +670,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/02/04/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>coroutineScope vs supervisorScope</title>
-    <url>/2023/02/20/coroutineScope%20vs%20supervisorScope/</url>
-    <content><![CDATA[<p>总结并不完全，只列出一些主要异同。</p>
-<h3 id="同"><a href="#同" class="headerlink" title="同"></a>同</h3><h4 id="1-内部子协程及作用域本身都完成了函数才完成"><a href="#1-内部子协程及作用域本身都完成了函数才完成" class="headerlink" title="1 内部子协程及作用域本身都完成了函数才完成"></a>1 内部子协程及作用域本身都完成了函数才完成</h4><blockquote>
-<p>This function returns as soon as the given block and all its child coroutines are completed.</p>
-</blockquote>
-<h4 id="2-都不参与函数调用处所在的scope的结构化并发"><a href="#2-都不参与函数调用处所在的scope的结构化并发" class="headerlink" title="2 都不参与函数调用处所在的scope的结构化并发"></a>2 都不参与函数调用处所在的scope的结构化并发</h4><p>在函数调用处 re-throw exception。</p>
-<h3 id="异"><a href="#异" class="headerlink" title="异"></a>异</h3><p>主要体现在异常情况下的 parent-child 取消逻辑。</p>
-<h4 id="coroutineScope是双向的取消"><a href="#coroutineScope是双向的取消" class="headerlink" title="coroutineScope是双向的取消"></a>coroutineScope是双向的取消</h4><h5 id="1"><a href="#1" class="headerlink" title="1"></a>1</h5><p>子协程发生异常 -&gt; coroutineScope作用域整个取消 -&gt; 其他子协程也被取消</p>
-<h5 id="2"><a href="#2" class="headerlink" title="2"></a>2</h5><p>coroutineScope取消&#x2F;作用域本身异常 -&gt; 取消内部所有子协程</p>
-<h4 id="supervisorScope是单向的取消"><a href="#supervisorScope是单向的取消" class="headerlink" title="supervisorScope是单向的取消"></a>supervisorScope是单向的取消</h4><h5 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h5><p>supervisorScope取消&#x2F;作用域本身异常 -&gt; 取消内部所有子协程。</p>
-<p>但是内部的子协程异常不会导致supervisorScope作用域的取消。需要像顶层协程那样给子协程设置Handler为他们设置独立的错误处理器，不设置的话没有处理就会打印异常信息。</p>
-<p>可以从博客中另外一篇《协程异常处理总结》了解更多。</p>
-]]></content>
-      <categories>
-        <category>Kotlin</category>
-        <category>协程</category>
-      </categories>
-  </entry>
-  <entry>
     <title>leetcode_50_螺旋矩阵</title>
     <url>/2023/02/09/leetcode-50-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<p>这道题看到很多解法都是边界法。然后看到另外一种有意思的解法。</p>
@@ -760,6 +722,26 @@
 ]]></content>
       <categories>
         <category>电影</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>coroutineScope vs supervisorScope</title>
+    <url>/2023/02/20/coroutineScope%20vs%20supervisorScope/</url>
+    <content><![CDATA[<p>总结并不完全，只列出一些主要异同。</p>
+<h3 id="同"><a href="#同" class="headerlink" title="同"></a>同</h3><h4 id="1-内部子协程及作用域本身都完成了函数才完成"><a href="#1-内部子协程及作用域本身都完成了函数才完成" class="headerlink" title="1 内部子协程及作用域本身都完成了函数才完成"></a>1 内部子协程及作用域本身都完成了函数才完成</h4><blockquote>
+<p>This function returns as soon as the given block and all its child coroutines are completed.</p>
+</blockquote>
+<h4 id="2-都不参与函数调用处所在的scope的结构化并发"><a href="#2-都不参与函数调用处所在的scope的结构化并发" class="headerlink" title="2 都不参与函数调用处所在的scope的结构化并发"></a>2 都不参与函数调用处所在的scope的结构化并发</h4><p>在函数调用处 re-throw exception。</p>
+<h3 id="异"><a href="#异" class="headerlink" title="异"></a>异</h3><p>主要体现在异常情况下的 parent-child 取消逻辑。</p>
+<h4 id="coroutineScope是双向的取消"><a href="#coroutineScope是双向的取消" class="headerlink" title="coroutineScope是双向的取消"></a>coroutineScope是双向的取消</h4><h5 id="1"><a href="#1" class="headerlink" title="1"></a>1</h5><p>子协程发生异常 -&gt; coroutineScope作用域整个取消 -&gt; 其他子协程也被取消</p>
+<h5 id="2"><a href="#2" class="headerlink" title="2"></a>2</h5><p>coroutineScope取消&#x2F;作用域本身异常 -&gt; 取消内部所有子协程</p>
+<h4 id="supervisorScope是单向的取消"><a href="#supervisorScope是单向的取消" class="headerlink" title="supervisorScope是单向的取消"></a>supervisorScope是单向的取消</h4><h5 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h5><p>supervisorScope取消&#x2F;作用域本身异常 -&gt; 取消内部所有子协程。</p>
+<p>但是内部的子协程异常不会导致supervisorScope作用域的取消。需要像顶层协程那样给子协程设置Handler为他们设置独立的错误处理器，不设置的话没有处理就会打印异常信息。</p>
+<p>可以从博客中另外一篇《协程异常处理总结》了解更多。</p>
+]]></content>
+      <categories>
+        <category>Kotlin</category>
+        <category>协程</category>
       </categories>
   </entry>
   <entry>
@@ -816,6 +798,24 @@
       <categories>
         <category>电影</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/02/04/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>《蓝莓之夜》感</title>
@@ -1000,23 +1000,6 @@
       </categories>
   </entry>
   <entry>
-    <title>关于现代生育问题的一些思考</title>
-    <url>/2023/04/09/%E5%85%B3%E4%BA%8E%E7%8E%B0%E4%BB%A3%E7%94%9F%E8%82%B2%E9%97%AE%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/</url>
-    <content><![CDATA[<p>在阳台看到楼下有一位女性带着两个小孩走过，小孩穿着舞蹈服。想必是接孩子从兴趣班刚回来。来深圳一段时间了，经常工作日上班也看到有不少老人带孩子。原来深漂不仅仅是年轻人的事，也席卷了上一辈。对上一辈来说不能说不是残酷的，离开了大半辈子的生活环境去到一个陌生的地方，操劳了一辈子。辛辛苦苦把子女带大，子女有小孩了要工作又要帮忙带小孩。国务院的劳动模范应该颁给这些人，他们实实在在地用自己的生命在延续这个社会。</p>
-<p>对于生育这件事我还想到了一件事。那是发生在刚入职的时候，大伙聚在一起围个圈自我介绍的时候，先是一个HR（还是什么其他职位我记不太清）介绍自己。她说自己做的是XXX，喜欢XXX，然后停顿了一下，说”与此同时，我还是一个3岁孩子的宝妈！“，顿时其他的人都拍起掌来。仿佛见证了奇迹一般，仿佛在战后表彰会上一个英勇的战士刚领完奖。</p>
-<p>原来我们这一代，至少20——30多的这一代，早已在<strong>潜意识</strong>上，深深地认同了，或者说———接受了，养育孩子是<strong>不现实</strong>的这一社会问题，或者说，经济问题。当时我在周围这群刚毕业的大学生眼中，特别是妹子，感受到的一种感觉是：深深地钦佩，佩服她的<strong>勇气</strong>，竟然在这么高节奏的城市中生活还敢生孩子呢！而她本人，在说这句话的时候也声调激昂，满满的自豪感。我并不想说这件事不值得自豪。这件事值得自豪，至少对她本人来说。那你觉得这件事值得自豪吗？如果你也觉得自豪，大家都觉得自豪，这么说明这个社会把养育孩子的<strong>门槛</strong>提高到了需要非凡的勇气，毅力和经济水平才能去做的地步，一个普通人所不能承受的地步。</p>
-<p>我似乎在说一些很明显的社会问题，在2023年这些已经是既定事实。但我感觉有不对的地方，她何以带着如此的荣誉感去宣扬自己养着一个小孩，仿佛在说这句话的时候在等待着谁的<strong>嘉奖</strong>一般。</p>
-<p>后来我想到了。如果把社会比喻成一个公司就很容易理解。公司最近遇到危机，要赶项目，要大家加班加点，但不是强制性的，因为法律有规定不能强制，所以呢公司上层就开始宣扬价值观、公司文化，说加班加点才是好，艰苦奋斗的精神值得大家学习！因为如果大家都摆烂不加班公司项目就完了，但是只要有一部分人信了，他们去加班加点，公司就能活下去。最后给这一部分人在大会上表扬一下，让大家向这部分人学习。公司给他们颁发了”奋斗者“奖章，这部分人也把佩戴这个奖章视为一种荣誉。</p>
-<p>社会就是公司，人口就是这个快崩溃的项目，加班加点就是生孩子，社会制定三胎政策、舆论导向就是宣扬价值观。<strong>而在这个社会中，在上层控制的媒体舆论中，生孩子者（加班者），是光荣的</strong>。</p>
-<p>所以上面我说的觉得奇怪的地方就是这里。生孩子是自然的，一个母亲自然地，应该为她的孩子自豪，这没有什么问题。（生孩子这个行为脱离社会文化不带任何色彩去看，是自然的。母亲<strong>为自己的孩子</strong>自豪，是自然的）。但是，母亲为<strong>她的生育行为</strong>本身去自豪，就不是自然的了，这是文化的了。就像古代的贞节牌坊，鼓励女性丧夫后守贞，只要守贞，就能受到政府嘉奖，给整村带来荣誉，还给设立牌坊。在农村，生的多就是好也是类似。只要生几个男孩，周围的邻里就会觉得你很了不起。这些都出于”文化“。</p>
-<p>不是出于<strong>自然意愿</strong>，而是带着外界设立的荣誉感自以为自愿，去做某一件事。就是马克思所说的所谓<strong>异化</strong>。</p>
-<p>带着荣誉感加班的人，是被异化的打工人；带着荣誉感去生育的人，则是被异化的现代女性。</p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-  </entry>
-  <entry>
     <title>关于《平凡的世界》</title>
     <url>/2023/11/09/%E5%85%B3%E4%BA%8E%E3%80%8A%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C%E3%80%8B/</url>
     <content><![CDATA[<p>对于这本巨著，一开始是惊讶的，然后是欣赏的，最后是崩溃的。</p>
@@ -1032,32 +1015,20 @@
 ]]></content>
   </entry>
   <entry>
-    <title>关键字tailrec</title>
-    <url>/2023/02/27/%E5%85%B3%E9%94%AE%E5%AD%97tailrec/</url>
-    <content><![CDATA[<p>chatgpt:</p>
-<p>Kotlin中的<code>tailrec</code>是一个修饰符，用于声明一个递归函数，告诉编译器将其转化为尾递归函数。尾递归是一种特殊的递归形式，在每个递归调用的结尾处只返回函数本身，不再执行任何其他操作。使用尾递归可以避免栈溢出问题，因为编译器可以对尾递归进行优化，将其转换为迭代形式，从而节省了函数调用堆栈的空间。</p>
-<p>使用<code>tailrec</code>的要求：</p>
-<ul>
-<li>函数必须是递归函数；</li>
-<li>递归调用必须是函数体中的最后一个操作。</li>
-</ul>
-<p>下面是一个使用<code>tailrec</code>的示例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">kotlinCopy codetailrec fun factorial(n: Int, acc: Int = 1): Int =</span><br><span class="line">    if (n &lt;= 1) acc</span><br><span class="line">    else factorial(n - 1, acc * n)</span><br></pre></td></tr></table></figure>
-
-<p>在上面的示例中，函数<code>factorial</code>是一个尾递归函数。通过将递归调用放在函数体的最后一个操作，使用<code>tailrec</code>修饰符可以告诉编译器将其优化为迭代形式，避免了函数调用堆栈的溢出问题。</p>
-<p>总之，<code>tailrec</code>修饰符适用于一些需要进行递归操作的函数，可以避免递归调用堆栈溢出的问题。但要注意，<code>tailrec</code>并不是递归的必要条件，因此只有在确定需要使用递归函数的情况下，才需要考虑使用<code>tailrec</code>来进行优化。</p>
-<p>kotlin code</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">tailrec</span> <span class="function"><span class="keyword">fun</span> <span class="title">go</span><span class="params">(i: <span class="type">Int</span>, sum: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> =</span><br><span class="line">    <span class="keyword">if</span> (i &gt; <span class="number">10</span>) sum <span class="keyword">else</span> go(i + <span class="number">1</span>, sum + i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">tailrec</span> <span class="function"><span class="keyword">fun</span> <span class="title">factorial</span><span class="params">(n: <span class="type">Int</span>, acc: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> =</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) acc</span><br><span class="line">    <span class="keyword">else</span> factorial(n - <span class="number">1</span>, acc * n)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p>java decompiled code</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">TailoclearnKt</span> &#123;</span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="title function_">go</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> sum)</span> &#123;</span><br><span class="line">      <span class="keyword">while</span>(i &lt;= <span class="number">10</span>) &#123;</span><br><span class="line">         <span class="type">int</span> <span class="variable">var10000</span> <span class="operator">=</span> i + <span class="number">1</span>;</span><br><span class="line">         sum += i;</span><br><span class="line">         i = var10000;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> sum;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="title function_">factorial</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> acc)</span> &#123;</span><br><span class="line">      <span class="keyword">while</span>(n &gt; <span class="number">1</span>) &#123;</span><br><span class="line">         <span class="type">int</span> <span class="variable">var10000</span> <span class="operator">=</span> n - <span class="number">1</span>;</span><br><span class="line">         acc *= n;</span><br><span class="line">         n = var10000;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> acc;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+    <title>关于现代生育问题的一些思考</title>
+    <url>/2023/04/09/%E5%85%B3%E4%BA%8E%E7%8E%B0%E4%BB%A3%E7%94%9F%E8%82%B2%E9%97%AE%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<p>在阳台看到楼下有一位女性带着两个小孩走过，小孩穿着舞蹈服。想必是接孩子从兴趣班刚回来。来深圳一段时间了，经常工作日上班也看到有不少老人带孩子。原来深漂不仅仅是年轻人的事，也席卷了上一辈。对上一辈来说不能说不是残酷的，离开了大半辈子的生活环境去到一个陌生的地方，操劳了一辈子。辛辛苦苦把子女带大，子女有小孩了要工作又要帮忙带小孩。国务院的劳动模范应该颁给这些人，他们实实在在地用自己的生命在延续这个社会。</p>
+<p>对于生育这件事我还想到了一件事。那是发生在刚入职的时候，大伙聚在一起围个圈自我介绍的时候，先是一个HR（还是什么其他职位我记不太清）介绍自己。她说自己做的是XXX，喜欢XXX，然后停顿了一下，说”与此同时，我还是一个3岁孩子的宝妈！“，顿时其他的人都拍起掌来。仿佛见证了奇迹一般，仿佛在战后表彰会上一个英勇的战士刚领完奖。</p>
+<p>原来我们这一代，至少20——30多的这一代，早已在<strong>潜意识</strong>上，深深地认同了，或者说———接受了，养育孩子是<strong>不现实</strong>的这一社会问题，或者说，经济问题。当时我在周围这群刚毕业的大学生眼中，特别是妹子，感受到的一种感觉是：深深地钦佩，佩服她的<strong>勇气</strong>，竟然在这么高节奏的城市中生活还敢生孩子呢！而她本人，在说这句话的时候也声调激昂，满满的自豪感。我并不想说这件事不值得自豪。这件事值得自豪，至少对她本人来说。那你觉得这件事值得自豪吗？如果你也觉得自豪，大家都觉得自豪，这么说明这个社会把养育孩子的<strong>门槛</strong>提高到了需要非凡的勇气，毅力和经济水平才能去做的地步，一个普通人所不能承受的地步。</p>
+<p>我似乎在说一些很明显的社会问题，在2023年这些已经是既定事实。但我感觉有不对的地方，她何以带着如此的荣誉感去宣扬自己养着一个小孩，仿佛在说这句话的时候在等待着谁的<strong>嘉奖</strong>一般。</p>
+<p>后来我想到了。如果把社会比喻成一个公司就很容易理解。公司最近遇到危机，要赶项目，要大家加班加点，但不是强制性的，因为法律有规定不能强制，所以呢公司上层就开始宣扬价值观、公司文化，说加班加点才是好，艰苦奋斗的精神值得大家学习！因为如果大家都摆烂不加班公司项目就完了，但是只要有一部分人信了，他们去加班加点，公司就能活下去。最后给这一部分人在大会上表扬一下，让大家向这部分人学习。公司给他们颁发了”奋斗者“奖章，这部分人也把佩戴这个奖章视为一种荣誉。</p>
+<p>社会就是公司，人口就是这个快崩溃的项目，加班加点就是生孩子，社会制定三胎政策、舆论导向就是宣扬价值观。<strong>而在这个社会中，在上层控制的媒体舆论中，生孩子者（加班者），是光荣的</strong>。</p>
+<p>所以上面我说的觉得奇怪的地方就是这里。生孩子是自然的，一个母亲自然地，应该为她的孩子自豪，这没有什么问题。（生孩子这个行为脱离社会文化不带任何色彩去看，是自然的。母亲<strong>为自己的孩子</strong>自豪，是自然的）。但是，母亲为<strong>她的生育行为</strong>本身去自豪，就不是自然的了，这是文化的了。就像古代的贞节牌坊，鼓励女性丧夫后守贞，只要守贞，就能受到政府嘉奖，给整村带来荣誉，还给设立牌坊。在农村，生的多就是好也是类似。只要生几个男孩，周围的邻里就会觉得你很了不起。这些都出于”文化“。</p>
+<p>不是出于<strong>自然意愿</strong>，而是带着外界设立的荣誉感自以为自愿，去做某一件事。就是马克思所说的所谓<strong>异化</strong>。</p>
+<p>带着荣誉感加班的人，是被异化的打工人；带着荣誉感去生育的人，则是被异化的现代女性。</p>
 ]]></content>
       <categories>
-        <category>Kotlin</category>
-        <category>语法</category>
+        <category>life</category>
       </categories>
   </entry>
   <entry>
@@ -1097,29 +1068,33 @@
       </tags>
   </entry>
   <entry>
-    <title>协程互斥-Mutex</title>
-    <url>/2023/02/13/%E5%8D%8F%E7%A8%8B%E4%BA%92%E6%96%A5-Mutex/</url>
-    <content><![CDATA[<h2 id="以细粒度限制线程"><a href="#以细粒度限制线程" class="headerlink" title="以细粒度限制线程"></a>以细粒度限制线程</h2><p><em>限制线程</em> 是解决共享可变状态问题的一种方案：对特定共享状态的所有访问权都限制在单个线程中。它通常应用于 UI 程序中：所有 UI 状态都局限于单个事件分发线程或应用主线程中。这在协程中很容易实现，通过使用一个单线程上下文：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> counterContext = newSingleThreadContext(<span class="string">&quot;CounterContext&quot;</span>)</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    withContext(Dispatchers.Default) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            <span class="comment">// 将每次自增限制在单线程上下文中</span></span><br><span class="line">            withContext(counterContext) &#123;</span><br><span class="line">                counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
+    <title>关键字tailrec</title>
+    <url>/2023/02/27/%E5%85%B3%E9%94%AE%E5%AD%97tailrec/</url>
+    <content><![CDATA[<p>chatgpt:</p>
+<p>Kotlin中的<code>tailrec</code>是一个修饰符，用于声明一个递归函数，告诉编译器将其转化为尾递归函数。尾递归是一种特殊的递归形式，在每个递归调用的结尾处只返回函数本身，不再执行任何其他操作。使用尾递归可以避免栈溢出问题，因为编译器可以对尾递归进行优化，将其转换为迭代形式，从而节省了函数调用堆栈的空间。</p>
+<p>使用<code>tailrec</code>的要求：</p>
+<ul>
+<li>函数必须是递归函数；</li>
+<li>递归调用必须是函数体中的最后一个操作。</li>
+</ul>
+<p>下面是一个使用<code>tailrec</code>的示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">kotlinCopy codetailrec fun factorial(n: Int, acc: Int = 1): Int =</span><br><span class="line">    if (n &lt;= 1) acc</span><br><span class="line">    else factorial(n - 1, acc * n)</span><br></pre></td></tr></table></figure>
 
-<p>这段代码运行非常缓慢，因为它进行了 <em>细粒度</em> 的线程限制。每个增量操作都得使用 <code>withContext(counterContext)</code> 块从多线程 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-default.html">Dispatchers.Default</a> 上下文切换到单线程上下文。</p>
-<h2 id="以粗粒度限制线程"><a href="#以粗粒度限制线程" class="headerlink" title="以粗粒度限制线程"></a>以粗粒度限制线程</h2><p>在实践中，线程限制是在大段代码中执行的，例如：状态更新类业务逻辑中大部分都是限于单线程中。下面的示例演示了这种情况， 在单线程上下文中运行每个协程。</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> counterContext = newSingleThreadContext(<span class="string">&quot;CounterContext&quot;</span>)</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    <span class="comment">// 将一切都限制在单线程上下文中</span></span><br><span class="line">    withContext(counterContext) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            counter++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
+<p>在上面的示例中，函数<code>factorial</code>是一个尾递归函数。通过将递归调用放在函数体的最后一个操作，使用<code>tailrec</code>修饰符可以告诉编译器将其优化为迭代形式，避免了函数调用堆栈的溢出问题。</p>
+<p>总之，<code>tailrec</code>修饰符适用于一些需要进行递归操作的函数，可以避免递归调用堆栈溢出的问题。但要注意，<code>tailrec</code>并不是递归的必要条件，因此只有在确定需要使用递归函数的情况下，才需要考虑使用<code>tailrec</code>来进行优化。</p>
+<p>kotlin code</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">tailrec</span> <span class="function"><span class="keyword">fun</span> <span class="title">go</span><span class="params">(i: <span class="type">Int</span>, sum: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> =</span><br><span class="line">    <span class="keyword">if</span> (i &gt; <span class="number">10</span>) sum <span class="keyword">else</span> go(i + <span class="number">1</span>, sum + i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">tailrec</span> <span class="function"><span class="keyword">fun</span> <span class="title">factorial</span><span class="params">(n: <span class="type">Int</span>, acc: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> =</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) acc</span><br><span class="line">    <span class="keyword">else</span> factorial(n - <span class="number">1</span>, acc * n)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>这段代码运行更快而且打印出了正确的结果。</p>
-<h2 id="互斥"><a href="#互斥" class="headerlink" title="互斥"></a>互斥</h2><p>该问题的互斥解决方案：使用<strong>永远不会同时执行</strong>的 <em>关键代码块</em> 来保护共享状态的所有修改。在阻塞的世界中，你通常会为此目的使用 <code>synchronized</code> 或者 <code>ReentrantLock</code>。 在协程中的替代品叫做 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/index.html">Mutex</a> 。它具有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/lock.html">lock</a> 和 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/unlock.html">unlock</a> 方法， 可以隔离关键的部分。关键的区别在于 <code>Mutex.lock()</code> 是一个挂起函数，它不会阻塞线程。（但会挂起协程）</p>
-<p>还有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/with-lock.html">withLock</a> 扩展函数，可以方便的替代常用的 <code>mutex.lock(); try &#123; …… &#125; finally &#123; mutex.unlock() &#125;</code> 模式：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlinx.coroutines.sync.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> mutex = Mutex()</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    withContext(Dispatchers.Default) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            <span class="comment">// 用锁保护每次自增</span></span><br><span class="line">            mutex.withLock &#123;</span><br><span class="line">                counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
 
-<p>此示例中锁是细粒度的，因此会付出一些代价。但是对于某些必须定期修改共享状态的场景，它是一个不错的选择，但是没有自然线程可以限制此状态。</p>
+
+<p>java decompiled code</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">TailoclearnKt</span> &#123;</span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="title function_">go</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> sum)</span> &#123;</span><br><span class="line">      <span class="keyword">while</span>(i &lt;= <span class="number">10</span>) &#123;</span><br><span class="line">         <span class="type">int</span> <span class="variable">var10000</span> <span class="operator">=</span> i + <span class="number">1</span>;</span><br><span class="line">         sum += i;</span><br><span class="line">         i = var10000;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> sum;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="title function_">factorial</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> acc)</span> &#123;</span><br><span class="line">      <span class="keyword">while</span>(n &gt; <span class="number">1</span>) &#123;</span><br><span class="line">         <span class="type">int</span> <span class="variable">var10000</span> <span class="operator">=</span> n - <span class="number">1</span>;</span><br><span class="line">         acc *= n;</span><br><span class="line">         n = var10000;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> acc;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>Kotlin</category>
-        <category>协程</category>
+        <category>语法</category>
       </categories>
-      <tags>
-        <tag>协程</tag>
-      </tags>
   </entry>
   <entry>
     <title>协程异常处理总结</title>
@@ -1246,6 +1221,31 @@
 
 <p>结果将会是：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Handle java.lang.RuntimeException: RuntimeException in nested coroutine in handler3</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Kotlin</category>
+        <category>协程</category>
+      </categories>
+      <tags>
+        <tag>协程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>协程互斥-Mutex</title>
+    <url>/2023/02/13/%E5%8D%8F%E7%A8%8B%E4%BA%92%E6%96%A5-Mutex/</url>
+    <content><![CDATA[<h2 id="以细粒度限制线程"><a href="#以细粒度限制线程" class="headerlink" title="以细粒度限制线程"></a>以细粒度限制线程</h2><p><em>限制线程</em> 是解决共享可变状态问题的一种方案：对特定共享状态的所有访问权都限制在单个线程中。它通常应用于 UI 程序中：所有 UI 状态都局限于单个事件分发线程或应用主线程中。这在协程中很容易实现，通过使用一个单线程上下文：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> counterContext = newSingleThreadContext(<span class="string">&quot;CounterContext&quot;</span>)</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    withContext(Dispatchers.Default) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            <span class="comment">// 将每次自增限制在单线程上下文中</span></span><br><span class="line">            withContext(counterContext) &#123;</span><br><span class="line">                counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
+
+<p>这段代码运行非常缓慢，因为它进行了 <em>细粒度</em> 的线程限制。每个增量操作都得使用 <code>withContext(counterContext)</code> 块从多线程 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-default.html">Dispatchers.Default</a> 上下文切换到单线程上下文。</p>
+<h2 id="以粗粒度限制线程"><a href="#以粗粒度限制线程" class="headerlink" title="以粗粒度限制线程"></a>以粗粒度限制线程</h2><p>在实践中，线程限制是在大段代码中执行的，例如：状态更新类业务逻辑中大部分都是限于单线程中。下面的示例演示了这种情况， 在单线程上下文中运行每个协程。</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> counterContext = newSingleThreadContext(<span class="string">&quot;CounterContext&quot;</span>)</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    <span class="comment">// 将一切都限制在单线程上下文中</span></span><br><span class="line">    withContext(counterContext) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            counter++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
+
+<p>这段代码运行更快而且打印出了正确的结果。</p>
+<h2 id="互斥"><a href="#互斥" class="headerlink" title="互斥"></a>互斥</h2><p>该问题的互斥解决方案：使用<strong>永远不会同时执行</strong>的 <em>关键代码块</em> 来保护共享状态的所有修改。在阻塞的世界中，你通常会为此目的使用 <code>synchronized</code> 或者 <code>ReentrantLock</code>。 在协程中的替代品叫做 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/index.html">Mutex</a> 。它具有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/lock.html">lock</a> 和 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/unlock.html">unlock</a> 方法， 可以隔离关键的部分。关键的区别在于 <code>Mutex.lock()</code> 是一个挂起函数，它不会阻塞线程。（但会挂起协程）</p>
+<p>还有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/with-lock.html">withLock</a> 扩展函数，可以方便的替代常用的 <code>mutex.lock(); try &#123; …… &#125; finally &#123; mutex.unlock() &#125;</code> 模式：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlinx.coroutines.sync.*</span><br><span class="line"><span class="keyword">import</span> kotlin.system.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">massiveRun</span><span class="params">(action: <span class="type">suspend</span> () -&gt; <span class="type">Unit</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> n = <span class="number">100</span>  <span class="comment">// 启动的协程数量</span></span><br><span class="line">    <span class="keyword">val</span> k = <span class="number">1000</span> <span class="comment">// 每个协程重复执行同一动作的次数</span></span><br><span class="line">    <span class="keyword">val</span> time = measureTimeMillis &#123;</span><br><span class="line">        coroutineScope &#123; <span class="comment">// 协程的作用域</span></span><br><span class="line">            repeat(n) &#123;</span><br><span class="line">                launch &#123;</span><br><span class="line">                    repeat(k) &#123; action() &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Completed <span class="subst">$&#123;n * k&#125;</span> actions in <span class="variable">$time</span> ms&quot;</span>)    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//sampleStart</span></span><br><span class="line"><span class="keyword">val</span> mutex = Mutex()</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">    withContext(Dispatchers.Default) &#123;</span><br><span class="line">        massiveRun &#123;</span><br><span class="line">            <span class="comment">// 用锁保护每次自增</span></span><br><span class="line">            mutex.withLock &#123;</span><br><span class="line">                counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">&quot;Counter = <span class="variable">$counter</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//sampleEnd</span></span><br></pre></td></tr></table></figure>
+
+<p>此示例中锁是细粒度的，因此会付出一些代价。但是对于某些必须定期修改共享状态的场景，它是一个不错的选择，但是没有自然线程可以限制此状态。</p>
 ]]></content>
       <categories>
         <category>Kotlin</category>
@@ -1402,19 +1402,6 @@
       </tags>
   </entry>
   <entry>
-    <title>小云第一局Valorant</title>
-    <url>/2023/02/06/%E5%B0%8F%E4%BA%91%E7%AC%AC%E4%B8%80%E5%B1%80Valorant/</url>
-    <content><![CDATA[<p>小云今天完完整整地打了一局Valorant，之前都是零零碎碎地打。不得不说对于一个新手来说，还行。不过我们也是今天她玩了才知道她晕三D，她说吃饭时都没啥胃口。我也是第一次实际看到晕三D的情况。</p>
-]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>小云</tag>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>学习Moshi</title>
     <url>/2023/02/21/%E5%AD%A6%E4%B9%A0Moshi/</url>
     <content><![CDATA[<h1 id="vs-Gson"><a href="#vs-Gson" class="headerlink" title="vs Gson"></a>vs Gson</h1><p>Gson的仓库介绍：Gson is a Java library that can be used to convert Java Objects into their JSON representation. It can also be used to convert a JSON string to an equivalent Java object. </p>
@@ -1463,6 +1450,19 @@
         <category>库</category>
         <category>Moshi</category>
       </categories>
+  </entry>
+  <entry>
+    <title>小云第一局Valorant</title>
+    <url>/2023/02/06/%E5%B0%8F%E4%BA%91%E7%AC%AC%E4%B8%80%E5%B1%80Valorant/</url>
+    <content><![CDATA[<p>小云今天完完整整地打了一局Valorant，之前都是零零碎碎地打。不得不说对于一个新手来说，还行。不过我们也是今天她玩了才知道她晕三D，她说吃饭时都没啥胃口。我也是第一次实际看到晕三D的情况。</p>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>小云</tag>
+        <tag>游戏</tag>
+      </tags>
   </entry>
   <entry>
     <title>懒惰是一项艰苦的工作 摘抄</title>
@@ -1603,6 +1603,19 @@
       </categories>
   </entry>
   <entry>
+    <title>简单记录</title>
+    <url>/2023/06/19/%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>很长一段时间没有记录东西了，主要的原因还是懒得写。当想记录什么的时候，想到也没发生什么大事，无非就是一些日常，也不想去记录。</p>
+<p>最近有一些比较感兴趣的知识，觉得有趣。</p>
+<p>一个是“外乡人心态”，从这个视频中学到 <a href="https://www.youtube.com/watch?v=k9h9LY-Z_4o&ab_channel=TheSchoolofLife">How to Escape the Rat Race and Find Freedom Like James Baldwin</a>。James Baldwin是上世纪美国一位著名的作家，他在他的原先所在的环境中，感到焦虑和压抑。“他在美国感到窒息，他的家人对他抱有一些他十分厌恶的期待，他的朋友随意评判别人，他感到自己的生活无时不刻像是被观察着，无时不刻被入侵”，这些感觉让他觉得失去了自由，没有办法保持创造力，对他而言，自己仿佛一直生活在学校或者是监狱之中。</p>
+<p>后来他 —— went into exile —— 前往法国，生活了很久。在那里，没有人认识他，他仿佛以某一种形式获得了第二次的生命，他可以随意的穿着，随意地交朋友，不用介意别人的眼光。即使他生活在巴黎，他也不刻意地去融入当地 —— 如果融入巴黎，这只会变成以前他生活的那个地方的样子。他故意地和他所在的环境的主流文化保持一定的距离，以保持他自己的“匿名性“。</p>
+<p>最后视频讲到，我们不必像James Baldwin一样，去到异国他乡来寻求自由，我们应该努力地在心中塑造一种”外乡人”的心态，即我们没有必要在意社会的偏见，迎合他人的目光来生活。我们可以不用在意当地文化的狭隘视野以及融入无意义的竞争环境。</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+  </entry>
+  <entry>
     <title>爱情如何持久化</title>
     <url>/2023/03/01/%E7%88%B1%E6%83%85%E5%A6%82%E4%BD%95%E6%8C%81%E4%B9%85%E5%8C%96/</url>
     <content><![CDATA[<blockquote>
@@ -1655,19 +1668,6 @@
       </categories>
   </entry>
   <entry>
-    <title>简单记录</title>
-    <url>/2023/06/19/%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>很长一段时间没有记录东西了，主要的原因还是懒得写。当想记录什么的时候，想到也没发生什么大事，无非就是一些日常，也不想去记录。</p>
-<p>最近有一些比较感兴趣的知识，觉得有趣。</p>
-<p>一个是“外乡人心态”，从这个视频中学到 <a href="https://www.youtube.com/watch?v=k9h9LY-Z_4o&ab_channel=TheSchoolofLife">How to Escape the Rat Race and Find Freedom Like James Baldwin</a>。James Baldwin是上世纪美国一位著名的作家，他在他的原先所在的环境中，感到焦虑和压抑。“他在美国感到窒息，他的家人对他抱有一些他十分厌恶的期待，他的朋友随意评判别人，他感到自己的生活无时不刻像是被观察着，无时不刻被入侵”，这些感觉让他觉得失去了自由，没有办法保持创造力，对他而言，自己仿佛一直生活在学校或者是监狱之中。</p>
-<p>后来他 —— went into exile —— 前往法国，生活了很久。在那里，没有人认识他，他仿佛以某一种形式获得了第二次的生命，他可以随意的穿着，随意地交朋友，不用介意别人的眼光。即使他生活在巴黎，他也不刻意地去融入当地 —— 如果融入巴黎，这只会变成以前他生活的那个地方的样子。他故意地和他所在的环境的主流文化保持一定的距离，以保持他自己的“匿名性“。</p>
-<p>最后视频讲到，我们不必像James Baldwin一样，去到异国他乡来寻求自由，我们应该努力地在心中塑造一种”外乡人”的心态，即我们没有必要在意社会的偏见，迎合他人的目光来生活。我们可以不用在意当地文化的狭隘视野以及融入无意义的竞争环境。</p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-  </entry>
-  <entry>
     <title>简单记录一下这一周</title>
     <url>/2023/03/26/%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E8%BF%99%E4%B8%80%E5%91%A8/</url>
     <content><![CDATA[<p>这一周可以说是来深圳之后经历的完整的一周。 自周三开始，搬过来自己租的房子，陆陆续续从公司宿舍那边搬东西过来，从拼多多买了很多小物件，比如说粘钩衣架之类的，剩下的就是上班还有拿快递。</p>
@@ -1678,6 +1678,44 @@
       <categories>
         <category>life</category>
       </categories>
+  </entry>
+  <entry>
+    <title>随便唠嗑</title>
+    <url>/2023/11/24/%E9%9A%8F%E4%BE%BF%E5%94%A0%E5%97%91/</url>
+    <content><![CDATA[<p>最近在读村上春树的《国境以南，太阳以西》，国境以南，south of the border，地方照书中说是mexico，而south of the border则是一首爵士乐名。至于太阳以西什么意思我已经忘记了。</p>
+<p>大约是大学的时候曾经看完中文版，时隔几年再看则是找了本En的来看。还好村上的文字无论翻译成中文还是英文都是那么的淳朴简单。带点小清新。所以阅读下来不是什么大的问题。</p>
+<p>好像想起来村上的书没有以女性为主角的，都是清一色的，带着点孤独、不合群气质的男性。在国境以南的开头，讲了主人公“我”虽然和镇上的女朋友isumi互相喜欢，但“我”总觉得isumi无法理解自己内心最深处的东西，并且自己希望去另外一个地方体验不一样的生活，于是做出要去东京读大学的决定，但isumi是一个比较，，额，，怎么说，比较“简单”的人吧，大概率就留在镇上读大学。她和“我”说，为什么一定要跑去东京呢，附近也有很不错的大学。“我”则是觉得自己绝不可能留在这里。</p>
+<p>看到这里的时候忽然觉得村上笔下蛮多“抛弃”的情节的。《挪威的森林》中“我”抛弃了自己第一次睡过的女孩，也是为了跑去东京读书，虽然女友极力挽留。“我”虽然内心觉得自己深深伤害了对方，但仍然觉得自己要去另外一个世界。《寻羊冒险记》和《刺杀骑士团长》则是“我”在故事开头即被妻子抛弃。《海边的卡夫卡》则是少年离家出走。</p>
+<p>可以这样理解吧，毕竟村上写的小说多多少少带点超现实的意味，主角必须要通过某种手段，和原来“现实”、“平常”的生活割裂开来，才能进一步展开剧情。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>远离使杀戮更容易</title>
+    <url>/2023/02/10/%E8%BF%9C%E7%A6%BB%E4%BD%BF%E6%9D%80%E6%88%AE%E6%9B%B4%E5%AE%B9%E6%98%93/</url>
+    <content><![CDATA[<p>原文</p>
+<hr>
+<p>在弗兰克·赫伯特（Frank Herbert）的经典科幻小说《沙丘》中，主人公必须压制他当下的动物本能，以此来证明自己是人类。他的手被放在一个邪恶的装置——一个会产生剧痛的黑盒子里。如果他把手从盒子里抽出来，负责看守的老妇人就会用毒针刺穿他的脖子，他就会死。她告诉他：“你听说过动物为了逃离陷阱而咬断自己一条腿的事吗？那是动物的把戏。如果是一个人，他会一直待在陷阱里，忍受痛苦，假装死亡，这样他才有可能杀死捕猎者，并消除对他的同类的威胁。”</p>
+<p>有些人天生比其他人更善于抑制情绪。事实上，这是与生俱来的，部分原因是他们的多巴胺受体的数量和性质异于常人。多巴胺受体是大脑中的分子，它们在多巴胺释放时会做出响应。遗传特征不同，多巴胺受体的情况也会有所差异。研究人员测量了不同人大脑中多巴胺受体的密度（受体的数量，以及它们之间距离的远近），并将其与这些人的“情绪分离”测量结果进行了比较。<br>情绪分离测试测量了一个人避免分享个人信息、避免与他人交往的倾向等特征。科学家们发现受体密度和与他人接触的倾向有直接关系，高密度的多巴胺受体与高水平的情绪分离有关。在另一项研究中，情绪分离得分最高的人将自己描述为“在人际关系中冷漠、社交冷淡、有报复心”。相比之下，情绪分离度最低的人则将自己描述为“过于热情、易被人利用”。</p>
+<p>大多数人的情绪分离程度介于最高和最低之间。我们既不冷漠也不会热情过度，我们的反应取决于具体情况。如果我们与周围的人在近体空间接触——靠得很近，直接接触，专注于此刻——当下分子回路会被激活，我们性格中温暖、热情的一面就会显现出来。而如果我们在远体空间跟人打交道——保持距离，抽象思考，专注于未来——我们性格中理性、克制的部分就更容易被看到。这两种不同的思维方式可以用“电车问题”来说明：</p>
+<p>一列失控的火车沿着铁轨疾驰而下，驶向5名工人。如果什么都不做，他们都会死。然而，把一个旁观者推向铁轨是有可能阻止火车的前进的。这个人的死会使火车减速，足以拯救5个工人的生命。你会把这个人推向铁轨吗？</p>
+<p>在这种情景下，大多数人都不会将这个旁观者推向轨道——他们无法亲手杀死一个人，即使是为了拯救5个人的生命。当下神经递质负责产生对他人的同理心，在大多数人身上，它都会压倒多巴胺精于盘算的理性。在这种情况下，当下的反应是如此强烈，因为旁观者离得太近，就在<strong>近体空间</strong>。要杀死他，我们必须用手接触他。除了最冷漠的人，其他人都做不到。</p>
+<p>但是，既然<strong>当下分子最强大的影响是在近体空间</strong>（我们五官所感知的当下世界），如果我们一步一步地后退，逐步减少当下分子对我们决策的影响，会发生什么？当我们离开当下分子的近体空间进入<strong>多巴胺能的远体空间</strong>时，我们用一条生命换5条生命的意愿是否会增加？</p>
+<p>让我们先从消除身体接触的当下感觉开始。想象一下，你站在一段距离之外看着事态发展。有一个开关，拉动它，就可以将列车从有5个人的轨道转移到只有一个人的轨道；而如果什么都不做，那5个人就会死。你会拉动开关吗？</p>
+<p>下面进一步把自己拉远。想象一下，你坐在距离遥远的另一座城市的办公桌旁。电话铃响了，一个语无伦次的铁路工人描述了这个情况。你在办公桌前就可以控制火车的行进路线。你可以按下一个开关，让火车转向只有一个人在上面的轨道，或者什么也不做，让火车撞向5个人。你会按下开关吗？</p>
+<p>最后，我们考虑最抽象的情况：抛弃所有的当下分子，让大脑完全为多巴胺掌控。假设你是一名运输系统工程师，正在设计铁路轨道的安全特性。你在铁轨旁安装了摄像头，能够准确提供实时的信息。你需要写一个控制开关的计算机程序，该程序将使用摄像机拍下的信息来选择让火车通过哪个轨道。你会将这个软件设定为为了救5个人而杀死一个人吗？</p>
+<p>以上几种场景各异，但结果是一样的：牺牲一条生命换取5条生命，或者牺牲5条生命挽救一个人。很少有人会愿意牺牲一个无辜的人，把他推向死亡。然而，如果是写一个管理轨道开关的软件来使生命损失最小化，就很少有人会犹豫了。这就好像有两个不同的人在评估情况：一个人的头脑是理性的，只根据理性来做决定；另一个人富有同情心，不管大局如何，都不愿杀人。一个人试图通过拯救最多的人来控制局势，另一个则不会。我们会选择哪个结果，在一定程度上取决于多巴胺回路中的活动。</p>
+<hr>
+<p>在了解到大脑对判断为属于 <strong>近体空间</strong> 的事件和属于 <strong>远体空间</strong> 的事件会产生截然不同的情绪和处理方法（理性还是非理性）之后，我联想到许久以前看过的一本有关藏传佛教的书。</p>
+<p>书中简述了一种 “放下” 的状态，一种不执著于当下，不困于痛苦，也不困于兴奋的一种超脱的状态，要达到这种状态，首先要放下对“我”的执着，类似于无我。如果一个人有焦虑，抑郁等情绪，这种状态应该是他所求之不得的。而实践时的方法则是：想象自己不是自己，以一个旁观者的角度来看自己的肉体，看自己遇上的事件，当自己逐渐越来越不以 <strong>遭遇者</strong> 的身份去体验不好的事情，而是以 <strong>旁观者</strong>的身份去看待事情的话——便能放下。</p>
+<p>没想到原来这还有脑科学的依据，我一直以为这只是一种心理学技巧。</p>
+<p>常听有人说，看科幻小说、电影等看多了，想像宇宙的宏大、人生的短暂、人类的渺小，不自觉地感到生活的不顺心似乎也没有什么值得在意，情绪变得平静。这其实也是一种从 <strong>远体空间</strong> 看事物所带来的结果吧。</p>
+]]></content>
+      <categories>
+        <category>读书</category>
+      </categories>
+      <tags>
+        <tag>情绪控制</tag>
+      </tags>
   </entry>
   <entry>
     <title>转载：IntelliJ调试协程</title>
@@ -1758,44 +1796,6 @@
       <tags>
         <tag>协程</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>远离使杀戮更容易</title>
-    <url>/2023/02/10/%E8%BF%9C%E7%A6%BB%E4%BD%BF%E6%9D%80%E6%88%AE%E6%9B%B4%E5%AE%B9%E6%98%93/</url>
-    <content><![CDATA[<p>原文</p>
-<hr>
-<p>在弗兰克·赫伯特（Frank Herbert）的经典科幻小说《沙丘》中，主人公必须压制他当下的动物本能，以此来证明自己是人类。他的手被放在一个邪恶的装置——一个会产生剧痛的黑盒子里。如果他把手从盒子里抽出来，负责看守的老妇人就会用毒针刺穿他的脖子，他就会死。她告诉他：“你听说过动物为了逃离陷阱而咬断自己一条腿的事吗？那是动物的把戏。如果是一个人，他会一直待在陷阱里，忍受痛苦，假装死亡，这样他才有可能杀死捕猎者，并消除对他的同类的威胁。”</p>
-<p>有些人天生比其他人更善于抑制情绪。事实上，这是与生俱来的，部分原因是他们的多巴胺受体的数量和性质异于常人。多巴胺受体是大脑中的分子，它们在多巴胺释放时会做出响应。遗传特征不同，多巴胺受体的情况也会有所差异。研究人员测量了不同人大脑中多巴胺受体的密度（受体的数量，以及它们之间距离的远近），并将其与这些人的“情绪分离”测量结果进行了比较。<br>情绪分离测试测量了一个人避免分享个人信息、避免与他人交往的倾向等特征。科学家们发现受体密度和与他人接触的倾向有直接关系，高密度的多巴胺受体与高水平的情绪分离有关。在另一项研究中，情绪分离得分最高的人将自己描述为“在人际关系中冷漠、社交冷淡、有报复心”。相比之下，情绪分离度最低的人则将自己描述为“过于热情、易被人利用”。</p>
-<p>大多数人的情绪分离程度介于最高和最低之间。我们既不冷漠也不会热情过度，我们的反应取决于具体情况。如果我们与周围的人在近体空间接触——靠得很近，直接接触，专注于此刻——当下分子回路会被激活，我们性格中温暖、热情的一面就会显现出来。而如果我们在远体空间跟人打交道——保持距离，抽象思考，专注于未来——我们性格中理性、克制的部分就更容易被看到。这两种不同的思维方式可以用“电车问题”来说明：</p>
-<p>一列失控的火车沿着铁轨疾驰而下，驶向5名工人。如果什么都不做，他们都会死。然而，把一个旁观者推向铁轨是有可能阻止火车的前进的。这个人的死会使火车减速，足以拯救5个工人的生命。你会把这个人推向铁轨吗？</p>
-<p>在这种情景下，大多数人都不会将这个旁观者推向轨道——他们无法亲手杀死一个人，即使是为了拯救5个人的生命。当下神经递质负责产生对他人的同理心，在大多数人身上，它都会压倒多巴胺精于盘算的理性。在这种情况下，当下的反应是如此强烈，因为旁观者离得太近，就在<strong>近体空间</strong>。要杀死他，我们必须用手接触他。除了最冷漠的人，其他人都做不到。</p>
-<p>但是，既然<strong>当下分子最强大的影响是在近体空间</strong>（我们五官所感知的当下世界），如果我们一步一步地后退，逐步减少当下分子对我们决策的影响，会发生什么？当我们离开当下分子的近体空间进入<strong>多巴胺能的远体空间</strong>时，我们用一条生命换5条生命的意愿是否会增加？</p>
-<p>让我们先从消除身体接触的当下感觉开始。想象一下，你站在一段距离之外看着事态发展。有一个开关，拉动它，就可以将列车从有5个人的轨道转移到只有一个人的轨道；而如果什么都不做，那5个人就会死。你会拉动开关吗？</p>
-<p>下面进一步把自己拉远。想象一下，你坐在距离遥远的另一座城市的办公桌旁。电话铃响了，一个语无伦次的铁路工人描述了这个情况。你在办公桌前就可以控制火车的行进路线。你可以按下一个开关，让火车转向只有一个人在上面的轨道，或者什么也不做，让火车撞向5个人。你会按下开关吗？</p>
-<p>最后，我们考虑最抽象的情况：抛弃所有的当下分子，让大脑完全为多巴胺掌控。假设你是一名运输系统工程师，正在设计铁路轨道的安全特性。你在铁轨旁安装了摄像头，能够准确提供实时的信息。你需要写一个控制开关的计算机程序，该程序将使用摄像机拍下的信息来选择让火车通过哪个轨道。你会将这个软件设定为为了救5个人而杀死一个人吗？</p>
-<p>以上几种场景各异，但结果是一样的：牺牲一条生命换取5条生命，或者牺牲5条生命挽救一个人。很少有人会愿意牺牲一个无辜的人，把他推向死亡。然而，如果是写一个管理轨道开关的软件来使生命损失最小化，就很少有人会犹豫了。这就好像有两个不同的人在评估情况：一个人的头脑是理性的，只根据理性来做决定；另一个人富有同情心，不管大局如何，都不愿杀人。一个人试图通过拯救最多的人来控制局势，另一个则不会。我们会选择哪个结果，在一定程度上取决于多巴胺回路中的活动。</p>
-<hr>
-<p>在了解到大脑对判断为属于 <strong>近体空间</strong> 的事件和属于 <strong>远体空间</strong> 的事件会产生截然不同的情绪和处理方法（理性还是非理性）之后，我联想到许久以前看过的一本有关藏传佛教的书。</p>
-<p>书中简述了一种 “放下” 的状态，一种不执著于当下，不困于痛苦，也不困于兴奋的一种超脱的状态，要达到这种状态，首先要放下对“我”的执着，类似于无我。如果一个人有焦虑，抑郁等情绪，这种状态应该是他所求之不得的。而实践时的方法则是：想象自己不是自己，以一个旁观者的角度来看自己的肉体，看自己遇上的事件，当自己逐渐越来越不以 <strong>遭遇者</strong> 的身份去体验不好的事情，而是以 <strong>旁观者</strong>的身份去看待事情的话——便能放下。</p>
-<p>没想到原来这还有脑科学的依据，我一直以为这只是一种心理学技巧。</p>
-<p>常听有人说，看科幻小说、电影等看多了，想像宇宙的宏大、人生的短暂、人类的渺小，不自觉地感到生活的不顺心似乎也没有什么值得在意，情绪变得平静。这其实也是一种从 <strong>远体空间</strong> 看事物所带来的结果吧。</p>
-]]></content>
-      <categories>
-        <category>读书</category>
-      </categories>
-      <tags>
-        <tag>情绪控制</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随便唠嗑</title>
-    <url>/2023/11/24/%E9%9A%8F%E4%BE%BF%E5%94%A0%E5%97%91/</url>
-    <content><![CDATA[<p>最近在读村上春树的《国境以南，太阳以西》，国境以南，south of the border，地方照书中说是mexico，而south of the border则是一首爵士乐名。至于太阳以西什么意思我已经忘记了。</p>
-<p>大约是大学的时候曾经看完中文版，时隔几年再看则是找了本En的来看。还好村上的文字无论翻译成中文还是英文都是那么的淳朴简单。带点小清新。所以阅读下来不是什么大的问题。</p>
-<p>好像想起来村上的书没有以女性为主角的，都是清一色的，带着点孤独、不合群气质的男性。在国境以南的开头，讲了主人公“我”虽然和镇上的女朋友isumi互相喜欢，但“我”总觉得isumi无法理解自己内心最深处的东西，并且自己希望去另外一个地方体验不一样的生活，于是做出要去东京读大学的决定，但isumi是一个比较，，额，，怎么说，比较“简单”的人吧，大概率就留在镇上读大学。她和“我”说，为什么一定要跑去东京呢，附近也有很不错的大学。“我”则是觉得自己绝不可能留在这里。</p>
-<p>看到这里的时候忽然觉得村上笔下蛮多“抛弃”的情节的。《挪威的森林》中“我”抛弃了自己第一次睡过的女孩，也是为了跑去东京读书，虽然女友极力挽留。“我”虽然内心觉得自己深深伤害了对方，但仍然觉得自己要去另外一个世界。《寻羊冒险记》和《刺杀骑士团长》则是“我”在故事开头即被妻子抛弃。《海边的卡夫卡》则是少年离家出走。</p>
-<p>可以这样理解吧，毕竟村上写的小说多多少少带点超现实的意味，主角必须要通过某种手段，和原来“现实”、“平常”的生活割裂开来，才能进一步展开剧情。</p>
-]]></content>
   </entry>
   <entry>
     <title>顶部凹陷Shape</title>
