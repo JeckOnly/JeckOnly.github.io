@@ -1,16 +1,13 @@
 baseURL = "https://jeckonly.github.io/"
-locale = "zh-cn"
+languageCode = "zh-cn"
 title = "JeckOnly"
-theme = "explore"
+theme = "anubis2"
 summaryLength = 120
 hasCJKLanguage = true
 enableRobotsTXT = true
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
-
-[build]
-  writeStats = true
+  home = ["HTML", "RSS"]
 
 [pagination]
   pagerSize = 5
@@ -33,42 +30,29 @@ enableRobotsTXT = true
     name = "date"
     weight = 10
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params]
-  author = "JeckOnly"
-  description = "一个使用 Hugo 与 Explore 主题搭建的 GitHub Pages 个人站点。"
-  logo = ""
-  tagline = "记录想法、文章与实验"
+  locale = "zh-cn"
+  description = "一个使用 Hugo 与 Anubis2 主题搭建的 GitHub Pages 个人站点。"
+  copyright = "JeckOnly"
   dateFormat = "2006-01-02"
   mainSections = ["posts"]
 
-  [params.ui]
-    stickyHeader = true
-    showSearch = true
-    searchEngine = "fuse"
+  [params.author]
+    name = "JeckOnly"
 
-  [params.style]
-    fontPreset = "inter"
-    palette = "slate"
-    containerMaxWidth = "1120px"
-    maxWidthCh = 72
+  [params.anubis2]
+    enablecolorthemeswitcher = true
+    colortheme = "auto"
+    enablecopycodebutton = true
+    enablesummary = true
+    enablerssicon = false
+    readnextposts = 4
+    tocwordcount = 0
 
-  [params.sidebar]
-    globalPosition = "right"
-    widgets = ["recent", "categories", "tags"]
-    recentCount = 5
-
-  [params.list]
-    listView = "default"
-    showExcerpt = true
-
-  [params.single]
-    showPrevNext = true
-    showRelated = true
-    relatedCount = 4
-
-    [params.single.toc]
-      enable = true
-      position = "inline"
+    [params.anubis2.services]
 
 [menu]
   [[menu.main]]
@@ -80,7 +64,7 @@ enableRobotsTXT = true
   [[menu.main]]
     identifier = "about"
     name = "关于"
-    url = "/pages/about/"
+    url = "/about/"
     weight = 20
 
   [[menu.main]]

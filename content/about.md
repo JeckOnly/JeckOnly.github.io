@@ -3,9 +3,11 @@ title: "关于"
 date: 2026-03-29T09:00:00+08:00
 draft: false
 description: "关于这个站点和作者的简要说明。"
+author: "JeckOnly"
+aliases: ["/pages/about/"]
 ---
 
-这是一个部署到 GitHub Pages 的 Hugo 个人站点，使用的是 `explore` 主题。
+这是一个部署到 GitHub Pages 的 Hugo 个人站点，当前使用的是 `Anubis2` 主题。
 
 当前版本先完成了基础结构搭建：
 
