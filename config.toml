@@ -1,0 +1,96 @@
+baseURL = "https://jeckonly.github.io/"
+locale = "zh-cn"
+title = "JeckOnly"
+theme = "explore"
+summaryLength = 120
+hasCJKLanguage = true
+enableRobotsTXT = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[build]
+  writeStats = true
+
+[pagination]
+  pagerSize = 5
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "categories"
+    weight = 80
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
+[params]
+  author = "JeckOnly"
+  description = "一个使用 Hugo 与 Explore 主题搭建的 GitHub Pages 个人站点。"
+  logo = ""
+  tagline = "记录想法、文章与实验"
+  dateFormat = "2006-01-02"
+  mainSections = ["posts"]
+
+  [params.ui]
+    stickyHeader = true
+    showSearch = true
+    searchEngine = "fuse"
+
+  [params.style]
+    fontPreset = "inter"
+    palette = "slate"
+    containerMaxWidth = "1120px"
+    maxWidthCh = 72
+
+  [params.sidebar]
+    globalPosition = "right"
+    widgets = ["recent", "categories", "tags"]
+    recentCount = 5
+
+  [params.list]
+    listView = "default"
+    showExcerpt = true
+
+  [params.single]
+    showPrevNext = true
+    showRelated = true
+    relatedCount = 4
+
+    [params.single.toc]
+      enable = true
+      position = "inline"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/pages/about/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "分类"
+    url = "/categories/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 40
